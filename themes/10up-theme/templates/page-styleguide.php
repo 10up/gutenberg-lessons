@@ -2,13 +2,13 @@
 /**
  * Template Name: Style Guide
  *
- * @package TenUpTheme
+ * @package GutenbergLessons
  */
 
-namespace TenUpTheme\Utility;
+namespace GutenbergLessons\Utility;
 
-use function TenUpTheme\Utility\adjust_brightness;
-use function TenUpTheme\Utility\get_colors;
+use function GutenbergLessons\Utility\adjust_brightness;
+use function GutenbergLessons\Utility\get_colors;
 
 get_header();
 ?>
