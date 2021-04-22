@@ -23,7 +23,7 @@ $attributes = $args['attributes'];
 	<p class="wp-block-cta-complete__description">
 		<?php echo wp_kses_post( $attributes['description'] ); ?>
 	</p>
-	<?php if ( true === $attributes['showButton'] ) : ?>
+	<?php if ( true === $attributes['showCTALink'] ) : ?>
 		<a href="<?php echo esc_url( $attributes['ctaLink'] ); ?>" class="wp-block-cta-complete__cta_link"><?php echo esc_html( $attributes['ctaText'] ); ?> </a>
 	<?php endif; ?>
 </div>
