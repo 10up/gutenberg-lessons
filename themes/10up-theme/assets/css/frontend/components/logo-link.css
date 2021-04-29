@@ -1,0 +1,27 @@
+.custom-logo-link {
+	align-items: center;
+	color: var(--c-black);
+	display: flex;
+	font-size: 5rem;
+	padding: 10px 0;
+	text-decoration: none;
+
+	& svg {
+		width: 1em;
+	}
+
+	& path {
+		fill: currentColor;
+	}
+
+	& .logo-text {
+		color: var(--c-black);
+		font-size: 2rem;
+		font-weight: var(--fw-bold);
+		padding-left: var(--sp-s);
+
+		@media (--bp-medium) {
+			font-size: 3rem;
+		}
+	}
+}

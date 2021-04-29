@@ -1,0 +1,29 @@
+/* stylelint-disable */
+
+/* Container Vars */
+:root {
+	--container: 120rem;
+	--container-content: 70rem;
+	--container-padding: 30px;
+	--sidebar-width: 400px;
+	--sidebar-padding: 60px;
+}
+
+/* Spacings */
+:root {
+	--sp-base: 30px;
+	--sp-l: 40px;
+	--sp-m: 50px;
+	--sp-s: 15px;
+	--sp-xl: 60px;
+}
+
+
+/* Fonts */
+:root {
+	--fw-bold: 700;
+	--fw-regular: 500;
+	--font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	--fw-semibold: 600;
+	--font-serif: Georgia, "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif;
+}

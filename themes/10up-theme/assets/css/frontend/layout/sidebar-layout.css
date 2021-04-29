@@ -1,0 +1,23 @@
+.sidebar-layout {
+
+	padding-top: var(--sp-xl);
+
+	@media (--bp-large) {
+		display: flex;
+
+
+		& .content-area {
+			flex-grow: 1;
+			order: 1;
+		}
+
+		& .sidebar-area {
+			max-width: var(--sidebar-width);
+			order: 0;
+			padding-right: var(--sp-xl);
+			padding-top: var(--sp-s);
+		}
+	}
+
+}
+
