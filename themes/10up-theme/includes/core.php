@@ -63,6 +63,8 @@ function theme_setup() {
 	register_nav_menus(
 		array(
 			'primary' => esc_html__( 'Primary Menu', 'tenup-theme' ),
+			'footer-1' => esc_html__( 'Footer Menu 1', 'tenup-theme' ),
+			'footer-2' => esc_html__( 'Footer Menu 2', 'tenup-theme' ),
 		)
 	);
 }

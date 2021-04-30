@@ -18,7 +18,7 @@
 				wp_nav_menu(
 					array(
 						'container'       => '',
-						'theme_location'  => 'primary',
+						'theme_location'  => 'footer-1',
 						'container_class' => '',
 						'fallback_cb'     => '__return_false',
 					)
@@ -31,7 +31,7 @@
 				wp_nav_menu(
 					array(
 						'container'       => '',
-						'theme_location'  => 'primary',
+						'theme_location'  => 'footer-2',
 						'container_class' => '',
 						'fallback_cb'     => '__return_false',
 					)
