@@ -1,0 +1,68 @@
+@import url("@10up/component-navigation");
+
+@define-mixin active-menu-item {
+	background: var(--c-white);
+	color: var(--c-10up-red);
+}
+
+
+.site-navigation nav {
+
+	& > ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		@media (--bp-medium) {
+			align-items: center;
+			display: flex;
+			height: 100%;
+		}
+	}
+
+	& li {
+		position: relative;
+	}
+
+	& ul li a {
+		color: var(--c-black);
+		display: block;
+		font-size: var(--fs-base);
+		font-weight: var(--fw-bold);
+		padding: 5px 10px;
+		text-decoration: none;
+		transition: all 0.3s;
+
+		@media (--bp-medium) {
+			padding: 10px 15px;
+			font-size: var(--fs-m);
+		}
+	}
+
+	& .current-menu-item a,
+	& a:focus {
+		@mixin active-menu-item;
+	}
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+		& a:hover {
+			@mixin active-menu-item;
+		}
+	}
+
+	& .menu-item-has-children a:after {
+		display: none;
+	}
+
+	& .sub-menu {
+		@media (--bp-medium) {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+
+}
+
+
+
+

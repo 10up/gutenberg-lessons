@@ -38,21 +38,23 @@
 	<?php endif; ?>
 
 		<div id="site-navigation" class="site-navigation">
-			<nav class="primary-nav" role="navigation">
+			<nav id="primary-menu" role="navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement">
+
 				<?php
 				wp_nav_menu(
 					array(
-						'container'       => '',
 						'theme_location'  => 'primary',
-						'container_class' => '',
+						'container' => '',
 						'fallback_cb'     => '__return_false',
+						'menu_id' => 'primary-nav',
+						'menu_class' => 'primary-nav'
 					)
 				);
 				?>
 			</nav>
 		</div>
 
-		<button class='primary-menu-button button' aria-controls="site-navigation">
+		<a href="#primary-nav" class='primary-menu-button button' aria-controls="primary-nav">
 			<svg class="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32"
 				 height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"
 				 style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);">
@@ -61,7 +63,9 @@
 				</g>
 				<rect x="0" y="0" width="32" height="32" fill="rgba(0, 0, 0, 0)" />
 			</svg>
-		</button>
+		</a>
+
+
 	</div> <!-- container -->
 </div> <!-- site-top -->
 

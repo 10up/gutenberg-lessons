@@ -21,6 +21,10 @@
 		justify-content: space-between;
 	}
 
+	& ul {
+		list-style-type: none;
+	}
+
 	& a {
 		color: var(--c-black);
 		font-weight: 500;
@@ -32,8 +36,14 @@
 		}
 	}
 
+	& .menu-item-has-children a:after {
+		display: none;
+	}
+
 	& ul .sub-menu {
 		display: block;
+
+
 
 		& a:before {
 			content: "- ";

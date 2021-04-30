@@ -13,9 +13,6 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "devDependencies": {
-    "@10up/scripts": "^1.3.1"
-  },
   "dependencies": {
     "@10up/component-navigation": "^2.1.0",
     "normalize.css": "^8.0.1",
@@ -36,5 +33,8 @@
       "styleguide-style": "./assets/css/styleguide/styleguide.css",
       "example-block": "./includes/blocks/example-block/index.js"
     }
+  },
+  "devDependencies": {
+    "@10up/scripts": "^1.3.3"
   }
 }

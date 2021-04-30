@@ -2,9 +2,13 @@
 	align-items: center;
 	color: var(--c-black);
 	display: flex;
-	font-size: 5rem;
+	font-size: 3rem;
 	padding: 10px 0;
 	text-decoration: none;
+
+	@media(--bp-medium) {
+		font-size: 4rem;
+	}
 
 	& svg {
 		width: 1em;
@@ -16,9 +20,10 @@
 
 	& .logo-text {
 		color: var(--c-black);
-		font-size: 2rem;
+		font-size: 1.5rem;
 		font-weight: var(--fw-bold);
 		padding-left: var(--sp-s);
+		text-transform: capitalize;
 
 		@media (--bp-medium) {
 			font-size: 3rem;
