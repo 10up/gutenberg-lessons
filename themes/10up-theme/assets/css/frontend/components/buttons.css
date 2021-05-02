@@ -1,14 +1,12 @@
 .button {
 	background: transparent;
-	border: 1px solid var(--c-10up-red);
-	border-radius: 5px;
-	color: var(--c-10up-red);
+	color: var(--c-red);
 	cursor: pointer;
 	transition: all 0.3s;
 
 	&:focus,
 	&:hover {
-		background: var(--c-10up-red);
+		background: var(--c-red);
 		color: var(--c-white);
 	}
 }

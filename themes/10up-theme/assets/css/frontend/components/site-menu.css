@@ -1,12 +1,15 @@
 @import url("@10up/component-navigation");
 
-@define-mixin active-menu-item {
-	background: var(--c-white);
-	color: var(--c-10up-red);
-}
-
 
 .site-navigation nav {
+
+	@media (hover: hover), (-ms-high-contrast: none) {
+
+		& a:hover {
+			background: var(--c-white);
+			color: var(--c-red);
+		}
+	}
 
 	& > ul {
 		list-style-type: none;
@@ -35,34 +38,24 @@
 
 		@media (--bp-medium) {
 			padding: 10px 15px;
-			font-size: var(--fs-m);
 		}
 	}
 
 	& .current-menu-item a,
 	& a:focus {
-		@mixin active-menu-item;
+		background: var(--c-white);
+		color: var(--c-red);
 	}
 
-	@media (hover: hover), (-ms-high-contrast: none) {
-		& a:hover {
-			@mixin active-menu-item;
-		}
-	}
-
-	& .menu-item-has-children a:after {
+	& .menu-item-has-children a::after {
 		display: none;
 	}
 
 	& .sub-menu {
+
 		@media (--bp-medium) {
 			opacity: 0;
 			visibility: hidden;
 		}
 	}
-
 }
-
-
-
-

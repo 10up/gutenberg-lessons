@@ -1,0 +1,25 @@
+.entry-content,
+.archive-content {
+
+	& > * + * {
+		margin-top: var(--sp-m);
+	}
+
+	& > :--headings + * {
+		margin-top: var(--sp-base);
+	}
+
+
+	& > div[class^="wp-block-"] {
+		margin-top: var(--sp-l);
+	}
+
+	& > div[class^="wp-block-buttons"] {
+		margin-top: var(--sp-base);
+	}
+
+	& > p {
+		margin-bottom: 0;
+	}
+}
+

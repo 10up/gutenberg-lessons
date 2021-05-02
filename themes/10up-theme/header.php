@@ -19,18 +19,15 @@
 <a class="skip-link screen-reader-text"
    href="#site-content"><?php esc_html_e( 'Skip to content', 'tenup-theme' ); ?></a>
 
-<div class='site-top'>
-	<div class='container site-top__container'>
+<div class='site-header'>
+	<div class='container site-header__container'>
 		<?php if ( is_front_page() ) : ?>
 		<h1>
 			<?php endif; ?>
 			<a class="custom-logo-link" href="<?php bloginfo( 'url' ); ?>">
-				<svg width="89px" height="89px" viewBox="0 0 89 89" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-					<title>TenUp Logo</title>
-					<g id="gnav-icon" stroke="none" stroke-width="1" fill-rule="evenodd">
-						<path d="M44.5,0 C19.7777778,0 0,19.7777778 0,44.5 C0,51.4222222 1.64814815,57.6851852 4.28518519,63.2888889 L4.61481481,63.6185185 L31.9740741,36.2592593 L23.7333333,27.6888889 L61.3111111,27.6888889 L61.3111111,65.2666667 L52.7407407,56.6962963 L25.0518519,84.3851852 C30.9851852,87.3518519 37.5777778,89 44.5,89 C69.2222222,89 89,69.2222222 89,44.5 C89,19.7777778 69.2222222,0 44.5,0 Z" id="gnav-icon__path" fill="#000000" fill-rule="nonzero"></path>
-					</g>
-				</svg>
+			<svg viewBox="0 0 89 89" xmlns="http://www.w3.org/2000/svg">
+  				<path d="M44.5 0C19.778 0 0 19.778 0 44.5c0 6.922 1.648 13.185 4.285 18.789l.33.33 27.36-27.36-8.242-8.57h37.578v37.578l-8.57-8.57-27.69 27.688C30.986 87.352 37.579 89 44.5 89 69.222 89 89 69.222 89 44.5S69.222 0 44.5 0z" fill="#df2b26" fill-rule="nonzero"/>
+			</svg>
 				<span class="logo-text"><?php bloginfo( 'name' ); ?></span>
 			</a>
 			<?php if ( is_front_page() ) : ?>
@@ -67,7 +64,7 @@
 
 
 	</div> <!-- container -->
-</div> <!-- site-top -->
+</div> <!-- site-header -->
 
 <div id="site-content" class='site-content'>
 

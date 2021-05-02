@@ -32,20 +32,18 @@
 
 		&:hover,
 		&:focus {
-			color: var(--c-10up-red);
+			color: var(--c-red);
 		}
 	}
 
-	& .menu-item-has-children a:after {
+	& .menu-item-has-children a::after {
 		display: none;
 	}
 
 	& ul .sub-menu {
 		display: block;
 
-
-
-		& a:before {
+		& a::before {
 			content: "- ";
 		}
 	}

@@ -1,8 +1,9 @@
-.site-top {
+.site-header {
 	background: var(--c-white);
 	border-bottom: 1px solid var(--c-grey-200);
+	padding: var(--sp-m) 0;
 
-	& .site-top__container {
+	& .site-header__container {
 		position: relative;
 
 		@media (--bp-medium) {
@@ -22,10 +23,6 @@
 		top: 50px;
 		width: 100%;
 
-		&.nav-opened {
-			height: auto;
-		}
-
 		@media (--bp-medium) {
 			background: transparent;
 			display: flex;
@@ -38,9 +35,15 @@
 			transform: translate(0, 0);
 			width: auto;
 		}
+
+		&.nav-opened {
+			border-top: 1px solid var(--c-grey-300);
+			height: auto;
+		}
 	}
 
 	& .primary-menu-button {
+		color: var(--c-black);
 		display: flex;
 		font-size: 2rem;
 		margin: auto 0 auto auto;
@@ -51,6 +54,11 @@
 
 		@media (--bp-medium) {
 			display: none;
+		}
+
+		&:hover {
+			background: transparent;
+			color: var(--c-red);
 		}
 	}
 

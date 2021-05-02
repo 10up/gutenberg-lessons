@@ -11,7 +11,7 @@ get_header(); ?>
 
 		<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">
-				<div class="container-content">
+				<div class="entry-content container-content">
 				<?php if ( have_posts() ) : ?>
 					<?php while ( have_posts() ) : the_post(); ?>
 						<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -30,12 +30,11 @@ get_header(); ?>
 			</aside>
 
 			<aside>
-				<h2 class="aside-title">Title</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, nesciunt, vitae, distinctio molestias
 					amet facere commodi ipsa minima deserunt ut modi repellendus corrupti similique eaque odio sint dicta ullam animi!
 				</p>
 			</aside>
-
+			<a href="#">Learn more about...</a>
 		</div>
 
 	</div>
