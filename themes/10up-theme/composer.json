@@ -12,7 +12,7 @@
   },
   "autoload": {
     "psr-4": {
-      "TenUpTheme\\": "includes/classes/"
+      "GutenbergLessons\\": "includes/classes/"
     }
   }
 }

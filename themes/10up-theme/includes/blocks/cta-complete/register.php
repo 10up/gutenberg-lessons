@@ -2,10 +2,10 @@
 /**
  * Gutenberg Blocks setup
  *
- * @package GutenbergLessons\Blocks\Example
+ * @package GutenbergLessons\Blocks\CTAComplete
  */
 
-namespace GutenbergLessons\Blocks\Example;
+namespace GutenbergLessons\Blocks\CTAComplete;
 
 /**
  * Register the block
@@ -14,9 +14,10 @@ function register() {
 	$n = function( $function ) {
 		return __NAMESPACE__ . "\\$function";
 	};
+
 	// Register the block.
 	register_block_type_from_metadata(
-		TENUP_THEME_BLOCK_DIR . '/example-block', // this is the directory where the block.json is found.
+		TENUP_THEME_BLOCK_DIR . '/cta-complete', // this is the directory where the block.json is found.
 		[
 			'render_callback' => $n( 'render_block_callback' ),
 		]
@@ -35,10 +36,10 @@ function register() {
 function render_block_callback( $attributes, $content, $block ) {
 	ob_start();
 	get_template_part(
-		'includes/blocks/example-block/markup',
+		'includes/blocks/cta-complete/markup',
 		null,
 		[
-			'class_name' => 'wp-block-tenup-example',
+			'class_name' => 'wp-block-tenup-cta-complete',
 			'attributes' => $attributes,
 			'content'    => $content,
 			'block'      => $block,

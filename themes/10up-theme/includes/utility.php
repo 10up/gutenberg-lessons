@@ -8,10 +8,10 @@
  * to Namespaces.
  *
  * @link https://developer.wordpress.org/themes/basics/template-tags/
- * @package TenUpTheme
+ * @package GutenbergLessons
  */
 
-namespace TenUpTheme\Utility;
+namespace GutenbergLessons\Utility;
 
 /**
  * Get asset info from extracted asset files
