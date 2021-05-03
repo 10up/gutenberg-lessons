@@ -2,7 +2,7 @@
 /**
  * WP Theme constants and setup functions
  *
- * @package TenUpTheme
+ * @package GutenbergLessons
  */
 
 // Useful global constants.
@@ -19,8 +19,8 @@ require_once TENUP_THEME_INC . 'utility.php';
 require_once TENUP_THEME_INC . 'blocks.php';
 
 // Run the setup functions.
-TenUpTheme\Core\setup();
-TenUpTheme\Blocks\setup();
+GutenbergLessons\Core\setup();
+GutenbergLessons\Blocks\setup();
 
 // Require Composer autoloader if it exists.
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {

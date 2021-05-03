@@ -2,7 +2,7 @@
 /**
  * The template for displaying the search form.
  *
- * @package TenUpTheme
+ * @package GutenbergLessons
  */
 
 ?>

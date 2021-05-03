@@ -5,9 +5,9 @@
  * @package TenUpScaffold\Core
  */
 
-namespace TenUpTheme\Blocks;
+namespace GutenbergLessons\Blocks;
 
-use TenUpTheme\Blocks\Example;
+use GutenbergLessons\Blocks\CTAComplete;
 
 
 /**
@@ -48,12 +48,11 @@ function register_theme_blocks() {
 	// Filter the plugins URL to allow us to have blocks in themes with linked assets. i.e editorScripts
 	add_filter( 'plugins_url', __NAMESPACE__ . '\filter_plugins_url', 10, 2 );
 
-
 	// Require custom blocks.
-	require_once TENUP_THEME_BLOCK_DIR . '/example-block/register.php';
+	require_once TENUP_THEME_BLOCK_DIR . '/cta-complete/register.php';
 
 	// Call block register functions for each block.
-	Example\register();
+	CTAComplete\register();
 
 	// Remove the filter after we register the blocks
 	remove_filter( 'plugins_url', __NAMESPACE__ . '\filter_plugins_url', 10, 2 );
@@ -105,8 +104,8 @@ function blocks_categories( $categories, $post ) {
 		$categories,
 		array(
 			array(
-				'slug'  => 'tenup-scaffold-blocks',
-				'title' => __( 'Custom Blocks', 'tenup-theme' ),
+				'slug'  => 'gutenberg-lessons',
+				'title' => __( 'Completed Blocks', 'gutenberg-lessons' ),
 			),
 		)
 	);

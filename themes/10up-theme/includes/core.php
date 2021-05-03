@@ -2,12 +2,12 @@
 /**
  * Core setup, site hooks and filters.
  *
- * @package TenUpTheme
+ * @package GutenbergLessons
  */
 
-namespace TenUpTheme\Core;
+namespace GutenbergLessons\Core;
 
-use TenUpTheme\Utility;
+use GutenbergLessons\Utility;
 
 /**
  * Set up theme defaults and register supported WordPress features.
@@ -36,7 +36,7 @@ function setup() {
  *
  * Translations can be added to the /languages directory.
  * If you're building a theme based on "tenup-theme", change the
- * filename of '/languages/TenUpTheme.pot' to the name of your project.
+ * filename of '/languages/GutenbergLessons.pot' to the name of your project.
  *
  * @return void
  */
