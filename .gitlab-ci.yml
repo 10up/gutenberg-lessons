@@ -9,9 +9,5 @@ include:
   project: 10up-build/ci-library
   file: /main.yml
 
-build_files:
-  stage: build
-  script:
-    - cd themes/10up-theme && npm install && npm run build
-  only:
-    - staging
+WordPress:
+  extends: .wordpress-build-common
