@@ -12,6 +12,6 @@ include:
 build_files:
   stage: build
   script:
-    - bash echo 'building'
+    - cd themes/10up-theme && npm install && npm run build
   only:
     - trunk
