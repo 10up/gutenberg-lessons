@@ -13,6 +13,22 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
  * 		Anything you've setup in block.json as an attribute should be listed here for use in the *		block's editing interface.
  * (2) The "other things" are things that come from WordPress itself. setAttributes, for example, 		is a function common to all block components that we can pass into our block as a prop.
  */
+
+/**
+ * Block Edit Component
+ *
+ * @param {Object}    props                        Block properties ( props ).
+ * @param {Object}    props.attributes             Block attributes as defined in block.json.
+ * @param {string}    props.attributes.title       The Title attribute as defined in block.json.
+ * @param {string}    props.attributes.description The description attribute as defined in block.json.
+ * @param {string}    props.attributes.ctaText     Text for the CTA Text as defined in block.json.
+ * @param {string}    props.attributes.ctaLink     Text for the CTA link as defined in block.json.
+ * @param {boolean}   props.attributes.showCTALink Are we showing the CTA link?
+ * @param {string}    props.className              Class name of the block.BlobPropertyBag
+ * @param {Function}  props.setAttributes          Function to set the block attributes
+ *
+ * @return {*} React Element
+ */
 const ExampleBockEdit = ({
 	attributes: { title, description, ctaText, ctaLink, showCTALink },
 	className,
@@ -50,7 +66,11 @@ const ExampleBockEdit = ({
 			</div>
 			<InspectorControls>
 				<PanelBody>
-					<p className="cta-link-helper-text">This toggle lets you conditionally output other markup and attributes in the block. (NOTE: We should style this paragraph, just to show (1) that it's possible, and (2) where to put those styles.</p>
+					<p className="cta-link-helper-text">
+						This toggle lets you conditionally output other markup and attributes in the
+						block. (NOTE: We should style this paragraph, just to show (1) that it's
+						possible, and (2) where to put those styles.
+					</p>
 					<ToggleControl
 						label={__('Show CTA button', 'gutenberg-lessons')}
 						checked={showCTALink}
