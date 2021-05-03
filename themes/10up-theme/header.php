@@ -24,11 +24,11 @@
 		<?php if ( is_front_page() ) : ?>
 		<h1>
 			<?php endif; ?>
-			<a class="custom-logo-link" href="<?php bloginfo( 'url' ); ?>">
+			<a class="custom-logo-link" href="<?php echo esc_url( get_bloginfo( 'url' ) ); ?>">
 			<svg viewBox="0 0 89 89" xmlns="http://www.w3.org/2000/svg">
   				<path d="M44.5 0C19.778 0 0 19.778 0 44.5c0 6.922 1.648 13.185 4.285 18.789l.33.33 27.36-27.36-8.242-8.57h37.578v37.578l-8.57-8.57-27.69 27.688C30.986 87.352 37.579 89 44.5 89 69.222 89 89 69.222 89 44.5S69.222 0 44.5 0z" fill="#df2b26" fill-rule="nonzero"/>
 			</svg>
-				<span class="logo-text"><?php bloginfo( 'name' ); ?></span>
+				<span class="logo-text"><?php esc_html( get_bloginfo( 'name' ) ); ?></span>
 			</a>
 			<?php if ( is_front_page() ) : ?>
 		</h1>
