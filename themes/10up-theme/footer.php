@@ -11,7 +11,7 @@
 <div class='site-footer'>
 	<div class="container">
 		<div class="site-footer__wrapper">
-			<p class="h3">Gutenberg Training</p>
+			<p class="site-footer__site-name">Gutenberg Training</p>
 
 			<nav class="footer-nav">
 				<?php

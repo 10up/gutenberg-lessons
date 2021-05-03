@@ -16,14 +16,14 @@
 // Set defaults.
 $attributes = $args['attributes'];
 ?>
-<div class="<?php echo esc_attr( $args['classname'] ); ?>">
-	<h2 class="wp-block-example-block__title">
+<div class="call-to-action-block">
+	<h2 class="call-to-action-block__title">
 		<?php echo wp_kses_post( $attributes['title'] ); ?>
 	</h2>
-	<p class="wp-block-cta-complete__description">
+	<p class="call-to-action-block__description">
 		<?php echo wp_kses_post( $attributes['description'] ); ?>
 	</p>
 	<?php if ( true === $attributes['showCTALink'] ) : ?>
-		<a href="<?php echo esc_url( $attributes['ctaLink'] ); ?>" class="wp-block-cta-complete__cta_link"><?php echo esc_html( $attributes['ctaText'] ); ?> </a>
+		<a href="<?php echo esc_url( $attributes['ctaLink'] ); ?>" class="call-to-action-block__link"><?php echo esc_html( $attributes['ctaText'] ); ?> </a>
 	<?php endif; ?>
 </div>

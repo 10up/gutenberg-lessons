@@ -47,5 +47,8 @@
 			content: "- ";
 		}
 	}
+}
 
+.site-footer__site-name {
+	font-weight: var(--fw-bold);
 }

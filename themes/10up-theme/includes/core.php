@@ -58,6 +58,41 @@ function theme_setup() {
 			'gallery',
 		)
 	);
+	add_theme_support( 'disable-custom-colors' );
+	add_theme_support( 'disable-custom-font-sizes' );
+	add_theme_support( 'editor-styles' );
+	add_theme_support( 'responsive-embeds' );
+	add_theme_support( 'disable-custom-gradients' );
+	add_theme_support(
+		'editor-gradient-presets',
+		[]
+	);
+
+	add_theme_support(
+		'editor-color-palette',
+		[
+			[
+				'name'  => __( 'White', 'tenup-theme' ),
+				'slug'  => 'white',
+				'color' => '#fff',
+			],
+			[
+				'name'  => __( 'Black', 'tenup-theme' ),
+				'slug'  => 'black',
+				'color' => '#000000',
+			],
+			[
+				'name'  => __( 'Grey', 'tenup-theme' ),
+				'slug'  => 'grey',
+				'color' => '#656565',
+			],
+			[
+				'name'  => __( ' Red', 'tenup-theme' ),
+				'slug'  => 'red',
+				'color' => '#df2b26',
+			],
+		]
+	);
 
 	// This theme uses wp_nav_menu() in three locations.
 	register_nav_menus(

@@ -2,12 +2,15 @@
 
 /* Container Vars */
 :root {
-	--max-site-width: 80rem; /* 1280px */
+	/* Site width: 1280px */
+	--max-site-width: 80rem;
 
 	/* Fonts */
 	--fw-bold: 700;
 	--fw-regular: 500;
-	--font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
 	--fw-semibold: 600;
-	--font-serif: Georgia, "Iowan Old Style", "Apple Garamond", Baskerville, "Times New Roman", "Droid Serif", Times, "Source Serif Pro", serif;
+
+	--font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+
+	--t-default: 300ms;
 }
