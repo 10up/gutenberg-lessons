@@ -1,0 +1,9 @@
+body {
+	background: var(--c-grey-100);
+	font-family: var(--font-sans);
+	line-height: 1.7;
+}
+
+.site-main {
+	margin-bottom: var(--sp-xl);
+}

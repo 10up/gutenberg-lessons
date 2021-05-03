@@ -1,0 +1,5 @@
+.call-to-action-block {
+	border: 1px solid var(--c-red);
+	border-bottom: 4px solid var(--c-red-100);
+	padding: var(--gutter);
+}

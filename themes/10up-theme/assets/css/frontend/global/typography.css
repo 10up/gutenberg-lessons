@@ -1,0 +1,54 @@
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+p {
+	margin: 1rem 0 0 0;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+a {
+	color: var(--c-red);
+}
+
+:--headings {
+	font-family: var(--font-sans);
+	font-weight: 400;
+	line-height: 1.6;
+	margin: 0;
+
+	& a {
+		color: currentColor;
+		text-decoration: none;
+	}
+}
+
+h1,
+.is-style-h1 {
+	color: var(--c-black);
+	font-size: var(--fs-plus-4);
+	font-weight: var(--fw-bold);
+	margin-top: 0;
+}
+
+h2,
+.is-style-h2 {
+	font-size: var(--fs-plus-3);
+	font-weight: 600;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h3,
+.is-style-h3 {
+	font-size: var(--fs-plus-2);
+}
+
+h4,
+.is-style-h4 {
+	color: var(--c-black);
+	font-size: var(--fs-plus-1);
+}

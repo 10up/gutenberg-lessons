@@ -1,0 +1,17 @@
+.site-header {
+	background: var(--c-white);
+	border-bottom: 1px solid var(--c-grey-200);
+	padding: var(--sp-m) 0;
+	position: relative;
+
+	& h1 {
+		margin: 0;
+	}
+}
+
+
+.site-header__container {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}

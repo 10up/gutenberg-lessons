@@ -1,0 +1,57 @@
+.button {
+	background: transparent;
+	color: var(--c-red);
+	cursor: pointer;
+	transition: all 0.3s;
+
+	&:focus,
+	&:hover {
+		background: var(--c-red);
+		color: var(--c-white);
+	}
+
+}
+
+.wp-block-button {
+	& .wp-block-button__link {
+		background-color: var(--c-white);
+		border-radius: 3px;
+		color: var(--c-black);
+		padding: 5px 15px;
+		transition: color var(--t-default);
+
+		&:hover {
+			color: var(--c-red);
+		}
+	}
+
+	/* Change this to "primary" when block styles are added */
+	&.is-style-outline {
+
+		& .wp-block-button__link {
+			color: var(--c-red);
+			transition: color var(--t-default);
+
+			&:hover {
+				color: var(--c-red-500);
+
+			}
+		}
+	}
+
+	/* Change this to "secondary" when block styles are added */
+	&.is-style-outline {
+
+		& .wp-block-button__link {
+			color: var(--c-white);
+			border: none;
+			background-color: var(--c-red);
+			transition: background-color var(--t-default);
+
+			&:hover {
+				background-color: var(--c-red-500);
+				color: var(--c-white);
+			}
+		}
+	}
+}
