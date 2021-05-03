@@ -1,0 +1,31 @@
+/*
+ * Type Scale
+ * Based on <html> font-size: 100% || 16px
+ */
+
+:root {
+
+	--fs-plus-4: 1.75rem; 	/* 28px H1 */
+	--fs-plus-3: 1.5rem; 	/* 24px H2 */
+	--fs-plus-2: 1.25rem; 	/* 20px H3 */
+	--fs-plus-1: 1.125rem; 	/* 18px H4 */
+	--fs-base: 1rem; 		/* 16px Body */
+	--fs-minus-1: 0.875rem; /* 14px */
+
+	--lh-large: 1.8;
+	--lh-base: 1.6;
+	--lh-small: 1.2;
+}
+
+@media (--bp-large) {
+
+	:root {
+
+		--fs-plus-4: 2rem; 		/* 32px H1 */
+		--fs-plus-3: 1.75rem; 	/* 28px H2 */
+		--fs-plus-2: 1.5rem; 	/* 24px H3 */
+		--fs-plus-1: 1.25rem; 	/* 20px H4 */
+		--fs-base: 1rem; 		/* 16px Body 2 */
+		--fs-minus-1: 0.875rem; /* 14px */
+	}
+}

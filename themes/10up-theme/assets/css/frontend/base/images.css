@@ -1,0 +1,22 @@
+img,
+svg {
+	height: auto;
+	max-width: 100%;
+}
+
+.icon {
+	height: 1em;
+	position: relative;
+	width: 1em;
+
+	& path {
+		fill: currentColor;
+	}
+}
+
+.wp-block-image {
+	background-color: var(--c-white);
+	margin-left: 0;
+	margin-right: 0;
+	padding: var(--gutter);
+}

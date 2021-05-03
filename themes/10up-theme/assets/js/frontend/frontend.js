@@ -1,1 +1,1 @@
-// import foo from './components/bar';
+import './components/navigation';

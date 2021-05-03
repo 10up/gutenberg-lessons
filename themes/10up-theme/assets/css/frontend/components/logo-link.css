@@ -1,0 +1,19 @@
+.custom-logo-link {
+	align-items: center;
+	color: var(--c-black);
+	display: flex;
+	padding: 10px 0;
+	text-decoration: none;
+
+	& svg {
+		width: 30px;
+	}
+
+	& .logo-text {
+		color: var(--c-black);
+		font-size: var(--fs-plus-1);
+		font-weight: var(--fw-bold);
+		padding-left: var(--sp-s);
+		text-transform: capitalize;
+	}
+}

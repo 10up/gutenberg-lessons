@@ -1,0 +1,17 @@
+/*
+ * Base spacing values
+ */
+:root {
+
+	/* 8px = base unit for calculating spacing system */
+	--sp-baseline: 0.5rem;
+	--sp-s: var(--sp-baseline); 	/* = 8px */
+	--sp-base: 1rem; 				/* 8px * 2  = 1rem   = 16px */
+	--sp-m: 1.5rem; 				/* 8px * 3  = 1.5rem = 24px */
+	--sp-l: 2rem; 					/* 8px * 4  = 2rem   = 32px */
+	--sp-xl: 2.5rem; 				/* 8px * 5  = 2.5rem = 40px */
+	--sp-xxl: 3rem; 				/* 8px * 6  = 3rem   = 48px */
+	--sp-xxxl: 4rem; 				/* 8px * 8  = 4rem   = 64px */
+
+	--gutter: var(--sp-m);
+}
