@@ -38,6 +38,7 @@
       "shared-style": "./assets/css/shared/shared-style.css",
       "style": "./assets/css/frontend/style.css",
       "styleguide-style": "./assets/css/styleguide/styleguide.css",
+      "core-block-overrides": "./includes/core-block-overrides.js",
       "cta-complete-block": "./includes/blocks/cta-complete/index.js"
     }
   }
