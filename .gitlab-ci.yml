@@ -1,0 +1,17 @@
+stages:
+  - build
+  - test
+  - pre-deploy
+  - deploy
+  - post-deploy
+
+include:
+  project: 10up-build/ci-library
+  file: /main.yml
+
+build_files:
+  stage: build
+  script:
+    - bash echo 'building'
+  only:
+    - trunk
