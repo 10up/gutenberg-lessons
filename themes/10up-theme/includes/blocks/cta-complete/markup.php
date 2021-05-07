@@ -2,7 +2,7 @@
 /**
  * Example block markup
  *
- * @package TenUpScaffold\Blocks\CTAComplete
+ * @package GutenbergLessons\Blocks\CTAComplete
  *
  * @var array $args {
  *     $args is provided by get_template_call.
@@ -23,7 +23,9 @@ $attributes = $args['attributes'];
 	<p class="call-to-action-block__description">
 		<?php echo wp_kses_post( $attributes['description'] ); ?>
 	</p>
-	<?php if ( true === $attributes['showCTALink'] ) : ?>
+	<?php if ( isset( $attributes['showCTALink'] ) && true === $attributes['showCTALink'] ) : ?>
 		<a href="<?php echo esc_url( $attributes['ctaLink'] ); ?>" class="call-to-action-block__link"><?php echo esc_html( $attributes['ctaText'] ); ?> </a>
 	<?php endif; ?>
 </div>
+
+DONE!
