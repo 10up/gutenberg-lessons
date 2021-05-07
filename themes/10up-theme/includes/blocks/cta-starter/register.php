@@ -5,7 +5,7 @@
  * @package GutenbergLessons\Blocks\CTAComplete
  */
 
-namespace GutenbergLessons\Blocks\CTAComplete;
+namespace GutenbergLessons\Blocks\CTAStarter;
 
 /**
  * Register the block
@@ -17,7 +17,7 @@ function register() {
 
 	// Register the block.
 	register_block_type_from_metadata(
-		TENUP_THEME_BLOCK_DIR . '/cta-complete', // this is the directory where the block.json is found.
+		TENUP_THEME_BLOCK_DIR . '/cta-starter', // this is the directory where the block.json is found.
 		[
 			'render_callback' => $n( 'render_block_callback' ),
 		]
@@ -36,10 +36,10 @@ function register() {
 function render_block_callback( $attributes, $content, $block ) {
 	ob_start();
 	get_template_part(
-		'includes/blocks/cta-complete/markup',
+		'includes/blocks/cta-starter/markup',
 		null,
 		[
-			'class_name' => 'wp-block-tenup-cta-complete',
+			'class_name' => 'wp-block-tenup-cta-starter',
 			'attributes' => $attributes,
 			'content'    => $content,
 			'block'      => $block,

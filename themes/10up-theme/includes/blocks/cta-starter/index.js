@@ -1,9 +1,4 @@
 /**
- * Example-block
- * Custom title block -- feel free to delete
- */
-
-/**
  * WordPress dependencies
  */
 import { __ } from '@wordpress/i18n';
@@ -22,8 +17,8 @@ import block from './block.json';
  * Register block
  */
 registerBlockType(block.name, {
-	title: __('CTA - Complete', 'gutenberg-lessons'),
-	description: __('Complete version of the CTA block', 'gutenberg-lessons'),
+	title: __('CTA - Starter', 'gutenberg-lessons'),
+	description: __('Starter version of the CTA block.', 'gutenberg-lessons'),
 	edit,
 	save: () => null,
 });

@@ -1,36 +1,19 @@
 {
-	"title": "CTA - Complete",
-	"description": "Complete version of the CTA block",
+	"title": "CTA - Starter",
+	"description": "Starter version of the CTA block.",
 	"text-domain": "gutenberg-lessons",
-	"name": "gutenberg-lessons/cta-complete",
+	"name": "gutenberg-lessons/cta-starter",
   "icon": "feedback",
   "category": "gutenberg-lessons",
 	"attributes":{
 		"title": {
 			"type" : "string"
-		},
-		"description": {
-			"type" : "string"
-		},
-    "showCTALink": {
-      "type": "boolean"
-    },
-    "ctaLink": {
-      "type" : "string"
-    },
-    "ctaText": {
-      "type" : "string",
-      "default": "Learn more →"
-    }
+		}
   },
   "example": {
     "attributes":{
-      "title": "Title",
-      "description":"Venenatis saepe perspiciatis illum qui voluptatum sagittis nihil litora ipsum sequi, eiusmod tellus soluta, pulvinar! Nemo exercitationem hic risus fugit! Omnis, proident tempora perspiciatis nulla.",
-      "showCTALink": true,
-      "ctaLink": "https://10up.com",
-      "ctaText": "Cta Text"
+      "title": "CTA Starter Example"
     }
   },
-	"editorScript": "file:../../../dist/blocks/cta-complete-block/editor.js"
+	"editorScript": "file:../../../dist/blocks/cta-starter-block/editor.js"
 }
