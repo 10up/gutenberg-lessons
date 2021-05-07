@@ -9,6 +9,7 @@ const siteNavigation = () => {
 		return;
 	}
 
+	// eslint-disable-next-line no-new
 	new Navigation('.primary-nav');
 };
 
