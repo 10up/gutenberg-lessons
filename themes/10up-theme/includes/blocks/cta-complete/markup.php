@@ -27,5 +27,3 @@ $attributes = $args['attributes'];
 		<a href="<?php echo esc_url( $attributes['ctaLink'] ); ?>" class="call-to-action-block__link"><?php echo esc_html( $attributes['ctaText'] ); ?> </a>
 	<?php endif; ?>
 </div>
-
-DONE!
