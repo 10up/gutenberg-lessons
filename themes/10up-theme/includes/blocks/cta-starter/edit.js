@@ -3,8 +3,8 @@
  */
 import { __ } from '@wordpress/i18n';
 import { Fragment } from '@wordpress/element';
-import { RichText } from '@wordpress/block-editor';
-
+import { RichText, InspectorControls, URLInput } from '@wordpress/block-editor';
+import { PanelBody, ToggleControl } from '@wordpress/components';
 /**
  * Block Edit Component
  *
@@ -29,6 +29,9 @@ const ExampleBockEdit = ({ attributes: { title }, className, setAttributes }) =>
 					onChange={(title) => setAttributes({ title })}
 				/>
 			</div>
+			<InspectorControls>
+				<PanelBody>Toggle control</PanelBody>
+			</InspectorControls>
 		</Fragment>
 	);
 };
