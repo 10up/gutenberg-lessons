@@ -1,0 +1,19 @@
+{
+	"title": "CTA - Starter",
+	"description": "Starter version of the CTA block.",
+	"text-domain": "gutenberg-lessons",
+	"name": "gutenberg-lessons/cta-starter",
+  "icon": "feedback",
+  "category": "gutenberg-lessons",
+	"attributes":{
+		"title": {
+			"type" : "string"
+		}
+  },
+  "example": {
+    "attributes":{
+      "title": "CTA Starter Example"
+    }
+  },
+	"editorScript": "file:../../../dist/blocks/cta-starter-block/editor.js"
+}
