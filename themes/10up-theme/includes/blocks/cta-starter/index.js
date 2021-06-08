@@ -3,7 +3,6 @@
  */
 import { __ } from '@wordpress/i18n';
 import { registerBlockType } from '@wordpress/blocks';
-import domReady from '@wordpress/dom-ready';
 
 /**
  * Internal dependencies
@@ -17,11 +16,9 @@ import block from './block.json';
 /**
  * Register block
  */
-domReady(function () {
-	registerBlockType(block.name, {
-		title: __('CTA - Complete', 'gutenberg-lessons'),
-		description: __('Complete version of the CTA block', 'gutenberg-lessons'),
-		edit,
-		save: () => null,
-	});
+registerBlockType(block.name, {
+	title: __('CTA - Starter', 'gutenberg-lessons'),
+	description: __('Starter version of the CTA block.', 'gutenberg-lessons'),
+	edit,
+	save: () => null,
 });
