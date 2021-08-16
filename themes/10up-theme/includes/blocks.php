@@ -2,7 +2,7 @@
 /**
  * Gutenberg Blocks setup
  *
- * @package TenUpScaffold\Core
+ * @package GutenbergLessons\Core
  */
 
 namespace GutenbergLessons\Blocks;
@@ -50,9 +50,11 @@ function register_theme_blocks() {
 
 	// Require custom blocks.
 	require_once TENUP_THEME_BLOCK_DIR . '/cta-complete/register.php';
+	require_once TENUP_THEME_BLOCK_DIR . '/cta-starter/register.php';
 
 	// Call block register functions for each block.
 	CTAComplete\register();
+	CTAStarter\register();
 
 	// Remove the filter after we register the blocks
 	remove_filter( 'plugins_url', __NAMESPACE__ . '\filter_plugins_url', 10, 2 );

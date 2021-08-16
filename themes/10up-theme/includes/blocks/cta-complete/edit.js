@@ -10,7 +10,7 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
  * Block Props
  * You'll notice two parts here: (1) an attributes object {}, and some (2) other things
  * (1) attributes are what WordPress saves (in the database?), to be passed to template partials.
- * 		Anything you've setup in block.json as an attribute should be listed here for use in the *		block's editing interface.
+ * Anything you've setup in block.json as an attribute should be listed here for use in the *		block's editing interface.
  * (2) The "other things" are things that come from WordPress itself. setAttributes, for example, 		is a function common to all block components that we can pass into our block as a prop.
  */
 
@@ -68,8 +68,8 @@ const ExampleBockEdit = ({
 				<PanelBody>
 					<p className="cta-link-helper-text">
 						This toggle lets you conditionally output other markup and attributes in the
-						block. (NOTE: We should style this paragraph, just to show (1) that it's
-						possible, and (2) where to put those styles.
+						block. (NOTE: We should style this paragraph, just to show (1) that
+						it&lsquo;s possible, and (2) where to put those styles.
 					</p>
 					<ToggleControl
 						label={__('Show CTA button', 'gutenberg-lessons')}
