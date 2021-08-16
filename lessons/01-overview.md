@@ -85,3 +85,6 @@ That's a quick tour of the block editor, some of the common lingo, and a peek at
 1. Blocks live in the block editor. Most blocks have two places to control its settings: a **Toolbar** above them  and an **Inspector** in the right sidebar.
 2. Blocks use and store **Attributes**. You can think of attributes in the same way you think of custom fields.
 3. Our scaffolding has a specific structure for blocks. An example block ships with our [WP Scaffolding](https://github.com/10up/wp-scaffold/tree/trunk/themes/10up-theme/includes/blocks/example-block).
+
+## Further Reading
+1. [Block Editor Handbook](https://developer.wordpress.org/block-editor/)
