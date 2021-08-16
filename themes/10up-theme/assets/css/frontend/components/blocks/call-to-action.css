@@ -1,5 +1,27 @@
 .call-to-action-block {
-	border: 1px solid var(--c-red);
-	border-bottom: 4px solid var(--c-red-100);
+	border: 2px solid var(--c-red);
+	border-bottom: 6px solid var(--c-red-100);
 	padding: var(--gutter);
+}
+
+.call-to-action-block__title {
+	font-family: var(--font-serif);
+	font-size: var(--fs-plus-1);
+	font-style: italic;
+	font-weight: 600;
+}
+
+.call-to-action-block__link {
+	background-color: var(--c-red-100);
+	border-radius: 5px;
+	color: var(--c-white);
+	font-size: var(--fs-base);
+	padding: var(--sp-s) var(--sp-m);
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: background-color 300ms;
+
+	&:hover {
+		background-color: var(--c-red);
+	}
 }

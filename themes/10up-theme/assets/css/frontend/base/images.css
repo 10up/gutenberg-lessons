@@ -18,5 +18,5 @@ svg {
 	background-color: var(--c-white);
 	margin-left: 0;
 	margin-right: 0;
-	padding: var(--gutter);
+	padding: var(--gutter) 0;
 }

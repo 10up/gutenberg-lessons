@@ -1,17 +1,31 @@
 .site-header {
 	background: var(--c-white);
-	border-bottom: 1px solid var(--c-grey-200);
-	padding: var(--sp-m) 0;
+	border-bottom: 1px solid var(--c-black);
+	margin: 5rem auto;
+	max-width: 520px;
 	position: relative;
-
-	& h1 {
-		margin: 0;
-	}
+	text-align: center;
 }
 
+.site-title {
+	border-bottom: 1px solid var(--c-black);
+	font-family: var(--font-serif);
+	font-size: 2.25rem;
+	letter-spacing: -0.125rem;
+}
 
-.site-header__container {
+.site-header__byline-container {
 	align-items: center;
 	display: flex;
+	font-family: var(--font-sans);
+	font-size: 1.125rem;
 	justify-content: space-between;
+	letter-spacing: 0.175rem;
+	padding: var(--sp-s) 0;
+	text-transform: uppercase;
+
+	& svg {
+		height: 25px;
+		width: 25px;
+	}
 }

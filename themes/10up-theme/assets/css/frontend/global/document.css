@@ -1,9 +1,8 @@
 body {
-	background: var(--c-grey-100);
-	font-family: var(--font-sans);
+	font-family: var(--font-serif);
 	line-height: 1.7;
 }
 
 .site-main {
-	margin-bottom: var(--sp-xl);
+	max-width: var(--max-site-width);
 }

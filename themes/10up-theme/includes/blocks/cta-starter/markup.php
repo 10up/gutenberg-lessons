@@ -17,7 +17,7 @@
 $attributes = $args['attributes'];
 ?>
 <div class="call-to-action-block">
-	<h2 class="call-to-action-block__title">
+	<h3 class="call-to-action-block__title">
 		<?php echo wp_kses_post( $attributes['title'] ); ?>
-	</h2>
+	</h3>
 </div>
