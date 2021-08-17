@@ -1,17 +1,17 @@
 .call-to-action-block {
-	background: white;
+	background: var(--c-white);
 	border: 2px solid var(--c-red);
 	padding: var(--gutter);
 	position: relative;
 
-	&:after {
+	&::after {
 		background: var(--c-red);
+		bottom: -10px;
+		content: "";
+		height: 100%;
 		position: absolute;
 		right: -10px;
-		bottom: -10px;
-		content: '';
 		width: 100%;
-		height: 100%;
 		z-index: -1;
 	}
 }
@@ -23,16 +23,22 @@
 }
 
 .call-to-action-block__link {
-	background-color: var(--c-red-100);
+	background-color: var(--c-red);
 	border-radius: 5px;
 	color: var(--c-white);
+	display: inline-block;
 	font-size: var(--fs-base);
+	margin-top: var(--sp-l);
 	padding: var(--sp-s) var(--sp-m);
 	text-decoration: none;
 	text-transform: uppercase;
 	transition: background-color 300ms;
 
 	&:hover {
-		background-color: var(--c-red);
+		background-color: var(--c-red-500);
 	}
+}
+
+.call-to-action-block__description {
+	font-size: var(--fs-plus-1);
 }

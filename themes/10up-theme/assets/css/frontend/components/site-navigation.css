@@ -1,10 +1,12 @@
 .site-navigation {
-	display: flex;
 	align-items: center;
+	display: flex;
+	overflow-x: auto;
 
 	& a {
 		color: var(--c-black);
 		text-decoration: none;
+		white-space: nowrap;
 
 		&:hover {
 			color: var(--c-red);
@@ -14,5 +16,9 @@
 }
 
 .site-navigation__separator {
-	margin: 0 var(--sp-l);
+	margin: 0 var(--sp-s);
+
+	@media (--bp-medium) {
+		margin: 0 var(--sp-l);
+	}
 }

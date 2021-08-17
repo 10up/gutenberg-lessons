@@ -1,8 +1,11 @@
 .site-header {
-	margin-left: 10%;
-	margin-top: 5rem;
 	margin-bottom: 3rem;
+	margin-top: 5rem;
 	max-width: 620px;
+
+	@media (--bp-large) {
+		margin-left: 6%;
+	}
 }
 
 .site-title {

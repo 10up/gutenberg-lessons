@@ -1,8 +1,10 @@
 .container {
-	margin-left: 10%;
 	max-width: var(--max-site-width);
 	padding-left: var(--gutter);
 	padding-right: var(--gutter);
-	width: 100%;
+
+	@media (--bp-large) {
+		margin-left: 6%;
+	}
 }
 
