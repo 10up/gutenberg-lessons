@@ -1,4 +1,4 @@
-const { unregisterBlockStyle } = wp.blocks;
+import { unregisterBlockStyle } from '@wordpress/blocks';
 
 function unregisterPullquoteStyles() {
 	unregisterBlockStyle('core/pullquote', ['solid-color']);

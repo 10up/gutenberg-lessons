@@ -1,4 +1,4 @@
-const { registerBlockStyle } = wp.blocks;
+import { registerBlockStyle } from '@wordpress/blocks';
 
 function registerImageStyles() {
 	registerBlockStyle('core/image', {
