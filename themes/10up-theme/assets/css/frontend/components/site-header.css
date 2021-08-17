@@ -1,31 +1,21 @@
 .site-header {
-	background: var(--c-white);
-	border-bottom: 1px solid var(--c-black);
-	margin: 5rem auto;
-	max-width: 520px;
-	position: relative;
-	text-align: center;
+	margin-left: 10%;
+	margin-top: 5rem;
+	margin-bottom: 3rem;
+	max-width: 620px;
 }
 
 .site-title {
-	border-bottom: 1px solid var(--c-black);
-	font-family: var(--font-serif);
+	font-family: var(--font-sans);
 	font-size: 2.25rem;
 	letter-spacing: -0.125rem;
+	margin-bottom: var(--sp-s);
+	margin-top: var(--sp-l);
 }
 
-.site-header__byline-container {
-	align-items: center;
-	display: flex;
-	font-family: var(--font-sans);
-	font-size: 1.125rem;
-	justify-content: space-between;
-	letter-spacing: 0.175rem;
-	padding: var(--sp-s) 0;
-	text-transform: uppercase;
 
-	& svg {
-		height: 25px;
-		width: 25px;
-	}
+.site-header__logo {
+	height: 50px;
+	width: 50px;
 }
+

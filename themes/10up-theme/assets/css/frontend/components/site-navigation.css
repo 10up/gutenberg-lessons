@@ -1,27 +1,18 @@
 .site-navigation {
-	border-top: 4px solid var(--c-black);
 	display: flex;
-	font-family: var(--font-sans);
+	align-items: center;
 
 	& a {
-		border-left: 1px solid var(--c-black);
 		color: var(--c-black);
-		padding: var(--sp-s) var(--sp-m);
 		text-decoration: none;
 
 		&:hover {
 			color: var(--c-red);
 			text-decoration: underline;
 		}
-
-		&.site-navigation__repo {
-			margin-left: auto;
-			text-align: center;
-		}
-
-		&:first-child {
-			border: none;
-			padding: var(--sp-s) 0;
-		}
 	}
+}
+
+.site-navigation__separator {
+	margin: 0 var(--sp-l);
 }

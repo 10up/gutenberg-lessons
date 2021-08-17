@@ -1,27 +1,8 @@
 .container {
-	margin: auto;
+	margin-left: 10%;
 	max-width: var(--max-site-width);
 	padding-left: var(--gutter);
 	padding-right: var(--gutter);
 	width: 100%;
 }
 
-.container-fluid {
-	margin: auto;
-	padding-left: var(--gutter);
-	padding-right: var(--gutter);
-	width: 100%;
-}
-
-.sidebar-layout .container-content {
-	padding-left: 0;
-	padding-right: 0;
-
-	@media (--bp-medium) {
-
-		& > .alignfull {
-			margin-left: 0;
-			margin-right: 0;
-		}
-	}
-}

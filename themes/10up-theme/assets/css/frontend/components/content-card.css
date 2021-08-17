@@ -1,18 +1,14 @@
-.content-card {
-	border: 1px solid var(--c-black);
-}
-
-
 .content-card__title {
-	border-bottom: 1px solid var(--c-black);
 	color: var(--c-black);
-	font-family: var(--font-serif);
-	font-size: var(--fs-plus-5);
+	font-size: 7rem;
 	line-height: 1.125;
-	padding: var(--sp-m) var(--sp-l);
+	font-weight: 400;
 }
 
 .content-card__content {
 	font-size: var(--fs-plus-2);
-	padding: var(--sp-l);
+}
+
+.content-card__title-decorator {
+	font-size: 2rem;
 }

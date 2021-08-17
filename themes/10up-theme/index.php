@@ -8,7 +8,7 @@
 get_header(); ?>
 
 	<main id="main" class="site-main container" role="main">
-		<div class="entry-content container-content">
+		<div class="container-content">
 			<?php if ( have_posts() ) : ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 					<?php get_template_part( 'partials/content' ); ?>
