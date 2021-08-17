@@ -15,7 +15,6 @@
 
 // Set defaults.
 $attributes = $args['attributes'];
-print_r($attributes);
 ?>
 
 	<div class="call-to-action-block <?php echo isset( $attributes['className'] ) ? esc_attr( $attributes['className'] ) : ''; ?>">
