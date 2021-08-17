@@ -16,7 +16,9 @@ svg {
 
 .wp-block-image {
 	background-color: var(--c-white);
-	margin-left: 0;
-	margin-right: 0;
-	padding: var(--gutter) 0;
+	margin: 0;
+
+	&.is-style-slightly-rounded img {
+		border-radius: 20px;
+	}
 }
