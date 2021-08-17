@@ -90,3 +90,6 @@ That's a quick tour of block Styles. Let's quickly sumarise the most important t
 1. Try adding two new styles to the core List block to allow for different list styles
 2. Try adding some new styles to the core Separator block
 3. Try removing existing styles on the core Button block and adding a new one
+
+## Further reading
+* [Block Styles](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-styles/)
