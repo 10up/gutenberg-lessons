@@ -35,3 +35,9 @@
 .wp-caption-text {
 	margin: 0;
 }
+
+.hr--short {
+	max-width: 120px;
+	margin: 0;
+	border-color: var(--c-black);
+}

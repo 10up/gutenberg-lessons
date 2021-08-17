@@ -3,7 +3,7 @@
 /* Container Vars */
 :root {
 	/* Site width: 1280px */
-	--max-site-width: 60rem;
+	--max-site-width: 860px;
 
 	--t-default: 300ms;
 }

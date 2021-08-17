@@ -11,7 +11,7 @@
 	<header class="content-card__header">
 		<h2 class="content-card__title">
 			<a href="<?php the_permalink(); ?>">
-				<?php the_title(); ?>
+				<?php the_title(); ?> <span class="content-card__title-decorator">↴</span>
 			</a>
 		</h2>
 	</header>
