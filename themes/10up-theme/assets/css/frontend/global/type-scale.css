@@ -5,6 +5,7 @@
 
 :root {
 
+	--fs-plus-5: 2.5rem; 	/* 40px Post titles */
 	--fs-plus-4: 1.75rem; 	/* 28px H1 */
 	--fs-plus-3: 1.5rem; 	/* 24px H2 */
 	--fs-plus-2: 1.25rem; 	/* 20px H3 */
@@ -20,7 +21,7 @@
 @media (--bp-large) {
 
 	:root {
-
+		--fs-plus-5: 4.5rem; 	/* 72px Post titles */
 		--fs-plus-4: 2rem; 		/* 32px H1 */
 		--fs-plus-3: 1.75rem; 	/* 28px H2 */
 		--fs-plus-2: 1.5rem; 	/* 24px H3 */

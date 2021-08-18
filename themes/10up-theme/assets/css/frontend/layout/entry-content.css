@@ -2,7 +2,7 @@
 .archive-content {
 
 	& > * + * {
-		margin-top: var(--sp-m);
+		margin-top: var(--sp-l);
 	}
 
 	& > :--headings + * {

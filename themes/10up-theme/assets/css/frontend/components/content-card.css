@@ -1,0 +1,15 @@
+.content-card__title {
+	color: var(--c-black);
+	font-size: var(--fs-plus-5);
+	font-weight: 400;
+	line-height: 1;
+}
+
+.content-card__content {
+	font-size: var(--fs-plus-2);
+	margin-top: var(--sp-m);
+}
+
+.content-card__title-decorator {
+	font-size: var(--fs-plus-4);
+}
