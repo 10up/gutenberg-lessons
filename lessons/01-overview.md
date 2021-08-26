@@ -16,6 +16,9 @@ Just so we're all on the same page with block terminology, here's all the import
 
 Now that we have a handle on what things in the interface are called, let's jump into what blocks are made of.
 
+## The Tech Stack
+A common point of confusion with the block editor is how React.js fits in. Custom blocks that we build are just plain ole' HTML, CSS, and PHP on the front of the website. In the admin panel block editor (e.g. when editing a post), everything is written in React.js. If you are writing mark up for the front end or styling a block, React.js is not involved.
+
 ## Block Attributes
 Attributes are the heart of Gutenberg blocks. They're how WordPress stores data, and are the common thread between the editor and the frontend.
 
