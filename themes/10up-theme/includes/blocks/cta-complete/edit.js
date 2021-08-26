@@ -30,11 +30,12 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
  */
 const ExampleBockEdit = ({
 	attributes: { title, description, ctaText, ctaLink, showCTALink },
+	className,
 	setAttributes,
 }) => {
 	return (
 		<Fragment>
-			<div className="call-to-action-block">
+			<div className={`call-to-action-block ${className}`}>
 				<RichText
 					className="call-to-action-block__title"
 					tagName="h2"

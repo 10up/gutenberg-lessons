@@ -3,4 +3,6 @@
  */
 
 // Each block that needs custom styles should have it's own file.
-// import './button'
+import './image';
+import './pullquote';
+import './cta';
