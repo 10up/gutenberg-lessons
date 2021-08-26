@@ -30,6 +30,46 @@ function setup() {
 	add_action( 'wp_head', $n( 'add_manifest' ), 10 );
 
 	add_filter( 'script_loader_tag', $n( 'script_loader_tag' ), 10, 2 );
+
+	// Register the custom post meta for the Slot Fill lesson.
+	add_action( 'init', $n( 'register_slot_fill_meta' ) );
+	// Filter the body class to add the slot fill class.
+	add_filter( 'body_class', $n( 'body_class' ) );
+
+}
+
+/**
+ * Registers the `display-mode` post meta for use in the SlotFill lesson.
+ */
+function register_slot_fill_meta() {
+	register_post_meta(
+		'post',
+		'display-mode',
+		array(
+			'show_in_rest' => true,
+			'single'       => true,
+			'type'         => 'string',
+		)
+	);
+}
+
+/**
+ * Filter to add the `display-mode` class to the body element.
+ *
+ * @param array $classes An array of body classes.
+ *
+ * @return array
+ */
+function body_class( $classes ) {
+	// Retrieve the post object from the global $post variable.
+	global $post;
+
+	if ( isset( $post ) && 'post' === $post->post_type ) {
+		$display_mode = get_post_meta( $post->ID, 'display-mode', true );
+		$classes[]    = $display_mode;
+	}
+
+	return $classes;
 }
 
 /**
