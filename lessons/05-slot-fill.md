@@ -25,3 +25,6 @@ Import the `ToggleControl` component and add it inside the `PluginDocumentSettin
 
 #### 4. Display the class on the Front End
 We can filter the `body_class` function to display this new meta as class a filter. This has been done already but have a look at it in [includes/core.php](../themes/10up-theme/includes/core.php#L63)
+
+#### 5. Add another control.
+We have light and dark now. We want to add more than 2. Create a select dropdown with 4 options for theme.
