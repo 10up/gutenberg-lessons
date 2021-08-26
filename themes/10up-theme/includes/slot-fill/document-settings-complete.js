@@ -20,9 +20,9 @@ const CustomDocumentSettingsPanel = () => {
 
 	return (
 		<PluginDocumentSettingPanel
-			name="tenup-body-class"
+			name="tenup-display-mode"
 			title={__('Display Mode', 'gutenberg-lessons')}
-			className="tenup-body-class"
+			className="tenup-display-mode"
 		>
 			<ToggleControl
 				label={__('Use Dark Mode', 'gutenberg-lessons')}
