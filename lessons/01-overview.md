@@ -1,4 +1,4 @@
-Blocks are the foundation of how we build WordPress sites at 10up. On most projects, we'll develop a bunch of custom blocks and also make customizations to the core blocks that come with WordPress.
+Blocks are the foundation of how we build WordPress sites at 10up. As of WordPress 5.0, the block editor replaced the classic editor. On most projects, we'll develop a bunch of custom blocks and also make customizations to the core blocks that come with WordPress.
 
 This tutorial will walk you through the process of creating some simple custom blocks, as well as show you how to modify core blocks to fit your needs on projects. We'll start with some basics on how to get started, and work our way up to building a full-fledged custom block.
 
