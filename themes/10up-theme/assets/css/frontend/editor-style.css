@@ -6,4 +6,8 @@
  * Licensed under the MIT license.
  */
 
-/* @import url("../blocks/index.css"); */
+
+@import url("base/index.css");
+@import url("global/index.css");
+@import url("components/index.css");
+@import url("components/blocks/index.css");

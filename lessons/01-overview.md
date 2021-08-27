@@ -1,4 +1,4 @@
-Blocks are the foundation of how we build WordPress sites at 10up. On most projects, we'll develop a bunch of custom blocks and also make customizations to the core blocks that come with WordPress.
+Blocks are the foundation of how we build WordPress sites at 10up. As of WordPress 5.0, the block editor replaced the classic editor. On most projects, we'll develop a bunch of custom blocks and also make customizations to the core blocks that come with WordPress.
 
 This tutorial will walk you through the process of creating some simple custom blocks, as well as show you how to modify core blocks to fit your needs on projects. We'll start with some basics on how to get started, and work our way up to building a full-fledged custom block.
 
@@ -15,6 +15,9 @@ Just so we're all on the same page with block terminology, here's all the import
 3. <strong>Inspector</strong> gets called a lot of different things — "Inspector Panel", "Sidebar", "Sidebar Inspector", etc. In Gutenberg language, it's simply known as the "Inspector".  This is where most of the customization options for blocks will be added.
 
 Now that we have a handle on what things in the interface are called, let's jump into what blocks are made of.
+
+## The Tech Stack
+A common point of confusion with the block editor is how React.js fits in. Custom blocks that we build are just plain ole' HTML, CSS, and PHP on the front of the website. In the admin panel block editor (e.g. when editing a post), everything is written in React.js. If you are writing mark up for the front end or styling a block, React.js is not involved.
 
 ## Block Attributes
 Attributes are the heart of Gutenberg blocks. They're how WordPress stores data, and are the common thread between the editor and the frontend.

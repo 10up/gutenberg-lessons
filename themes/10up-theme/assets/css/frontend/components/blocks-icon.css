@@ -1,0 +1,8 @@
+.blocks-icon {
+	opacity: 0.5;
+	position: fixed;
+	right: -300px;
+	top: 0;
+	width: 800px;
+	z-index: -1;
+}

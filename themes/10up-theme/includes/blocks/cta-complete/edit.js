@@ -24,7 +24,6 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
  * @param {string}    props.attributes.ctaText     Text for the CTA Text as defined in block.json.
  * @param {string}    props.attributes.ctaLink     Text for the CTA link as defined in block.json.
  * @param {boolean}   props.attributes.showCTALink Are we showing the CTA link?
- * @param {string}    props.className              Class name of the block.BlobPropertyBag
  * @param {Function}  props.setAttributes          Function to set the block attributes
  *
  * @return {*} React Element
@@ -36,9 +35,9 @@ const ExampleBockEdit = ({
 }) => {
 	return (
 		<Fragment>
-			<div className={className}>
+			<div className={`call-to-action-block ${className}`}>
 				<RichText
-					className="wp-block-cta-complete-__title"
+					className="call-to-action-block__title"
 					tagName="h2"
 					placeholder={__('Title here …', 'gutenberg-lessons')}
 					keepPlaceholderOnFocus="true"
@@ -46,7 +45,7 @@ const ExampleBockEdit = ({
 					onChange={(title) => setAttributes({ title })}
 				/>
 				<RichText
-					className="wp-block-cta-complete__description"
+					className="call-to-action-block__description"
 					tagName="p"
 					placeholder={__('Description here…', 'gutenberg-lessons')}
 					keepPlaceholderOnFocus="true"
@@ -55,7 +54,7 @@ const ExampleBockEdit = ({
 				/>
 				{showCTALink && (
 					<RichText
-						className="wp-block-cta-complete__cta_link"
+						className="call-to-action-block__link"
 						tagName="a"
 						placeholder={__('CTA here…', 'gutenberg-lessons')}
 						keepPlaceholderOnFocus="true"

@@ -2,6 +2,8 @@
 @import url("logo-link.css");
 @import url("site-header.css");
 @import url("aside.css");
-@import url("site-menu.css");
+@import url("site-navigation.css");
 @import url("buttons.css");
 @import url("blocks");
+@import url("content-card");
+@import url("blocks-icon");

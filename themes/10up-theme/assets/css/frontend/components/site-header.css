@@ -1,17 +1,24 @@
 .site-header {
-	background: var(--c-white);
-	border-bottom: 1px solid var(--c-grey-200);
-	padding: var(--sp-m) 0;
-	position: relative;
+	margin-bottom: 3rem;
+	margin-top: 5rem;
+	max-width: 620px;
 
-	& h1 {
-		margin: 0;
+	@media (--bp-large) {
+		margin-left: 6%;
 	}
 }
 
-
-.site-header__container {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
+.site-title {
+	font-family: var(--font-sans);
+	font-size: 2.25rem;
+	letter-spacing: -0.125rem;
+	margin-bottom: var(--sp-s);
+	margin-top: var(--sp-l);
 }
+
+
+.site-header__logo {
+	height: 50px;
+	width: 50px;
+}
+

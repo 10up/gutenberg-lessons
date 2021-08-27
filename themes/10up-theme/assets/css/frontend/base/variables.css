@@ -3,14 +3,7 @@
 /* Container Vars */
 :root {
 	/* Site width: 1280px */
-	--max-site-width: 80rem;
-
-	/* Fonts */
-	--fw-bold: 700;
-	--fw-regular: 500;
-	--fw-semibold: 600;
-
-	--font-sans: -apple-system, BlinkMacSystemFont, "avenir next", avenir, "helvetica neue", helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	--max-site-width: 860px;
 
 	--t-default: 300ms;
 }
