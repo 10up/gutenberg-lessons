@@ -23,7 +23,7 @@ For resources on learning JavaScript and React.js, look through this [internal d
 ## Lessons
 * [Lesson 1: Anatomy of a block](./lessons/01-overview.md)
 * [Lesson 2: A Simple CTA block](./lessons/02-cta-lesson.md)
-* Lesson 3: Styles
+* [Lesson 3: Block Styles](./lessons/03-styles.md)
 * Lesson 4: Block Patterns and Variations
 * [Lesson 5: Slot Fill](./lessons/05-slot-fill.md)
 
