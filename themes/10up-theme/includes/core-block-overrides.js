@@ -4,5 +4,5 @@
 
 import './block-styles';
 // import './block-filters';
-// import './block-variations';
+import './block-variations';
 import './slot-fill';
