@@ -10,7 +10,7 @@ Just so we're all on the same page with block terminology, here's all the import
 
 ![alt text](images/block-editor.png "The Block Editor")
 
-1. <strong>Block</strong> — The content of posts within WordPress gets composed of Blocks. These Blocks are either build and provided by WordPress Core, a 3rd party or custom build blocks. Each Block is a visual representation of the content which allows you to visually edit your content inline.
+1. <strong>Block</strong> — The content of posts within WordPress gets composed of Blocks. These Blocks are either built and provided by WordPress Core, a 3rd party, or are custom built blocks. Each Block is a visual representation of the content which allows you to visually edit your content inline.
 2. <strong>Toolbar</strong> — Every block has a toolbar that gets shown hovering above it when the block is selected. This toolbar contains secondary controls that are commonly used like formatting controls for text or alignment controls.
 3. <strong>Inspector</strong> gets called a lot of different things — "Inspector Panel", "Sidebar", "Sidebar Inspector", etc. In Gutenberg language, it's simply known as the "Inspector".  This is where any additional controls for blocks live. These controls should not be _required_ for a block to work. Everything should have sensible defauts that can get overwritten if needed.
 
