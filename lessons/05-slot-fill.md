@@ -13,9 +13,19 @@ For a much deeper dive into the entire SlotFill system and how it works internal
 5. Add the `ToggleControl` component to display and update the meta value.
 6. Filter the `body_class` to display the new class on the frontend.
 
+### Overview
+Imagine you're building a site that needs to support per-post [light/dark mode](https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/). On each post, the editor can decide whether the post will have with a dark background or a light one on the frontend.
+
+We'll give the editor this control via a toggle in a Slot in the Inspector. In the template, we'll see if this toggle is checked or not and assign a corresponding class to the body tag: `<body class="light-mode">` or `<body class="dark-mode">`. *We can worry about the CSS details required to make this happen in another lesson.*
+
+Here's the end result in the editor:
+
+![alt text](images/slotfill-light-dark-mode.png "Light or dark mode")
+
 ### Tasks
 #### 1. Registering a plugin.
 In order to add a Fill to any of the available Slots, we first need to register a plugin using `registerPlugin` from the `@wordpress/plugins` package. Import the function and pass the appropriate parameters as defined in the [official docs](https://developer.wordpress.org/block-editor/reference-guides/packages/packages-plugins/#registerplugin). In the starter files, the SlotFill we're working with has already been imported do you only need to add the `CustomDocumentSettingsPanel` to the `render` property of `registerPlugin`.
+
 #### 2. Prepare the post meta for the REST API.
 In order to access or save post meta in Gutenberg, the meta needs to be exposed to the REST API. For the lesson, this has already been done in [includes/core.php](../themes/10up-theme/includes/core.php#L35) but this is a very important step as without it, meta will not be saved to the database.
 
@@ -23,8 +33,8 @@ In order to access or save post meta in Gutenberg, the meta needs to be exposed 
 Import the `ToggleControl` component and add it inside the `PluginDocumentSettingPanel` component. Anything inside that component will be displayed in the sidebar. Using the [official docs](https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/) as reference, set up the `ToggleControl` so that the value of the meta is set to `dark-mode` when checked and `light-mode` when unchecked and save the meta using the `editPost` function.
 **Note: You will be updating all of the meta for the post, so be sure to combine the existing and new meta values when saving. If you get stuck, refer to the complete example.**
 
-#### 4. Display the class on the Front End
+#### 4. Display the class on the frontend
 We can filter the `body_class` function to display this new meta as class a filter. This has been done already but have a look at it in [includes/core.php](../themes/10up-theme/includes/core.php#L63)
 
-#### 5. Add another control.
-We have light and dark now. We want to add more than 2. Create a select dropdown with 4 options for theme.
+#### 5. Add another control
+We now have two modes for our posts: light and dark. Imagine your client comes back and says, "We actually want to be able to select from 4 different modes/themes — Light, Dark, Milkshake and Popsicle."  Swap the current toggle for a select dropdown with 4 options for the theme and output the appropriate body class on the frontend: `<body class="light-mode">`, `<body class="dark-mode">`, `<body class="milkshake-mode">`, `<body class="popsicle-mode">`.
