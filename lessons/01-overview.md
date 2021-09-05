@@ -12,7 +12,7 @@ Just so we're all on the same page with block terminology, here's all the import
 
 1. <strong>Block</strong> — The content of posts within WordPress gets composed of Blocks. These Blocks are either built and provided by WordPress Core, a 3rd party, or are custom built blocks. Each Block is a visual representation of the content which allows you to visually edit your content inline.
 2. <strong>Toolbar</strong> — Every block has a toolbar that gets shown hovering above it when the block is selected. This toolbar contains secondary controls that are commonly used like formatting controls for text or alignment controls.
-3. <strong>Inspector</strong> gets called a lot of different things — "Inspector Panel", "Sidebar", "Sidebar Inspector", etc. In Gutenberg language, it's simply known as the "Inspector".  This is where any additional controls for blocks live. These controls should not be _required_ for a block to work. Everything should have sensible defauts that can get overwritten if needed.
+3. <strong>Inspector</strong> gets called a lot of different things — "Inspector Panel", "Sidebar", "Sidebar Inspector", etc. In Gutenberg language, it's simply known as the "Inspector".  This is where any additional controls for blocks live. These controls should not be _required_ for a block to work. Everything should have sensible defaults that can get overwritten if needed.
 
 Now that we have a handle on what things in the interface are called, let's jump into what blocks are made of.
 
@@ -83,7 +83,7 @@ Let's look at the `customTitle` attribute:
 ```
 
 ## Takeaways
-That's a quick tour of the block editor, some of the common lingo, and a peek at an existing block. Let's quickly sumarise the most important takeaways.
+That's a quick tour of the block editor, some of the common lingo, and a peek at an existing block. Let's quickly summarize the most important takeaways.
 
 1. Blocks live in the block editor. Most blocks have two places to control its settings: a **Toolbar** above them  and an **Inspector** in the right sidebar.
 2. Blocks use and store **Attributes**. You can think of attributes in the same way you think of custom fields.
