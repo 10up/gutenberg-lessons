@@ -79,7 +79,7 @@ Here's the [completed example](https://gitlab.10up.com/exercises/gutenberg-lesso
 
 
 ## Takeaways
-That's a quick tour of block Styles. Let's quickly sumarise the most important takeaways:
+That's a quick tour of block Styles. Let's quickly summarize the most important takeaways:
 
 1. The editor ships with Styles on some core blocks
 2. You can remove unwanted Styles, and add new ones
