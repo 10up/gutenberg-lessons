@@ -1,5 +1,12 @@
 ## Lesson 5: Inner Blocks / Nested Blocks
 
+### Learning Outcomes:
+1. Learn what inner blocks are and how to use them
+2. Learn how to decide when to use inner blocks
+3. Learn about controlled parent child relationships in inner blocks
+
+### What are "inner blocks"?
+
 In the editor you are able to nest blocks within other blocks. You may have come across this when using the Core Group or Columns Block.  This ability is super powerful because it allows you to compose different blocks together to create custom layouts. But this is not the only thing nested blocks are useful for. Nesting also allows you to reduce complexity when you have to create repeatable items your markup.
 
 There are two types of nesting blocks and we can identify them by looking at the two core blocks I already mentioned. The Group and the Columns block.
@@ -12,56 +19,10 @@ On the other hand there are blocks like the Column block that may seem very simi
 
 ![Editor List View showing a Core Columns block with three nested Column Blocks that each have their own child blocks within.](/lessons/images/inner-blocks-core-columns-screenshot.jpg)
 
-### Allowing other Blocks to be inserted into your own custom blocks
-When you have an area of your site where you want to give editors the flexibility to insert Blocks themselves you can define an `InnerBlocks` area for that purpose. A block can only contain one inner blocks area. Once the `<InnerBlocks />` Component is placed somewhere in your markup, the editor will show the standard Inserter in that place and allow Editors to place any other block inside of that area.
+### Exercise Overview
 
-If you want to give the Editor a bit more guidance / an example of what content they should enter in an area you can improve the experience by adding a template for the inner blocks. This template gets applied when the block is first inserted and allows the end user to get up and running more quickly. Be aware though that the template should make sense for a given block. If editors need to remove it every time because it isn't what they need it is a bad template.
+### Takeaways
 
-```js
-const INNER_BLOCK_TEMPLATE = [
-	[ 'core/heading', { level: 2, placeholder: 'Enter heading here...' } ],
-	[ 'core/paragraphn', { placeholder: 'Enter the content here...' } ],
-];
+### Next steps
 
-function BlockEdit() {
-	return (
-		<InnerBlocks
-			template={ INNER_BLOCK_TEMPLATE }
-		/>
-	)
-}
-```
-
-You can also control which blocks an editor can insert into your inner block area by defining `allowedBlocks` for that area.
-
-```js
-const ALLOWED_INNER_BLOCKS = [
-	'core/heading',
-	'core/paragraph',
-	'core/image',
-	'core/buttons'
-];
-
-function BlockEdit() {
-	return (
-		<InnerBlocks
-			allowedBlocks={ ALLOWED_INNER_BLOCKS }
-		/>
-	)
-}
-```
-
-### Building Controlled Inner Blocks (Parent / Child Blocks)
-
-#### Tabs Block Example
-![Tabs Block Wireframe](/lessons/images/inner-blocks-tabs-example.png)
-1. `Tabs` Block
-2. Controlled `Tab` Block
-3. Open / restricted `InnerBlocks`
-
-#### Slider Block Example
-![Slider Block Wireframe](/lessons/images/inner-blocks-slider-example.png)
-1. `Slider` Block
-2. Controlled `Slide` Block
-3. Open / restricted `InnerBlocks`
-
+### Further reading
