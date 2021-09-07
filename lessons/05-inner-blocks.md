@@ -1,11 +1,11 @@
-## Lesson 5: Inner Blocks / Nested Blocks
+# Lesson 5: Inner Blocks / Nested Blocks
 
-### Learning Outcomes:
+## Learning Outcomes:
 1. Learn what inner blocks are and how to use them
 2. Learn how to decide when to use inner blocks
 3. Learn about controlled parent child relationships in inner blocks
 
-### What are "inner blocks"?
+## What are "inner blocks"?
 
 Inner Blocks in WordPress means being able to nest blocks in other blocks. You may have come across this when using the Core Group or Columns Block. This ability is very powerful because it allows you to compose different blocks to build your content. But this is not the only thing nested blocks are useful for. Nesting also allows you to reduce complexity when you have to create repeatable items your blocks.
 
@@ -21,13 +21,15 @@ Another good example of this is the core buttons block. It only allows button bl
 
 ![Editor List View showing a Core Columns block with three nested Column Blocks that each have their own child blocks within.](/lessons/images/inner-blocks-core-columns-screenshot.jpg)
 
-### Exercise Overview
+## Exercise Overview
 
-### Takeaways
+## Breaking it down
 
-### Next steps
+## Takeaways
 
-### Further reading
+## Next steps
+
+## Further reading
 - [Nested Blocks: Using InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/)
 - [Inner Blocks Component Reference](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/inner-blocks#innerblocks)
 - [API Version 2 - useBlockProps & useInnerBlocksProps](https://internal.10up.com/blog/2021/06/23/a-quick-guide-for-gutenberg-api-version-2/)
