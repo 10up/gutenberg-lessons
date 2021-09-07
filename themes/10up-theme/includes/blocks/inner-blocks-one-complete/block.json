@@ -3,11 +3,11 @@
 	"description": "Complete version of the Inner Blocks block",
 	"text-domain": "gutenberg-lessons",
 	"name": "gutenberg-lessons/inner-blocks-one-complete",
-  "icon": "grid",
-  "apiVersion": 2,
-  "category": "gutenberg-lessons",
+	"icon": "grid",
+	"apiVersion": 2,
+	"category": "gutenberg-lessons",
 	"attributes":{
-  },
-  "example": {},
+	},
+	"example": {},
 	"editorScript": "file:../../../dist/blocks/inner-blocks-one-complete-block/editor.js"
 }
