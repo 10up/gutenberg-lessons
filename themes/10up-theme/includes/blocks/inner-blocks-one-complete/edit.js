@@ -6,11 +6,9 @@ import { useBlockProps } from '@wordpress/block-editor';
 /**
  * Block Edit Component
  *
- * @param {Object} props Block
- *
  * @return {JSX.Element} React Element
  */
-function BockEdit() {
+const BockEdit = () => {
 	const blockProps = useBlockProps();
 
 	return (
@@ -20,4 +18,4 @@ function BockEdit() {
 	);
 };
 
- export default BockEdit;
+export default BockEdit;
