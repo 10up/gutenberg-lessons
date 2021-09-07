@@ -39,7 +39,7 @@ function render_block_callback( $attributes, $content, $block ) {
 		'includes/blocks/inner-blocks-one-complete/markup',
 		null,
 		[
-			'class_name' => 'wp-block-tenup-inner-blocks-one-complete',
+			'class_name' => 'wp-block-gutenberg-lessons-inner-blocks-one-complete',
 			'attributes' => $attributes,
 			'content'    => $content,
 			'block'      => $block,
