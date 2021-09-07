@@ -7,7 +7,7 @@
 
 ### What are "inner blocks"?
 
-Inner Blocks in WordPress refers to the concept of nesting blocks in other blocks. You may have come across this when using the Core Group or Columns Block. This ability is very powerful because it allows you to compose different blocks to build your content. But this is not the only thing nested blocks are useful for. Nesting also allows you to reduce complexity when you have to create repeatable items your blocks.
+Inner Blocks in WordPress means being able to nest blocks in other blocks. You may have come across this when using the Core Group or Columns Block. This ability is very powerful because it allows you to compose different blocks to build your content. But this is not the only thing nested blocks are useful for. Nesting also allows you to reduce complexity when you have to create repeatable items your blocks.
 
 Looking at the two core blocks I already mentioned we can see this concept of nested blocks come to life.
 
