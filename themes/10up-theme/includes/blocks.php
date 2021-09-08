@@ -9,6 +9,8 @@ namespace GutenbergLessons\Blocks;
 
 use GutenbergLessons\Blocks\CTAComplete;
 use GutenbergLessons\Blocks\InnerBlocksOneComplete;
+use GutenbergLessons\Blocks\InnerBlocksTwoCardGridComplete;
+use GutenbergLessons\Blocks\InnerBlocksTwoCardComplete;
 
 /**
  * Set up blocks
@@ -52,10 +54,14 @@ function register_theme_blocks() {
 	require_once TENUP_THEME_BLOCK_DIR . '/cta-complete/register.php';
 	require_once TENUP_THEME_BLOCK_DIR . '/cta-starter/register.php';
 	require_once TENUP_THEME_BLOCK_DIR . '/inner-blocks-one-complete/register.php';
+	require_once TENUP_THEME_BLOCK_DIR . '/inner-blocks-two-card-grid-complete/register.php';
+	require_once TENUP_THEME_BLOCK_DIR . '/inner-blocks-two-card-complete/register.php';
 
 	// Call block register functions for each block.
 	CTAComplete\register();
 	InnerBlocksOneComplete\register();
+	InnerBlocksTwoCardGridComplete\register();
+	InnerBlocksTwoCardComplete\register();
 	CTAStarter\register();
 
 	// Remove the filter after we register the blocks
