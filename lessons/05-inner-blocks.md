@@ -22,6 +22,15 @@ Another good example of this is the core buttons block. It only allows button bl
 ![Editor List View showing a Core Columns block with three nested Column Blocks that each have their own child blocks within.](/lessons/images/inner-blocks-core-columns-screenshot.jpg)
 
 ## Exercise Overview
+In this lesson we will be building two different blocks. In the first one we will take a look at how we can use inner blocks to allow an editor to place anything they want into a predefined area of your component. In this example we have a "simple" design of a "Hero" component that has an image at the top with a content area that overlaps the image.
+
+![Hero Block Mockup](/lessons/images/inner-blocks-one-mockup.png)
+
+The client wants to be able to place any other blocks into the content area of the "Hero" component to make it as flexible as possible for them.
+
+And for the second block we will be building a "Card Grid" component. This Card grid should allow editors to place as many card components into a grid that automatically reflows based on the screen size of the device they are using.
+
+![Card Grid Block Mockup](/lessons/images/inner-blocks-two-mockup.png)
 
 ## Breaking it down
 
