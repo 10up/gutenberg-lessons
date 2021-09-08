@@ -39,9 +39,13 @@ And for the second block we will be building a "Card Grid" component. This Card 
 ## Breaking it down
 
 ### 1. "Hero" Block
+For the "Hero" Block we need to define an area of our markup where other blocks can get inserted.
+
 ![Hero Block Scribble](/lessons/images/inner-blocks-one-scribble.png)
 
 ### 2. "Card Grid" Block
+The "Card Grid" consists of two elements. The actual grid that can contain the cards and then the individual cards. This is similar to how core has the Buttons block that contains individual Button blocks. So we can archive this by creating two different blocks. The "Card Grid" block that needs to define an inner block area where only the card block can get inserted. And then we need the card block that cannot get used anywhere outside of the "Card Grid".
+
 ![Card Grid Block Scribble](/lessons/images/inner-blocks-two-scribble.png)
 
 ## Using Inner Blocks
