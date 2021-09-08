@@ -68,6 +68,7 @@ export default BlockEdit;
 
 With this done you can already go to the editor and see that there is now a Block Appender rendering inside your block that allows you to insert any blocks you want.
 
+### Saving the Content of our Inner Blocks Area
 If you now try to save the post and view it on the frontend you will find though that your changes are not actually saved. The way the editor stores inner blocks is in the actual post content. But right now our blocks just return `null` in their `save` method.
 
 We can fix this by replacing the `null` with the `<InnerBlocks.Content />` component.
@@ -98,6 +99,8 @@ From here we are most of the way there. You are not able to insert any blocks yo
 
 There are a few things to keep in mind though to improve the User Experience of our block.
 
+### Use `allowedBlocks` to better control what editors can do
+
 Right now editors are able to insert any block they want into the inner blocks area. This might not always be what we want. In the case of our "Hero" it for example doesn't really make sense to allow any layout related blocks like the "Banner", "Columns" or "Group" block.
 
 We can improve the UX by adding a list of allowed blocks to the inner blocks component.
@@ -114,6 +117,8 @@ return (
 	/>
 )
 ```
+
+### Defining a `template` to get editors up and running quicker
 
 Another thing that isn't great about the UX right now is that the initial state when we insert our "Hero" block is only an empty grey box.
 
@@ -133,9 +138,42 @@ return (
 )
 ```
 
+### Parent / Child relationships of blocks
+
+If you want to create parent / child relationships between blocks like we need to do for our "Card Grid" and "Card" blocks that consists of two things. For one you need to define the `allowedBlocks` on the `InnerBlocks` in the parent block to only contain the child block you want to have show up. If the `allowedBlocks` array only contains one item the inserter will no longer show the block picker popover but instead directly insert that one block. Which is a nice little UX improvement we get for free.
+
+The second thing we need to do is make sure our "child" block, in this case the "Card", doesn't appear in the regular inserter or that it cannot get moved anywhere outside of a "Card Grid". And for that we can use the [`parent`](https://github.com/WordPress/gutenberg/blob/trunk/docs/reference-guides/block-api/block-registration.md#parent-optional) option in the `block.json` file. When you define a `parent` the block will no longer show up in the inserter and it also cannot get used anywhere outside of the defined parent.
+
+```json
+{
+	"name": "...",
+	"...",
+	"parent": [ "namespace/block-name" ]
+}
+```
+
+### Styling considerations in the editor
+
+One thing to be aware of when using `InnerBlocks` is that at the moment it makes it a bit more difficult to match styling between the editor and the frontend of the site because the `InnerBlocks` component in the editor wraps the markup of the child blocks in this markup:
+```html
+<div class="block-editor-inner-blocks">
+	<div class="block-editor-block-list__layout">
+		<!-- Markup of the Child Blocks will get serted here -->
+		<div class="block-list-appender">...</div>
+	</div>
+</div>
+```
+This means that we will have to adjust our stying between the frontend and the editor.
+
+In our "Card Grid" we use CSS Grid to make the main wrapper a grid container with the child blocks being direct children of the wrapper. In the editor however this won't work because the `.block-editor-inner-blocks` and `.block-editor-block-list__layout` elements are inserted in between the wrapper and the children. So we need to get creating in our styles and override some of the frontend styles and add new ones to visually match the component in the editor.
+
+> There currently is a new experimental API in core called `__experimentalUseInnerBlocksProps` that will allow us to remove these additional elements and get markup parity between the editor and the frontend. But that API is not fully production ready and may change in the future.
+
 ## Takeaways
+The takeaways you should take from this lesson is that inner blocks are a very powerful concept in the editor that allow us to use different blocks to compose more complex content. They can also allow us to simplify the logic we have to code when it comes to managing repeating elements and have many options to control the user experience.
 
 ## Next steps
+Now that you have build two blocks that use `InnerBlocks` take a look at the [Component Reference for the `InnerBlocks`](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/inner-blocks#innerblocks) component and see wether there are any other things you can to to improve the editorial user experience.
 
 ## Further reading
 - [Nested Blocks: Using InnerBlocks](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/)
