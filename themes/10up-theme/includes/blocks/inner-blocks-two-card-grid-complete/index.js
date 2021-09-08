@@ -10,6 +10,9 @@ import { InnerBlocks } from '@wordpress/block-editor';
 import edit from './edit';
 import block from './block.json';
 
+/**
+ * CSS to override editor styling
+ */
 import './index.css';
 
 /**

@@ -5,5 +5,5 @@
 .wp-block-gutenberg-lessons-inner-blocks-two-card-grid-complete .block-editor-block-list__layout {
 	display: grid;
 	grid-gap: 2rem;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
 }
