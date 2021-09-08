@@ -44,6 +44,91 @@ And for the second block we will be building a "Card Grid" component. This Card 
 ### 2. "Card Grid" Block
 ![Card Grid Block Scribble](/lessons/images/inner-blocks-two-scribble.png)
 
+## Using Inner Blocks
+Inner Blocks actually is the name of a react component that is part of the "Block Editor" package. We can import it into our block edit component and use it within the markup of our block.
+
+```js
+import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';
+
+const BlockEdit = () => {
+	const blockProps = useBlockProps();
+	return (
+		<div {...blockProps}>
+			<InnerBlocks />
+		</div>
+	)
+}
+
+export default BlockEdit;
+```
+
+With this done you can already go to the editor and see that there is now a Block Appender rendering inside your block that allows you to insert any blocks you want.
+
+If you now try to save the post and view it on the frontend you will find though that your changes are not actually saved. The way the editor stores inner blocks is in the actual post content. But right now our blocks just return `null` in their `save` method.
+
+We can fix this by replacing the `null` with the `<InnerBlocks.Content />` component.
+
+```js
+/**
+ * WordPress dependencies
+ */
+import { registerBlockType } from '@wordpress/blocks';
+import { InnerBlocks } from '@wordpress/block-editor';
+
+/**
+ * Internal dependencies
+ */
+import edit from './edit';
+import block from './block.json';
+
+/**
+ * Register block
+ */
+registerBlockType(block.name, {
+	edit,
+	save: () => <InnerBlocks.Content />,
+});
+```
+
+From here we are most of the way there. You are not able to insert any blocks you want and the content actually gets saved into the database and shows on the frontend.
+
+There are a few things to keep in mind though to improve the User Experience of our block.
+
+Right now editors are able to insert any block they want into the inner blocks area. This might not always be what we want. In the case of our "Hero" it for example doesn't really make sense to allow any layout related blocks like the "Banner", "Columns" or "Group" block.
+
+We can improve the UX by adding a list of allowed blocks to the inner blocks component.
+
+```js
+return (
+	<InnerBlocks
+		allowedBlocks={[
+			'core/heading',
+			'core/paragraph',
+			'core/buttons',
+			'core/button',
+		]}
+	/>
+)
+```
+
+Another thing that isn't great about the UX right now is that the initial state when we insert our "Hero" block is only an empty grey box.
+
+We know that in an ideal case we want our editors to have a title and a paragraph inside the "Hero" so we can make that the default when the block is inserted.
+
+To achieve this we can define a `template` on the inner block area. The template gets defined the same way you already saw in [Lesson 4: Patterns & Variations](/lessons/04-patterns-variations.md#using-variations). It is an array with individual items also being represented as an array with the block name as the first element, the blocks attributes as the second and child blocks as the third element.
+
+```js
+return (
+	<InnerBlocks
+		template={[
+			['core/heading', { level: 2, placeholder: 'Insert your heading here...' }],
+			['core/paragraph', { placeholder: 'Write some description text here...' }],
+
+		]}
+	/>
+)
+```
+
 ## Takeaways
 
 ## Next steps
