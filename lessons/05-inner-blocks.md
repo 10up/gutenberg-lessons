@@ -7,32 +7,36 @@
 
 ## What are "inner blocks"?
 
-Inner Blocks in WordPress means being able to nest blocks in other blocks. You may have come across this when using the Core Group or Columns Block. This ability is very powerful because it allows you to compose different blocks to build your content. But this is not the only thing nested blocks are useful for. Nesting also allows you to reduce complexity when you have to create repeatable items your blocks.
+Inner Blocks in WordPress means being able to nest blocks within other blocks. You may have come across this when using the Core Group or Columns Block. This ability is very powerful because it allows you to compose different blocks to build your content. Composition is not the only thing nested blocks are useful for. Nesting also allows you to reduce complexity when you have to create repeatable items your blocks.
 
-Looking at the two core blocks I already mentioned we can see this concept of nested blocks come to life.
+Looking at the two core blocks I already mentioned, we can see this concept of nested blocks come to life.
 
-The Group block is meant to be a wrapper. It creates a container with some options like a background color for that section and then of course the ability to place different blocks within that group. Another great example for this is the Media & Text or the Cover Block. They all allow you to place any other blocks inside of an inner blocks area.
+The Group block is meant to be a wrapper for other blocks. It creates a container with some options like a background color for that section and allows you to insert other blocks into that wrapper. Other examples of this kind of nesting can be found in the the Media & Text and the Cover Block. They all allow you to place other blocks within an inner blocks area.
 
 ![Editor List View showing a Core Group block with a Heading and Paragraph nested within.](/lessons/images/inner-blocks-core-group-screenshot.jpg)
 
-But there is another great use-case for using inner blocks. We can see that when looking at the core columns block. It may seem very similar in the beginning because they also allow you to place other blocks within them. But that actually is not the case for columns. The columns block itself only allows individual column blocks as it's direct decedents. The individual column blocks then allow you to place other blocks in them. But the column blocks cannot get used outside the Columns block. Instead of storing a very complicated array of the columns with all their options and building custom logic to add, move or remove columns, all of that get's managed my using inner blocks with a wrapping `columns` block that only allows `column` blocks as it's direct children.
+There is another great use-case for inner blocks. We can see that when looking at the core columns block. It may seem very similar at first because it also allows you to place blocks within the columns.
 
-Another good example of this is the core buttons block. It only allows button blocks as it's children.
+But this is not actually the case for the columns block. It only allows individual column blocks as it's direct decedents. The individual column blocks then allow you to place other blocks in them. The column blocks cannot get used outside the columns block.
+
+Instead of storing a very complicated array of the columns with all their options and building custom logic to add, move or remove columns, all of that get's managed my using inner blocks with a wrapping `columns` block that only allows `column` blocks as it's direct children.
+
+Another example of this is the core buttons block. It only allows button blocks as it's children and uses inner blocks to allow editors to add, move and remove the individual button blocks.
 
 ![Editor List View showing a Core Columns block with three nested Column Blocks that each have their own child blocks within.](/lessons/images/inner-blocks-core-columns-screenshot.jpg)
 
 ## Exercise Overview
-In this lesson we will be building two different blocks to take a look at different use-cases inner blocks can solve.
+In this lesson we are going to build two different blocks to take a look at these different use-cases inner blocks can solve.
 
 ### 1. "Hero" Block
-In the first one we will take a look at how we can use inner blocks to allow an editor to place anything they want into a predefined area of your component. In this example we have a "simple" design of a "Hero" component that has an image at the top with a content area that overlaps the image.
+First we will take a look at how we can use inner blocks to allow an editor to place anything they want into a predefined area of your component. In this example we have a "simple" design of a "Hero" component that has an image at the top with a content area that overlaps the image.
 
 ![Hero Block Mockup](/lessons/images/inner-blocks-one-mockup.png)
 
-The client wants to be able to place any other blocks into the content area of the "Hero" component to make it as flexible as possible for them.
+The client wants to be able to place other blocks into the content area of the "Hero" component to make it as flexible as possible for them.
 
 ### 2. "Card Grid" Block
-And for the second block we will be building a "Card Grid" component. This Card grid should allow editors to place as many card components into a grid that automatically reflows based on the screen size of the device they are using.
+The second block we will be building is a "Card Grid" component. This Card grid should allow editors to place as many card components into a grid that automatically reflows based on the screen size of the device they are using.
 
 ![Card Grid Block Mockup](/lessons/images/inner-blocks-two-mockup.png)
 
@@ -43,10 +47,16 @@ For the "Hero" Block we need to define an area of our markup where other blocks 
 
 ![Hero Block Scribble](/lessons/images/inner-blocks-one-scribble.png)
 
+To get started there is a starter block scaffolded out located in the blocks folder of the theme with the name `inner-blocks-one-stater`. If you are stuck you can take a look at the `inner-blocks-one-completed` folder for a completed version of the block.
+
 ### 2. "Card Grid" Block
-The "Card Grid" consists of two elements. The actual grid that can contain the cards and then the individual cards. This is similar to how core has the Buttons block that contains individual Button blocks. So we can archive this by creating two different blocks. The "Card Grid" block that needs to define an inner block area where only the card block can get inserted. And then we need the card block that cannot get used anywhere outside of the "Card Grid".
+The "Card Grid" consists of two elements. The actual grid that can contain the cards and then the individual cards. This is similar to how core has the Buttons block that contains individual Button blocks.
+
+So we can archive this by creating two different blocks. The "Card Grid" block that needs to define an inner block area where only the card block can get inserted. And then we need the card block that cannot get used anywhere outside of the "Card Grid".
 
 ![Card Grid Block Scribble](/lessons/images/inner-blocks-two-scribble.png)
+
+To get started there are two starter blocks scaffolded out located in the blocks folder of the theme with the name `inner-blocks-two-card-grid-stater` and `inner-blocks-two-card-starter`. If you are stuck you can take a look at the `inner-blocks-two-card-grid-completed` and `inner-blocks-two-card-completed` folder for a completed version of the block.
 
 ## Using Inner Blocks
 Inner Blocks actually is the name of a react component that is part of the "Block Editor" package. We can import it into our block edit component and use it within the markup of our block.
@@ -93,6 +103,21 @@ registerBlockType(block.name, {
 	edit,
 	save: () => <InnerBlocks.Content />,
 });
+```
+
+Now that the content is saved in the database we also need to somehow use this content in our markup in php. When we build blocks dynamically we provide the `register_block_type_from_metadata` function with a `render_callback`. This function gets called with three arguments from WordPress. The block attributes, the blocks content (inner blocks) as a markup string and the block as a `WP_Block` class. We are interested in the second parameter for this.
+
+```php
+/*
+	* the $args['content'] is the html generated from innerBlocks
+	* it is being created from the save method in JS or the render_callback
+	* in php and is sanitized.
+	*
+	* Re sanitizzing it through `wp_kses_post` causes
+	* embed blocks to break and other core filters don't apply.
+	* therefore no additional sanitisation is done and it is being output as is
+	*/
+echo $args['content']; // phpcs:disable
 ```
 
 From here we are most of the way there. You are not able to insert any blocks you want and the content actually gets saved into the database and shows on the frontend.
