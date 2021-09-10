@@ -83,7 +83,7 @@ innerBlocks: [
 
 
 ## Takeaways
-That's a quick look of block variations. Let's quickly sumarise the most important takeaways:
+That's a quick look of block variations. Let's quickly summarize the most important takeaways:
 
 1. You can combine core and custom blocks into patterns or variations
 2. You often need to group blocks together using Group and Column blocks
