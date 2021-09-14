@@ -1,5 +1,11 @@
 {
 	"extends": [
-		"@10up/eslint-config/wordpress"
-	]
+		"@10up/eslint-config/wordpress",
+		"@10up/eslint-config/react"
+	],
+	"rules": {
+		"react/prop-types": 0,
+		"jsdoc/require-param": 0,
+		"jsdoc/require-returns": 0
+	}
 }
