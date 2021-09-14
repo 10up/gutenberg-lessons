@@ -3,13 +3,13 @@
 ## Learning Outcomes:
 1. Learn what inner blocks are and how to use them
 2. Learn how to decide when to use inner blocks
-3. Learn about controlled parent child relationships in inner blocks
+3. Learn about controlled parent/child relationships in inner blocks
 
 ## What are "inner blocks"?
 
-Inner Blocks in WordPress means being able to nest blocks within other blocks. You may have come across this when using the Core Group or Columns Block. This ability is very powerful because it allows you to compose different blocks to build your content. Composition is not the only thing nested blocks are useful for. Nesting also allows you to reduce complexity when you have to create repeatable items your blocks.
+Inner Blocks in WordPress let you nest blocks within other blocks. You may have come across this when using the Core Group or Columns Block. This ability is very powerful because it allows you to compose different blocks to build your content. Composition is not the only thing nested blocks are useful for. Nesting also allows you to reduce complexity when you have to create repeatable items your blocks.
 
-Looking at the two core blocks I already mentioned, we can see this concept of nested blocks come to life.
+Looking at the two core blocks I just mentioned — Group and Columns — we can see this concept of nested blocks come to life.
 
 The Group block is meant to be a wrapper for other blocks. It creates a container with some options like a background color for that section and allows you to insert other blocks into that wrapper. Other examples of this kind of nesting can be found in the the Media & Text and the Cover Block. They all allow you to place other blocks within an inner blocks area.
 
