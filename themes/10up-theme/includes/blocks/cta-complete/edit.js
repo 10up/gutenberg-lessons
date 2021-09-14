@@ -17,16 +17,6 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
 /**
  * Block Edit Component
  *
- * @param {Object}    props                        Block properties ( props ).
- * @param {Object}    props.attributes             Block attributes as defined in block.json.
- * @param {string}    props.attributes.title       The Title attribute as defined in block.json.
- * @param {string}    props.attributes.description The description attribute as defined in block.json.
- * @param {string}    props.attributes.ctaText     Text for the CTA Text as defined in block.json.
- * @param {string}    props.attributes.ctaLink     Text for the CTA link as defined in block.json.
- * @param {boolean}   props.attributes.showCTALink Are we showing the CTA link?
- * @param {Function}  props.setAttributes          Function to set the block attributes
- *
- * @return {*} React Element
  */
 const ExampleBockEdit = ({
 	attributes: { title, description, ctaText, ctaLink, showCTALink },
@@ -67,8 +57,7 @@ const ExampleBockEdit = ({
 				<PanelBody>
 					<p className="cta-link-helper-text">
 						This toggle lets you conditionally output other markup and attributes in the
-						block. (NOTE: We should style this paragraph, just to show (1) that
-						it&lsquo;s possible, and (2) where to put those styles.
+						block.
 					</p>
 					<ToggleControl
 						label={__('Show CTA button', 'gutenberg-lessons')}
