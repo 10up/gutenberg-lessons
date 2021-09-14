@@ -1,0 +1,37 @@
+.wp-block-gutenberg-lessons-inner-blocks-one-complete__image,
+.wp-block-gutenberg-lessons-inner-blocks-one-starter__image {
+
+	& img {
+		display: block;
+		height: auto;
+		width: 100%;
+		z-index: -1;
+	}
+}
+
+.wp-block-gutenberg-lessons-inner-blocks-one-complete__content,
+.wp-block-gutenberg-lessons-inner-blocks-one-starter__content {
+	background-color: var(--c-grey-100);
+	border-radius: 4px;
+	box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0, rgba(27, 31, 35, 0.15) 0 0 0 1px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: -6rem;
+	max-width: 80%;
+	min-height: 12rem;
+	padding: 3rem;
+	position: relative;
+	z-index: 1;
+
+	& > :first-child {
+		margin-top: 0;
+	}
+
+	& > :last-child {
+		margin-bottom: 0;
+	}
+
+	& .wp-block-buttons {
+		margin-top: 2rem;
+	}
+}
