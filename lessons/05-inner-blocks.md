@@ -26,7 +26,7 @@ Another example of this is the core buttons block. It only allows button blocks 
 ![Editor List View showing a Core Columns block with three nested Column Blocks that each have their own child blocks within.](/lessons/images/inner-blocks-core-columns-screenshot.jpg)
 
 ## Exercise Overview
-In this lesson we are going to build two different blocks to take a look at these different use-cases inner blocks can solve.
+In this lesson we are going to build two different blocks to take a look at these different use-cases inner blocks can solve. Both of these blocks have a `starter` folder that already contains a lot of the skeleton for these blocks. But the actual `InnerBlocks` need to get added to the components to make them work. If you get stuck you can always take a peek at the `completed` folder for a complete version of the block.
 
 ### 1. "Hero" Block
 First we will take a look at how we can use inner blocks to allow an editor to place anything they want into a predefined area of your component. In this example we have a "simple" design of a "Hero" component that has an image at the top with a content area that overlaps the image.
@@ -49,6 +49,8 @@ For the "Hero" Block we need to define an area of our markup where other blocks 
 
 To get started there is a starter block scaffolded out located in the blocks folder of the theme with the name `inner-blocks-one-stater`. If you are stuck you can take a look at the `inner-blocks-one-completed` folder for a completed version of the block.
 
+Most of the markup and block scaffolding already is in place. What is left to do is wiring up the `InnerBlock` area both in the editor and on the frontend. You will find comments outlining where the inner blocks area should go in both the `edit.js` and the `markup.php` files.
+
 ### 2. "Card Grid" Block
 The "Card Grid" consists of two elements. The actual grid that can contain the cards and then the individual cards. This is similar to how core has the Buttons block that contains individual Button blocks.
 
@@ -57,6 +59,8 @@ So we can archive this by creating two different blocks. The "Card Grid" block t
 ![Card Grid Block Scribble](/lessons/images/inner-blocks-two-scribble.png)
 
 To get started there are two starter blocks scaffolded out located in the blocks folder of the theme with the name `inner-blocks-two-card-grid-stater` and `inner-blocks-two-card-starter`. If you are stuck you can take a look at the `inner-blocks-two-card-grid-completed` and `inner-blocks-two-card-completed` folder for a completed version of the block.
+
+Like in the first example most of the markup and block is already scaffolded out. The inner blocks area needs to get added and configured again and the "Card" block needs to get hidden from the inserter unless it is being used within the "Card Grid" block.
 
 ## Using Inner Blocks
 Inner Blocks actually is the name of a react component that is part of the "Block Editor" package. We can import it into our block edit component and use it within the markup of our block.
