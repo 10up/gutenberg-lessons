@@ -3,3 +3,11 @@
  * https://project-website.tld
  *
  */
+
+.block-editor-url-input__input {
+
+	@nest .components-panel & {
+		border: 1px solid #757575 !important;
+		max-width: 100%;
+	}
+}
