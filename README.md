@@ -26,7 +26,8 @@ For resources on learning JavaScript and React.js, look through this [internal d
 * [Lesson 3: Block Styles](./lessons/03-styles.md)
 * [Lesson 4: Block Patterns and Variations](./lessons/04-patterns-variations.md)
 * [Lesson 5: Inner Blocks / Block Nesting](./lessons/05-inner-blocks.md)
-* [Lesson 6: Slot Fill](./lessons/06-slot-fill.md)
+* [Lesson 6: Rich Text Formats](./lessons/06-rich-text-formats.md)
+* [Lesson 7: Slot Fill](./lessons/07-slot-fill.md)
 
 ## Support
 If you run into issues with this training project, feel free to reach out in Slack to `#10up-gutenberg`. We also welcome bug reports, suggestions and contributions via the [Issues tab in Gitlab](https://gitlab.10up.com/exercises/gutenberg-lessons/-/issues).
