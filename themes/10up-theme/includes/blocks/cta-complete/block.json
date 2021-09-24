@@ -1,37 +1,38 @@
 {
 	"title": "CTA - Complete",
+	"apiVersion": 2,
 	"description": "Complete version of the CTA block",
 	"text-domain": "gutenberg-lessons",
 	"name": "gutenberg-lessons/cta-complete",
-  "icon": "feedback",
-  "category": "gutenberg-lessons",
-	"attributes":{
+	"icon": "feedback",
+	"category": "gutenberg-lessons",
+	"attributes": {
 		"title": {
-			"type" : "string"
+			"type": "string"
 		},
 		"description": {
-			"type" : "string"
+			"type": "string"
 		},
-    "showCTALink": {
-      "type": "boolean"
-    },
-    "ctaLink": {
-      "type" : "string",
-      "default": "https://10up.com"
-    },
-    "ctaText": {
-      "type" : "string",
-      "default": "Learn more →"
-    }
-  },
-  "example": {
-    "attributes":{
-      "title": "CTA Block",
-      "description":"Venenatis saepe perspiciatis illum qui voluptatum sagittis nihil litora ipsum sequi, eiusmod tellus soluta, pulvinar! Nemo exercitationem hic risus fugit! Omnis, proident tempora perspiciatis nulla.",
-      "showCTALink": true,
-      "ctaLink": "https://10up.com",
-      "ctaText": "Cta Text"
-    }
-  },
+		"showCTALink": {
+			"type": "boolean"
+		},
+		"ctaLink": {
+			"type": "string",
+			"default": "https://10up.com"
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "Learn more →"
+		}
+	},
+	"example": {
+		"attributes": {
+			"title": "CTA Block",
+			"description": "Venenatis saepe perspiciatis illum qui voluptatum sagittis nihil litora ipsum sequi, eiusmod tellus soluta, pulvinar! Nemo exercitationem hic risus fugit! Omnis, proident tempora perspiciatis nulla.",
+			"showCTALink": true,
+			"ctaLink": "https://10up.com",
+			"ctaText": "Cta Text"
+		}
+	},
 	"editorScript": "file:../../../dist/blocks/cta-complete-block/editor.js"
 }

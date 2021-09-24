@@ -3,7 +3,7 @@
  */
 import { __ } from '@wordpress/i18n';
 import { Fragment } from '@wordpress/element';
-import { RichText, InspectorControls, URLInput } from '@wordpress/block-editor';
+import { RichText, InspectorControls, URLInput, useBlockProps } from '@wordpress/block-editor';
 import { PanelBody, ToggleControl } from '@wordpress/components';
 
 /**
@@ -20,12 +20,13 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
  */
 const ExampleBockEdit = ({
 	attributes: { title, description, ctaText, ctaLink, showCTALink },
-	className,
 	setAttributes,
 }) => {
+	const blockProps = useBlockProps({ className: 'call-to-action-block' });
+
 	return (
 		<Fragment>
-			<div className={`call-to-action-block ${className}`}>
+			<div {...blockProps}>
 				<RichText
 					className="call-to-action-block__title"
 					tagName="h2"
