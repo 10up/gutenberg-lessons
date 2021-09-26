@@ -91,3 +91,6 @@ That was a quick tour of the block editor, some of the common lingo, and a peek 
 
 ## Further Reading
 1. [Block Editor Handbook](https://developer.wordpress.org/block-editor/)
+
+## Next Lesson
+[Lesson 2: A Simple CTA block](./02-cta-lesson.md)
