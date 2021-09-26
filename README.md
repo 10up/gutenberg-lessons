@@ -6,7 +6,7 @@ The purpose of this project is to help you build and customize (Gutenberg) block
 
 ## Training Prerequisites
 * Basic understanding of WordPress including how themes are structured.
-* Understanding of JavaScript fundementals and ES6+ concepts.
+* Understanding of JavaScript fundamentals and ES6+ concepts.
 * Basic understanding of React components.
 
 For resources on learning JavaScript and React.js, look through this [internal document](https://internal.10up.com/docs/javascript-tutorials/).
