@@ -1,23 +1,23 @@
-Blocks are the foundation of how we build WordPress sites at 10up. As of WordPress 5.0, the block editor replaced the classic editor. On most projects, we'll develop a bunch of custom blocks and also make customizations to the core blocks that come with WordPress.
+Blocks are the foundation of how we build WordPress sites at 10up. As of WordPress 5.0, the Block Editor replaced the Classic Editor. On most projects, we will develop a suite of custom blocks and also make customizations to the core blocks that are shipped with WordPress.
 
-This tutorial will walk you through the process of creating some simple custom blocks, as well as show you how to modify core blocks to fit your needs on projects. We'll start with some basics on how to get started, and work our way up to building a full-fledged custom block.
+This tutorial will walk you through the process of creating a simple custom blocks, as well as show you how to modify core blocks to fit the needs of your project. We will start with the basics and work our way up to building a full-fledged custom block.
 
 
-The very first thing you need to know about blocks is about the editor itself — let's start there!
+The very first thing you need to know about blocks is about the Block Editor itself — let's start there!
 
 ## The block editor
-Just so we're all on the same page with block terminology, here's all the important pieces of a block that you'll be dealing with:
+So that we are all on the same page with block terminology, here is a list of the important components of a block that you will be dealing with:
 
 ![alt text](images/block-editor.png "The Block Editor")
 
-1. <strong>Block</strong> — The content of posts within WordPress gets composed of Blocks. These Blocks are either built and provided by WordPress Core, a 3rd party, or are custom built blocks. Each Block is a visual representation of the content which allows you to visually edit your content inline.
-2. <strong>Toolbar</strong> — Every block has a toolbar that gets shown hovering above it when the block is selected. This toolbar contains secondary controls that are commonly used like formatting controls for text or alignment controls.
-3. <strong>Inspector</strong> gets called a lot of different things — "Inspector Panel", "Sidebar", "Sidebar Inspector", etc. In Gutenberg language, it's simply known as the "Inspector".  This is where any additional controls for blocks live. These controls should not be _required_ for a block to work. Everything should have sensible defaults that can get overwritten if needed.
+1. <strong>Block</strong> — The content of posts within WordPress is composed of Blocks. These Blocks are either built and provided by WordPress Core, a 3rd party theme or plugin, or are custom built blocks. Each Block is a visual representation of the content which allows you to visually edit your content inline.
+2. <strong>Toolbar</strong> — Every block has a toolbar that is shown hovering directly above it when the block is selected. This toolbar contains secondary controls that are commonly used such as formatting or alignment controls.
+3. <strong>Inspector</strong> - This section is called many different names — "Inspector Panel", "Sidebar", "Sidebar Inspector", etc. In Gutenberg language, it is simply known as the "Inspector". This is where any additional controls for a block live. These controls should not be _required_ for a block to work. Every option should have sensible defaults that can get overwritten if needed.
 
-Now that we have a handle on what things in the interface are called, let's jump into what blocks are made of.
+Now that we have a handle on the interface terminology, let's jump into what blocks are made of.
 
 ## The Tech Stack
-A common point of confusion with the block editor is how React.js fits in. Custom blocks that we build are just plain ole' HTML, CSS, and PHP on the front of the website. In the admin panel block editor (e.g. when editing a post), everything is written in React.js. If you are writing mark up for the front end or styling a block, React.js is not involved.
+A common point of confusion with the block editor is how it relates to React.js. Custom blocks that we build are plain ole' HTML, CSS, and PHP on the frontend of the website. In the Block Editor (e.g. when editing a post), the interface and all of the blocks are written in React.js. If you are writing markup for the frontend or styling a block, React.js is not involved.
 
 ## Block Attributes
 Attributes are the heart of Gutenberg blocks. They're how WordPress stores data, and are the common thread between the editor and the frontend.
