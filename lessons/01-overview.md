@@ -42,10 +42,10 @@ The various pieces of this starter block are:
 - [**save.js**](https://github.com/10up/wp-scaffold/blob/trunk/themes/10up-theme/includes/blocks/example-block/save.js) — You generally should not need to touch this file. At 10up, we build dynamic blocks which return `null`, but this is not super-important to know at this stage. Dynamic versus static blocks is something you do not need to worry about until much later in these lessons.
 
 ## Putting it all together
-There's a lot going on there, but things should make more sense if you follow a single attribute around.
+There is a lot going on here, but things should make more sense if we follow a single attribute around the codebase.
 
-Let's look at the `customTitle` attribute:
-1. It's first defined as an attribute here in [block.json](https://github.com/10up/wp-scaffold/blob/trunk/themes/10up-theme/includes/blocks/example-block/block.json#L15). This is essentially saying "I want to store a field in the database called `customTitle`" and use it in my templates.
+Let us look at the `customTitle` attribute:
+1. It is first defined as an attribute in [block.json](https://github.com/10up/wp-scaffold/blob/trunk/themes/10up-theme/includes/blocks/example-block/block.json#L15). This is essentially saying "I want to store a field in the database called `customTitle`" and use it in my templates.
 
 <pre>
 {
@@ -62,7 +62,7 @@ Let's look at the `customTitle` attribute:
   } ...
 </pre>
 
-2. Then we wrap it in some markup and watch for changes in a `<RichText>` element in [edit.js](https://github.com/10up/wp-scaffold/blob/trunk/themes/10up-theme/includes/blocks/example-block/edit.js#L28).
+2. Then we wrap it in some markup and watch for changes in a `<RichText>` element in [edit.js](https://github.com/10up/wp-scaffold/blob/trunk/themes/10up-theme/includes/blocks/example-block/edit.js#L28). Pay close attention to the last two lines of the `<RichText>` element. We are defining the value then re-defining the value when it is changed.
 ```
 	<div className={className}>
 		<RichText
@@ -83,11 +83,11 @@ Let's look at the `customTitle` attribute:
 ```
 
 ## Takeaways
-That's a quick tour of the block editor, some of the common lingo, and a peek at an existing block. Let's quickly summarize the most important takeaways.
+That was a quick tour of the block editor, some of the common lingo, and a peek at an existing block. Let us quickly summarize the most important takeaways.
 
-1. Blocks live in the block editor. Most blocks have two places to control its settings: a **Toolbar** above them  and an **Inspector** in the right sidebar.
-2. Blocks use and store **Attributes**. You can think of attributes in the same way you think of custom fields.
-3. Our scaffolding has a specific structure for blocks. An example block ships with our [WP Scaffolding](https://github.com/10up/wp-scaffold/tree/trunk/themes/10up-theme/includes/blocks/example-block).
+1. Blocks live in the block editor. Most blocks have two places to control its settings: the **Toolbar** above the block and the **Inspector** located in the right sidebar.
+2. Blocks use and store **Attributes**. Think of attributes in the same way you would think about custom fields.
+3. Our scaffolding has a specific structure for blocks. The example block ships with our [WP Scaffold](https://github.com/10up/wp-scaffold/tree/trunk/themes/10up-theme/includes/blocks/example-block) repository.
 
 ## Further Reading
 1. [Block Editor Handbook](https://developer.wordpress.org/block-editor/)
