@@ -19,7 +19,7 @@ For resources on learning JavaScript and React.js, look through this [internal d
 ```
 2. Clone this repository into the `wordpress` directory replacing the `wp-content` folder
 ```
-cd gutenberg-training-test/wordpress && rm -rf wp-content && git clone git@gitlab.10up.com:exercises/gutenberg-lessons.git
+cd gutenberg-training-test/wordpress && rm -rf wp-content && git clone git@gitlab.10up.com:exercises/gutenberg-lessons.git wp-content
 ```
 3. Navigate to the theme directory and install dependencies
 ```
