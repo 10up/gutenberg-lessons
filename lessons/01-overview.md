@@ -20,11 +20,11 @@ Now that we have a handle on the interface terminology, let's jump into what blo
 A common point of confusion with the block editor is how it relates to React.js. Custom blocks that we build are plain ole' HTML, CSS, and PHP on the frontend of the website. In the Block Editor (e.g. when editing a post), the interface and all of the blocks are written in React.js. If you are writing markup for the frontend or styling a block, React.js is not involved.
 
 ## Block Attributes
-Attributes are the heart of Gutenberg blocks. They're how WordPress stores data, and are the common thread between the editor and the frontend.
+Attributes are the heart of Gutenberg blocks. They are how WordPress stores data and are the common thread between the editor and the frontend.
 
 In our custom blocks, we define the attributes we want to use, save them to the database, and output them in our templates.
 
-You can think about attributes as fields or data — a heading, a title, a description, a url, an array of Post IDs, an image ID, a boolean toggle, etc — are all common examples of attributes. In each of these instances, we want to save the attribute's value in editor and then output them in our templates.
+You can think about attributes as fields or data — a heading, a title, a description, a url, an array of Post IDs, an image ID, a boolean toggle, etc — are all common examples of attributes. In each of these instances, we want to save the attribute's value in the editor and then output them in our templates.
 
 
 ## Anatomy of a block
