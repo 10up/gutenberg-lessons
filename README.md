@@ -13,11 +13,26 @@ For resources on learning JavaScript and React.js, look through this [internal d
 
 
 ## Project Setup
-1. Create a local WordPress installation.
-2. Checkout/download the repo replacing the `wp-content` folder
-3. In `wp-content/themes/10up-theme` run `npm install && npm run start`
-4. Run `npm run watch` to watch for changes that you'll make
-5. Activate this `10up-theme` in WordPress
+1. Create a local WordPress installation with the domain `gutenberg-training.test`
+```
+10updocker create gutenberg-training
+```
+2. Clone this repository into the `wordpress` directory replacing the `wp-content` folder
+```
+cd gutenberg-training-test/wordpress && rm -rf wp-content && git clone git@gitlab.10up.com:exercises/gutenberg-lessons.git
+```
+3. Navigate to the theme directory and install dependencies
+```
+cd wp-content/themes/10up-theme && npm install && npm run start
+```
+4. Activate the 10up-theme in WordPress
+```
+10updocker wp theme activate 10up-theme
+```
+5. Start watching for file changes that you will make
+```
+npm run watch
+```
 
 
 ## Lessons
