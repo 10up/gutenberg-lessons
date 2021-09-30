@@ -1,10 +1,10 @@
-## Lesson 2: Creating a simple Block
+# Lesson 2: Creating a simple Block
 
 This lesson provides a partially completed block that needs to have some features added to it to match the existing `cta-complete` block. All of the setup and files have been pre-configured as the focus here is to work with a block on its own without adding confusion around build tools and file locations.
 
 If you are stuck or need help, refer to the `cta-complete` block as reference or reach out to #10up-gutenberg in Slack for help
 
-### Learning Outcomes:
+## Learning Outcomes:
 
 1. Learn how to add new attributes to a block.
 2. Use the RichText component and save the values to a block.
@@ -14,17 +14,17 @@ If you are stuck or need help, refer to the `cta-complete` block as reference or
 Here's the completed CTA block that we're going to build:
 ![alt text](images/cta-complete.png "The completed CTA block")
 
-### Tasks:
+## Tasks:
 
-#### 1: Adding a new attribute.
+### 1: Adding a new attribute.
 Add a new attribute to the `cta-starter/block.json` file that will store the `description` field. Attributes are how data is stored with a block. [Here is a link to the official docs for reference](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/) and some more reading [here](https://developer.wordpress.org/block-editor/handbook/tutorials/create-block/attributes/).
 
-####  2: Adding a RichText component to manage the new attribute
+###  2: Adding a RichText component to manage the new attribute
 We want the user to be able to enter the description and manage formatting of the text in the blocks `edit` property. To do that, we can add a `RichText` component to the `cta-starter/edit.js` file under the existing one for the title. This component can receive many props ( [see the docs here for the full list](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/rich-text) ) but for now, we only need to specific the `tagName`, the `value` and `onChange`. If you use the existing `RichText` being used for the the `title` attribute, be sure to update the any references to the `title` attribute to the new one we created. Once you have the attribute being saved and retrieved correctly, move on to the next task!
 
 **Note**: See that `setAttributes` call? That's a function that is provided by the block API to set attributes for the block you can read more about it [here](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/)
 
-#### 3: Adding an optional field to the block.
+### 3: Adding an optional field to the block.
 Now that we know how to add new attributes and use `setAttributes` to update them, we can a more complicated feature - let's add an optional CTA button!
 
 When we're done, it will look like this:
@@ -52,7 +52,7 @@ __A quick note on block UX best practices:__ Generally, speaking content such as
 The intention for any block we create at 10up is to have the Block Editor experience match the front-end experience match as closely as possible. Update the `cta-starter/markup.php` to show the new attributes correctly ( including the optional CTA button )
 
 
-#### 5: Next Steps
+## Next Steps
 
 Congratulations! If you're here, you've created a block that should look and function the same as the `cta-complete` block. For this part of the training, get creative and add your own feature to the block. Some ideas:
 
