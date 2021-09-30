@@ -4,14 +4,14 @@ This lesson provides a partially completed block in `/10up-theme/includes/blocks
 
 If you are stuck or need help, refer to the `cta-complete` block as reference or reach out to `#10up-gutenberg` in Slack for help.
 
-### Learning Outcomes:
+### Objectives:
 
-1. Learn how to add new attributes to a block.
+1. Add new attributes to a block.
 2. Use the RichText component and save the values to a block.
 3. Add an Inspector Control to a block.
-4. Displaying attributes on the frontend.
+4. Display the attributes on the frontend.
 
-Here's the completed CTA block that we're going to build:
+Here is the completed CTA block that we are going to build:
 ![alt text](images/cta-complete.png "The completed CTA block")
 
 ### Tasks:
