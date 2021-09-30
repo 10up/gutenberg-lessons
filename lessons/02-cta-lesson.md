@@ -1,11 +1,11 @@
-## Lesson 2: Creating a simple Block
+# Lesson 2: Creating a simple Block
 
 This lesson provides a partially completed block in `/10up-theme/includes/blocks/cta-starter` that needs to have some features added to it to match the completed block in `10up-theme/includes/blocks/cta-complete`. All of the setup and files have been pre-configured as the focus here is to work with a block on its own without adding confusion around build tools and file locations.
 
 If you are stuck or need help, refer to the `cta-complete` block as reference or reach out to `#10up-gutenberg` in Slack for help.
 
 
-### Objectives:
+## Objectives:
 
 1. Add new attributes to a block.
 2. Use the RichText component and save the values to a block.
@@ -15,7 +15,7 @@ If you are stuck or need help, refer to the `cta-complete` block as reference or
 Here is the completed CTA block that we are going to build:
 ![alt text](images/cta-complete.png "The completed CTA block")
 
-### Get Started:
+## Get Started:
 Go ahead and open your code editor if you have not already done so. Run the following command inside the `wp-content/themes/10up-theme` directory to start watching for file changes.
 ```
 npm run watch
@@ -26,9 +26,9 @@ Also, open your browser and navigate to the existing `Hello World` post.
 https://gutenberg-training.test/wp-admin/post.php?post=1&action=edit
 ```
 
-### Tasks:
+## Tasks:
 
-#### 1: Add the new attribute.
+### 1: Add the new attribute.
 Attributes are how data is stored with a block. [Here is a link to the WordPress Handbook docs for reference](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/) and [another link to the Handbook tutorial](https://developer.wordpress.org/block-editor/handbook/tutorials/create-block/attributes/). Step one will be to add the new attribute to the `cta-starter/block.json` file that will store the `description` field.
 ```
 "attributes": {
@@ -41,7 +41,7 @@ Attributes are how data is stored with a block. [Here is a link to the WordPress
 },
 ```
 
-####  2: Add the RichText component to manage the new attribute.
+###  2: Add the RichText component to manage the new attribute.
 We want the user to be able to enter the description and manage formatting of the text in the blocks `edit` property. To do that, we will add a `RichText` component to the `cta-starter/edit.js` file under the existing `RichText` component for the Title. This component can receive many props ([see the docs here for the full list](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/rich-text)), but for now, we only need to specify `tagName`, `value`, and `onChange`. If you use the existing `RichText` being used for the `title` attribute, be sure to update any references to the `title` attribute to be `description`. 
 ```
 <RichText
@@ -57,7 +57,7 @@ To test your work, enter data into the `description` field in the Block Editor, 
 
 **Note**: See that `setAttributes` call? It is a function that is provided by the block API to set attributes for the block. You can read more about it in the [Block Reference Guides](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/).
 
-#### 3: Add an optional field to the block.
+### 3: Add an optional field to the block.
 Now that we know how to add attributes and use `setAttributes` to update them, we can create more complicated features - let's add an optional CTA button!
 
 When we are done, it will look like this:
@@ -146,7 +146,7 @@ Update the `cta-starter/markup.php` to show the new attributes correctly includi
 The intention for every block we create at 10up is to match the Block Editor experience with the frontend experience as closely as possible. Care must be taken in terms of your HTML markup and your CSS styles to ensure a consistent feel between the Block Editor and the frontend.
 
 
-#### 5: Optional Steps
+## Optional Changes
 
 Congratulations! You created a block that should look and function the same as the `cta-complete` block. For this part of the training, get creative and add your own features to the block. A few fun ideas are below:
 
@@ -154,3 +154,6 @@ Congratulations! You created a block that should look and function the same as t
 2. Convert the "Show CTA" toggle to a [radio control](https://developer.wordpress.org/block-editor/reference-guides/components/radio-control/).
 3. Add [checkbox control](https://developer.wordpress.org/block-editor/reference-guides/components/checkbox-control/) that allows the user to open the `LEARN MORE` button link in a new tab.
 
+## Next Lesson
+
+[Lesson 3: Block Styles](./03-styles.md)
