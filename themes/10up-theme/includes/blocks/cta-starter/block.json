@@ -6,11 +6,14 @@
 	"name": "gutenberg-lessons/cta-starter",
 	"icon": "feedback",
 	"category": "gutenberg-lessons",
-	"attributes": {
-		"title": {
-			"type": "string"
-		}
+"attributes": {
+	"title": {
+		"type": "string"
 	},
+	"description": {
+		"type": "string"
+	}
+},
 	"example": {
 		"attributes": {
 			"title": "CTA Starter Example"
