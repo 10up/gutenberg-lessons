@@ -132,9 +132,18 @@ Next, we will add a third `RichText` component below the one used for the `descr
 
 __A quick note on block editor best practices:__ In general, content such as text or setting a featured image should be input into the actual block and "settings" such as the CTA on/off toggle should be in the Inspector Toolbar.
 
-### 4: Rendering the front-end.
+### 4: Display the attributes on the frontend.
 
-The intention for any block we create at 10up is to have the Block Editor experience match the front-end experience match as closely as possible. Update the `cta-starter/markup.php` to show the new attributes correctly ( including the optional CTA button )
+Update the `cta-starter/markup.php` to show the new attributes correctly including the optional CTA button.
+```
+<p class="call-to-action-block__description">
+	<?php echo wp_kses_post( $attributes['description'] ); ?>
+</p>
+<?php if ( isset( $attributes['showCTALink'] ) && true === $attributes['showCTALink'] ) : ?>
+	<a href="<?php echo esc_url( $attributes['ctaLink'] ); ?>" class="call-to-action-block__link"><?php echo esc_html( $attributes['ctaText'] ); ?> </a>
+<?php endif; ?>
+```
+The intention for every block we create at 10up is to match the Block Editor experience with the frontend experience as closely as possible. Care must be taken in terms of your HTML markup and your CSS styles to ensure a consistent feel between the Block Editor and the frontend.
 
 
 #### 5: Next Steps
