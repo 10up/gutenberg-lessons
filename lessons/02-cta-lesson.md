@@ -146,11 +146,11 @@ Update the `cta-starter/markup.php` to show the new attributes correctly includi
 The intention for every block we create at 10up is to match the Block Editor experience with the frontend experience as closely as possible. Care must be taken in terms of your HTML markup and your CSS styles to ensure a consistent feel between the Block Editor and the frontend.
 
 
-#### 5: Next Steps
+#### 5: Optional Steps
 
-Congratulations! If you're here, you've created a block that should look and function the same as the `cta-complete` block. For this part of the training, get creative and add your own feature to the block. Some ideas:
+Congratulations! You created a block that should look and function the same as the `cta-complete` block. For this part of the training, get creative and add your own features to the block. A few fun ideas are below:
 
-1. Change the style of the block if the "Show CTA" toggle is turned on.
-2. Convert the toggle to a [radio control](https://developer.wordpress.org/block-editor/reference-guides/components/radio-control/).
-3. Add a control that allows you to open the LEARN MORE link in a new tab.
+1. Change the style of the block if the "Show CTA" toggle is enabled.
+2. Convert the "Show CTA" toggle to a [radio control](https://developer.wordpress.org/block-editor/reference-guides/components/radio-control/).
+3. Add [checkbox control](https://developer.wordpress.org/block-editor/reference-guides/components/checkbox-control/) that allows the user to open the `LEARN MORE` button link in a new tab.
 
