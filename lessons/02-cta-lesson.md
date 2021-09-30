@@ -69,8 +69,9 @@ To do this, we need to manage three new pieces of data:
 2. The button text.
 3. The button link.
 
-Create three more attributes in the `cta-starter/block.json` file for each new piece of data with the appropriate `type` and `default` values. (Refer to `cta-complete/block.json` if you get stuck )
-**Note: One of them is NOT of the the type `string`**
+Create three more attributes in the `cta-starter/block.json` file for each new piece of data with the appropriate `type` and `default` values. (Refer to `cta-complete/block.json` if you get stuck)
+
+**Note:** One of them is NOT of the the type `string`
 ```
 "attributes": {
 	"title": {
@@ -93,7 +94,14 @@ Create three more attributes in the `cta-starter/block.json` file for each new p
 },
 ```
 
-Next, we need to add a `ToggleControl` ( [docs](https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/) ) to the Inspector Sidebar for the block. FYI, there are lots of useful pre-built components like this one you can use. Reference the [pre-built components](https://developer.wordpress.org/block-editor/reference-guides/components/) before building any new ones. The `InspectorControls` component has already been added to the `cta-starter/edit.js` for you, this is special type of component that uses a concept call SlotFill. This is how we can add the code here, but have it appear in the Block Inspector sidebar. All of the imports have already been setup for you so you can just add the new `ToggleControl` inside the `PanelBody`. Set the props for the component to update the attribute that controls if the the CTA is enabled ( Refer to `cta-complete/block,json` if you get stuck )
+Next, we will add a `ToggleControl` ([docs](https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/)) to the block's Inspector Sidebar. Be aware that there are many useful pre-built components like this one that you can use when building a block. Reference the [pre-built components guide](https://developer.wordpress.org/block-editor/reference-guides/components/) before building a new component. The `InspectorControls` component has already been added to the `cta-starter/edit.js` file for you. It is a special type of component that uses a concept call SlotFill. This is how we can add the code next to the components, but have it appear in the block's Inspector Sidebar. All of the imports have already been setup for you so you can simply add the new `ToggleControl` component inside the `PanelBody` component. Set the props for the component to update the attribute that controls it if the the CTA is enabled (Refer to `cta-complete/block,json` if you get stuck).
+```
+<ToggleControl
+	label={__('Show CTA button', 'gutenberg-lessons')}
+	checked={showCTALink}
+	onChange={() => setAttributes({ showCTALink: !showCTALink })}
+/>
+```
 
 Once that is in-place, we want to add a`URLInput` component to the Inspector Side bar. This will allow the user to set the URL that the CTA button links to. The issue here, is that we only want to show this new control if the attribute that stores if the CTA is enabled is set to true. Give this a try and again refer to the completed example if you get stuck.
 
