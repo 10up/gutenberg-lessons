@@ -103,11 +103,34 @@ Next, we will add a `ToggleControl` ([docs](https://developer.wordpress.org/bloc
 />
 ```
 
-Once that is in-place, we want to add a`URLInput` component to the Inspector Side bar. This will allow the user to set the URL that the CTA button links to. The issue here, is that we only want to show this new control if the attribute that stores if the CTA is enabled is set to true. Give this a try and again refer to the completed example if you get stuck.
+Next, we will add the `URLInput` component to the Inspector Sidebar. This will allow the user to set the URL that the CTA button links to. The issue here, is that we only want to show this new control if the attribute that stores if the CTA is enabled is set to `true`. 
+```
+{showCTALink && (
+	<URLInput
+		label={__('URL', 'gutenberg-lessons')}
+		value={ctaLink}
+		onChange={(ctaLink) => {
+			setAttributes({ ctaLink });
+		}}
+	/>
+)}
+```
 
-The next step is to add a new `RichText` component below the one for the `description` field that will manage the text of the CTA button. Be sure that this is only shown if the feature is enabled and that it sets and retrieves the associated attribute correctly.
+Next, we will add a third `RichText` component below the one used for the `description` field. This component will manage the CTA button text. Be sure that this is only shown if the CTA button is enabled. The component should set and retrieve the associated attribute correctly.
+```
+{showCTALink && (
+	<RichText
+		className="call-to-action-block__link"
+		tagName="a"
+		placeholder={__('CTA here…', 'gutenberg-lessons')}
+		keepPlaceholderOnFocus="true"
+		value={ctaText}
+		onChange={(ctaText) => setAttributes({ ctaText })}
+	/>
+)}
+```
 
-__A quick note on block UX best practices:__ Generally, speaking content such as text or setting a featured image should be input into the actual block and "settings" such as the CTA on/off toggle should be in the inspector toolbar.
+__A quick note on block editor best practices:__ In general, content such as text or setting a featured image should be input into the actual block and "settings" such as the CTA on/off toggle should be in the Inspector Toolbar.
 
 ### 4: Rendering the front-end.
 
