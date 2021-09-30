@@ -2,7 +2,7 @@
 
 This lesson provides a partially completed block in `/10up-theme/includes/blocks/cta-starter` that needs to have some features added to it to match the completed block in `10up-theme/includes/blocks/cta-complete`. All of the setup and files have been pre-configured as the focus here is to work with a block on its own without adding confusion around build tools and file locations.
 
-If you are stuck or need help, refer to the `cta-complete` block as reference or reach out to #10up-gutenberg in Slack for help
+If you are stuck or need help, refer to the `cta-complete` block as reference or reach out to `#10up-gutenberg` in Slack for help.
 
 ### Learning Outcomes:
 
