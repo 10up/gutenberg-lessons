@@ -16,8 +16,8 @@ Here is the completed CTA block that we are going to build:
 
 ### Tasks:
 
-#### 1: Adding a new attribute.
-Add a new attribute to the `cta-starter/block.json` file that will store the `description` field. Attributes are how data is stored with a block. [Here is a link to the official docs for reference](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/) and some more reading [here](https://developer.wordpress.org/block-editor/handbook/tutorials/create-block/attributes/).
+#### 1: Add the new attribute.
+Attributes are how data is stored with a block. [Here is a link to the WordPress Handbook docs for reference](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/) and [another link to the Handbook tutorial](https://developer.wordpress.org/block-editor/handbook/tutorials/create-block/attributes/). Step one will be to add the new attribute to the `cta-starter/block.json` file that will store the `description` field.
 
 ####  2: Adding a RichText component to manage the new attribute
 We want the user to be able to enter the description and manage formatting of the text in the blocks `edit` property. To do that, we can add a `RichText` component to the `cta-starter/edit.js` file under the existing one for the title. This component can receive many props ( [see the docs here for the full list](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/rich-text) ) but for now, we only need to specific the `tagName`, the `value` and `onChange`. If you use the existing `RichText` being used for the the `title` attribute, be sure to update the any references to the `title` attribute to the new one we created. Once you have the attribute being saved and retrieved correctly, move on to the next task!
