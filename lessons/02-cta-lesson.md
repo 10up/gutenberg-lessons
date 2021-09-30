@@ -38,7 +38,7 @@ Attributes are how data is stored with a block. [Here is a link to the WordPress
 	"description": {
 		"type": "string"
 	}
-}
+},
 ```
 
 ####  2: Add the RichText component to manage the new attribute.
@@ -57,10 +57,10 @@ To test your work, enter data into the `description` field in the Block Editor, 
 
 **Note**: See that `setAttributes` call? It is a function that is provided by the block API to set attributes for the block. You can read more about it in the [Block Reference Guides](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/).
 
-#### 3: Adding an optional field to the block.
-Now that we know how to add new attributes and use `setAttributes` to update them, we can a more complicated feature - let's add an optional CTA button!
+#### 3: Add an optional field to the block.
+Now that we know how to add attributes and use `setAttributes` to update them, we can create more complicated features - let's add an optional CTA button!
 
-When we're done, it will look like this:
+When we are done, it will look like this:
 ![alt text](images/cta-complete-with-control.png "CTA block with Inspector control")
 
 
@@ -69,8 +69,29 @@ To do this, we need to manage three new pieces of data:
 2. The button text.
 3. The button link.
 
-Add three more attributes to the `cta-starter/block.json` file for each of the new pieces of data with appropriate `type` and `default`values as needed. ( Refer to `cta-complete/block,json` if you get stuck )
-**Note: On of them is NOT of the the type `string`**
+Create three more attributes in the `cta-starter/block.json` file for each new piece of data with the appropriate `type` and `default` values. (Refer to `cta-complete/block.json` if you get stuck )
+**Note: One of them is NOT of the the type `string`**
+```
+"attributes": {
+	"title": {
+		"type": "string"
+	},
+	"description": {
+		"type": "string"
+	},
+	"showCTALink": {
+		"type": "boolean"
+	},
+	"ctaLink": {
+		"type": "string",
+		"default": "https://10up.com"
+	},
+	"ctaText": {
+		"type": "string",
+		"default": "Learn more →"
+	}
+},
+```
 
 Next, we need to add a `ToggleControl` ( [docs](https://developer.wordpress.org/block-editor/reference-guides/components/toggle-control/) ) to the Inspector Sidebar for the block. FYI, there are lots of useful pre-built components like this one you can use. Reference the [pre-built components](https://developer.wordpress.org/block-editor/reference-guides/components/) before building any new ones. The `InspectorControls` component has already been added to the `cta-starter/edit.js` for you, this is special type of component that uses a concept call SlotFill. This is how we can add the code here, but have it appear in the Block Inspector sidebar. All of the imports have already been setup for you so you can just add the new `ToggleControl` inside the `PanelBody`. Set the props for the component to update the attribute that controls if the the CTA is enabled ( Refer to `cta-complete/block,json` if you get stuck )
 
