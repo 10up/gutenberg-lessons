@@ -42,7 +42,18 @@ Attributes are how data is stored with a block. [Here is a link to the WordPress
 ```
 
 ####  2: Add the RichText component to manage the new attribute.
-We want the user to be able to enter the description and manage formatting of the text in the blocks `edit` property. To do that, we will add a `RichText` component to the `cta-starter/edit.js` file under the existing `RichText` component for the Title. This component can receive many props ([see the docs here for the full list](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/rich-text)), but for now, we only need to specify `tagName`, `value`, and `onChange`. If you use the existing `RichText` being used for the `title` attribute, be sure to update any references to the `title` attribute to be `description`. To test your work, enter data into the `description` field in the Block Editor, save the post, and refresh your screen. Once you have the attribute being saved and retrieved correctly, move on to the next task!
+We want the user to be able to enter the description and manage formatting of the text in the blocks `edit` property. To do that, we will add a `RichText` component to the `cta-starter/edit.js` file under the existing `RichText` component for the Title. This component can receive many props ([see the docs here for the full list](https://github.com/WordPress/gutenberg/tree/trunk/packages/block-editor/src/components/rich-text)), but for now, we only need to specify `tagName`, `value`, and `onChange`. If you use the existing `RichText` being used for the `title` attribute, be sure to update any references to the `title` attribute to be `description`. 
+```
+<RichText
+	className="wp-block-cta-complete-__description"
+	tagName="p"
+	placeholder={__('Description here …', 'gutenberg-lessons')}
+	keepPlaceholderOnFocus="true"
+	value={description}
+	onChange={(description) => setAttributes({ description })}
+/>
+```
+To test your work, enter data into the `description` field in the Block Editor, save the post, and refresh your screen. Once you have the attribute being saved and retrieved correctly, move on to the next task!
 
 **Note**: See that `setAttributes` call? It is a function that is provided by the block API to set attributes for the block. You can read more about it in the [Block Reference Guides](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/).
 
