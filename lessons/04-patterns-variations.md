@@ -1,4 +1,4 @@
-# Lesson 3: Block variations
+# Lesson 4: Block variations
 
 In the last lesson, we learned how to add styles to blocks. In this lesson, we're going to learn how to organize core and custom blocks into patterns or variations for easy reuse.
 
