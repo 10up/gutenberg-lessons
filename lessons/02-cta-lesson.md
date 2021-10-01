@@ -4,7 +4,6 @@ This lesson provides a partially completed block in `/10up-theme/includes/blocks
 
 If you are stuck or need help, refer to the `cta-complete` block as reference or reach out to `#10up-gutenberg` in Slack for help.
 
-
 ## Objectives:
 
 1. Add new attributes to a block.

@@ -1,22 +1,25 @@
-## Lesson X:
+# Lesson X:
 
-### Learning Outcomes:
+## Learning Outcomes:
 1. ...
 2. ...
 3. ...
 
-### What are "X"?
+## What are "X"?
 
-### Exercise Overview
+## Exercise Overview
 
-### Takeaways
+## Takeaways
 
-### Next steps
+## Next steps
 1. ...
 2. ...
 3. ...
 
-### Further reading
+## Further reading
 - []()
 - []()
 - []()
+
+## Next Lesson
+[]()

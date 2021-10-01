@@ -1,3 +1,5 @@
+# Lesson 1: Anatomy of a block
+
 Blocks are the foundation of how we build WordPress sites at 10up. As of WordPress 5.0, the Block Editor replaced the Classic Editor. On most projects, we will develop a suite of custom blocks and also make customizations to the core blocks that are shipped with WordPress.
 
 This tutorial will walk you through the process of creating a simple custom blocks, as well as show you how to modify core blocks to fit the needs of your project. We will start with the basics and work our way up to building a full-fledged custom block.
