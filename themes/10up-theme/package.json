@@ -32,6 +32,7 @@
       "style": "./assets/css/frontend/style.css",
       "styleguide-style": "./assets/css/styleguide/styleguide.css",
       "core-block-overrides": "./includes/core-block-overrides.js",
+      "rich-text-formats": "./includes/text-formats/index.js",
       "cta-complete-block": "./includes/blocks/cta-complete/index.js",
       "inner-blocks-one-complete-block": "./includes/blocks/inner-blocks-one-complete/index.js",
       "inner-blocks-two-card-grid-complete-block": "./includes/blocks/inner-blocks-two-card-grid-complete/index.js",
