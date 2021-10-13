@@ -1,6 +1,6 @@
 # Lesson 4: Block variations
 
-In the last lesson, we learned how to add styles to blocks. In this lesson, we're going to learn how to organize core and custom blocks into patterns or variations for easy reuse.
+In the last lesson, we learned how to add styles to blocks. In this lesson, we're going to learn how to organize core and custom blocks into variations for easy reuse.
 
 ## Learning Outcomes:
 
@@ -85,7 +85,7 @@ innerBlocks: [
 ## Takeaways
 That's a quick look of block variations. Let's quickly summarize the most important takeaways:
 
-1. You can combine core and custom blocks into patterns or variations
+1. You can combine core and custom blocks into variations
 2. You often need to group blocks together using Group and Column blocks
 3. You can change the attributes of any blocks you use — adding classes, changing placeholder text, etc
 
