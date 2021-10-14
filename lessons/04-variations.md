@@ -102,3 +102,6 @@ That's a quick look of block variations. Let's quickly summarize the most import
 * [Block Variations Handbook](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-variations/)
 * [Block Variations](https://css-tricks.com/how-to-use-block-variations-in-wordpress/)
 * [BlockBook](https://youknowriad.github.io/blockbook/block/)
+
+## Next Lesson
+[Lesson 5: Inner Blocks](./05-inner-blocks.md)

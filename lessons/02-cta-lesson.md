@@ -60,3 +60,5 @@ Congratulations! If you're here, you've created a block that should look and fun
 2. Convert the toggle to a [radio control](https://developer.wordpress.org/block-editor/reference-guides/components/radio-control/).
 3. Add a control that allows you to open the LEARN MORE link in a new tab.
 
+## Next Lesson
+[Lesson 3: Block styles](./03-styles.md)

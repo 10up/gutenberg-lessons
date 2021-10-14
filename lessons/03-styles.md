@@ -93,3 +93,6 @@ That's a quick tour of block Styles. Let's quickly summarize the most important 
 
 ## Further reading
 * [Block Styles](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-styles/)
+
+## Next Lesson
+[Lesson 4: Variations](./04-variations.md)
