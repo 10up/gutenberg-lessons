@@ -25,6 +25,7 @@ function setup() {
 	add_action( 'admin_enqueue_scripts', $n( 'admin_styles' ) );
 	add_action( 'admin_enqueue_scripts', $n( 'admin_scripts' ) );
 	add_action( 'enqueue_block_editor_assets', $n( 'core_block_overrides' ) );
+	add_action( 'enqueue_block_editor_assets', $n( 'text_formats' ) );
 	add_action( 'wp_enqueue_scripts', $n( 'styles' ) );
 	add_action( 'wp_head', $n( 'js_detection' ), 0 );
 	add_action( 'wp_head', $n( 'add_manifest' ), 10 );
@@ -218,6 +219,25 @@ function core_block_overrides() {
 		wp_enqueue_script(
 			'core-block-overrides',
 			TENUP_THEME_DIST_URL . 'js/core-block-overrides.js',
+			$dep['dependencies'],
+			$dep['version'],
+			true
+		);
+	}
+}
+
+/**
+ * Enqueue core block filters, styles and variations.
+ *
+ * @return void
+ */
+function text_formats() {
+	$overrides = TENUP_THEME_DIST_PATH . 'js/rich-text-formats.asset.php';
+	if ( file_exists( $overrides ) ) {
+		$dep = require_once $overrides;
+		wp_enqueue_script(
+			'rich-text-formats',
+			TENUP_THEME_DIST_URL . 'js/rich-text-formats.js',
 			$dep['dependencies'],
 			$dep['version'],
 			true
