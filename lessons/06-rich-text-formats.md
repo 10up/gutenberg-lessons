@@ -44,3 +44,6 @@ Rich Text Formats make sense to use whenever you want editors to be able to mani
 ## Further reading
 - [Block Editor Handbook: Introduction to the Format API](https://developer.wordpress.org/block-editor/how-to-guides/format-api/)
 - [How to Create Custom Text Formats for Gutenberg Block Editor - by Jeffrey Carandang](https://jeffreycarandang.com/how-to-create-custom-text-formats-for-gutenberg-block-editor/)
+
+## Next Lesson
+[Lesson 7: Slot Fill](./07-slot-fill.md)

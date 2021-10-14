@@ -210,4 +210,4 @@ Now that you have build two blocks that use `InnerBlocks` take a look at the [Co
 - [API Version 2 - useBlockProps & useInnerBlocksProps](https://internal.10up.com/blog/2021/06/23/a-quick-guide-for-gutenberg-api-version-2/)
 
 ## Next Lesson
-[Lesson 6: Slot Fill](./06-slot-fill.md)
+[Lesson 6: Rich Text Formats](./06-rich-text-formats.md)
