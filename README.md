@@ -39,7 +39,7 @@ npm run watch
 * [Lesson 1: Anatomy of a block](./lessons/01-overview.md)
 * [Lesson 2: A Simple CTA block](./lessons/02-cta-lesson.md)
 * [Lesson 3: Block Styles](./lessons/03-styles.md)
-* [Lesson 4: Block Patterns and Variations](./lessons/04-patterns-variations.md)
+* [Lesson 4: Block Variations](./lessons/04-variations.md)
 * [Lesson 5: Inner Blocks / Block Nesting](./lessons/05-inner-blocks.md)
 * [Lesson 6: Slot Fill](./lessons/06-slot-fill.md)
 
