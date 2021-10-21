@@ -48,9 +48,9 @@ npm run watch
 
 After going through the lessons, it's time to put all your newly learned skills together and build a block by yourself. Spend no more than ~4 hours on this block. Submit what you build to your Director of Engineering for review.
 
-__What to build__
+__What to Build__
 
-Your task is to build a block called "Byline". The block should show the author of the current post next to their avatar image. There should be a control for hiding the avatar image.
+Your task is to build a block called "Author Byline". The block should show the author of the current post next to their avatar image. There should be a block setting for hiding the avatar image.
 
 To start you should make a clone of the [10up WP Scaffold](https://github.com/10up/wp-scaffold). The block should be created as a part of the theme.
 
