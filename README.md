@@ -60,6 +60,8 @@ __Technical Specifications__
 * Following 10up Best Practices
 * Follows block building patterns shown in the [10up WP Scaffold example block](https://github.com/10up/wp-scaffold/tree/trunk/themes/10up-theme/includes/blocks/example-block).
 
+If you get stuck or have questions, please post in the `#10up-gutenberg` Slack channel.
+
 
 ## Support
 If you run into issues with this training project, feel free to reach out in Slack to `#10up-gutenberg`. We also welcome bug reports, suggestions and contributions via the [Issues tab in Gitlab](https://gitlab.10up.com/exercises/gutenberg-lessons/-/issues).
