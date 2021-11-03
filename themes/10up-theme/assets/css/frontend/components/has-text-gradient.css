@@ -1,0 +1,11 @@
+.has-text-gradient {
+	--startColor: #1565c0;
+	--endColor: #b92b27;
+	--fallbackColor: var(--endColor);
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-color: var(--fallbackColor);
+	background-image: linear-gradient(to right, var(--startColor), var(--endColor));
+	background-size: 100%;
+	-webkit-text-fill-color: transparent;
+}

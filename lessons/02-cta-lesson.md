@@ -139,7 +139,9 @@ Update the `cta-starter/markup.php` to show the new attributes correctly includi
 	<?php echo wp_kses_post( $attributes['description'] ); ?>
 </p>
 <?php if ( isset( $attributes['showCTALink'] ) && true === $attributes['showCTALink'] ) : ?>
-	<a href="<?php echo esc_url( $attributes['ctaLink'] ); ?>" class="call-to-action-block__link"><?php echo esc_html( $attributes['ctaText'] ); ?> </a>
+	<a href="<?php echo esc_url( $attributes['ctaLink'] ); ?>" class="call-to-action-block__link">
+		<?php echo esc_html( $attributes['ctaText'] ); ?>
+	</a>
 <?php endif; ?>
 ```
 The intention for every block we create at 10up is to match the Block Editor experience with the frontend experience as closely as possible. Care must be taken in terms of your HTML markup and your CSS styles to ensure a consistent feel between the Block Editor and the frontend.
