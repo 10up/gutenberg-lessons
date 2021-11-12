@@ -53,12 +53,35 @@ You can also add Styles to custom blocks that you create. Let's add a new style 
 ![alt text](images/cta-block-style.png "Slightly Rounded Image block style")
 
 
-It looks a lot like the registering a Style for a core block:
-1. Create a new `cta.js` file in `/includes/block-styles/`
-2. Use the `registerBlockStyle` function to select the `gutenberg-lessons/cta-complete` block, and set the "Thick border" style. You can find the name of the block in its `block.json` file.
-3. Add a style using the new `is-style-thick-border` classname.
+It looks a lot like the registering a Style for a core block. Follow the steps below to create your own custom block style. If you get stuck you can reference the same [custom block style registration](https://gitlab.10up.com/exercises/gutenberg-lessons/-/blob/trunk/themes/10up-theme/includes/block-styles/cta.js) applied to the `cta-complete` block.:
+1. Create a new `cta-starter.js` file in `/includes/block-styles/`
+2. Import `registerBlockStyle` from WordPress: `import { registerBlockStyle } from '@wordpress/blocks';`
+3. Create a new function, `registerCTAStarterStyles()`
+4. Within this function, use the `registerBlockStyle` function to target the `gutenberg-lessons/cta-starter` block(the name to reference is found in the blocks' `block.json` file), and set the style "name" to `thick-border` and the style "label" to `Thick border`.
+
+**Hint** Remember what we did for the core image block:
+```
+function registerImageStyles() {
+	registerBlockStyle('core/image', {
+		name: 'slightly-rounded',
+		label: 'Slightly Rounded',
+	});
+}
+```
+
+5. Call the function in the WordPress.dom ready:
+```
+wp.domReady(() => {
+	registerCTAStarterStyles();
+});
+```
+6. Next, we need to be sure this custom style registration is imported. See the [index.js](https://gitlab.10up.com/exercises/gutenberg-lessons/-/blob/trunk/themes/10up-theme/includes/block-styles/index.js) file found in `block-styles` and add the above file name as an import (`import './cta-starter';`);
+7. Add a style using the new `is-style-thick-border` classname. This has already been done for you in the [`call-to-actoin.css`](https://gitlab.10up.com/exercises/gutenberg-lessons/-/blob/trunk/themes/10up-theme/assets/css/frontend/components/blocks/call-to-action.css) file.
 
 And voila! We've added a new style for our custom block!
+
+**Note**: For training purposes, this replicates the custom styles already in place for the `cta-complete` block. This type of replication we would typically not do in a real world environment.
+
 ![alt text](images/cta-block-thick-border.png "Slightly Rounded Image block style")
 
 
@@ -67,16 +90,13 @@ Lots of core blocks come with styles. Depending on the client, the design, or th
 
 ![alt text](images/pullquote-core-block-style.png "Slightly Rounded Image block style")
 
-### Steps
+### Steps (These steps have already been done for you. Please follow along as a reference.)
 1. Create a new `pullquote.js` file in `/includes/block-styles/`
 2. Use the `unRegisterBlockStyle` function to select the `core/pullquote` block, and remove the "Solid color" style.
 3. Import your `pullquote.js` into `/includes/block-styles/index.js`
 
 After we've done that, we can see that the "Solid color" Style has now been removed:
 ![alt text](images/pullquote-core-block-style-removed.png "Pullquote block with style removed")
-
-Here's the [completed example](https://gitlab.10up.com/exercises/gutenberg-lessons/-/blob/trunk/themes/10up-theme/includes/block-styles/image.js).
-
 
 ## Takeaways
 That's a quick tour of block Styles. Let's quickly summarize the most important takeaways:
