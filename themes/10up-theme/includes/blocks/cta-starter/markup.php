@@ -16,8 +16,10 @@
 // Set defaults.
 $attributes = $args['attributes'];
 ?>
-<div class="call-to-action-block">
+
+<div class="call-to-action-block <?php echo isset( $attributes['className'] ) ? esc_attr( $attributes['className'] ) : ''; ?>">
+
 	<h3 class="call-to-action-block__title">
-		<?php echo wp_kses_post( $attributes['title'] ); ?>
+		<?php echo wp_kses_post( $attributes['title'] ); ?>—
 	</h3>
 </div>

@@ -47,7 +47,31 @@ The various pieces of this starter block are:
 There is a lot going on here, but things should make more sense if we follow a single attribute around the codebase.
 
 Let us look at the `customTitle` attribute:
-1. It is first defined as an attribute in [block.json](https://github.com/10up/wp-scaffold/blob/trunk/themes/10up-theme/includes/blocks/example-block/block.json#L15). This is essentially saying "I want to store a field in the database called `customTitle`" and use it in my templates.
+1. It is first defined as an attribute in [block.json](https://github.com/10up/wp-scaffold/blob/trunk/themes/10up-theme/includes/blocks/example-block/block.json#L15). This is essentially saying "I want to store a field in the database called `customTitle`" and use it in my templates. There are two instances below where you can see `customTitle` defined.
+
+The first, is the actual definition of the attribute. Here, we define the atrribute and set [type validation](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-attributes/#type-validation).
+
+```
+"attributes":{
+		"customTitle": {˚
+			"type" : "string"
+		}
+	},
+```
+
+The second, within `example: {}` is not setting or defining the attribute. Instead, it is an optional (but recommended) setting that enables a rich text preview of what the block looks like when you hover over it in the Block Inserter and also in the Block Switcher. If no data is set in `example`, the provided preview just reads "No Preview Available."
+
+```
+"example": {
+	"attributes":{
+		"customTitle": "Example Block"
+	}
+},
+```
+
+For this lession, however, the actual defining of the attribute (first instance) is where we want to focus.
+
+You can see below the "Example Block" `block.json` from our 10up Scaffold that includes both the `customTitle` attribute definition and the `customTitle` "example" content:
 
 <pre>
 {
@@ -55,14 +79,23 @@ Let us look at the `customTitle` attribute:
 	"description": "An Example Block",
 	"text-domain": "tenup-scaffold",
 	"name": "tenup/example",
-  	"icon": "feedback",
-  	"category": "tenup-scaffold-blocks",
+	"icon": "feedback",
+	"category": "tenup-scaffold-blocks",
 	"attributes":{
 		<strong>"customTitle"</strong>: {˚
 			"type" : "string"
 		}
-  } ...
+	},
+	"example": {
+		"attributes":{
+			"customTitle": "Example Block"
+		}
+	},
+	...
+}
 </pre>
+
+
 
 2. Then we wrap it in some markup and watch for changes in a `<RichText>` element in [edit.js](https://github.com/10up/wp-scaffold/blob/trunk/themes/10up-theme/includes/blocks/example-block/edit.js#L28). Pay close attention to the last two lines of the `<RichText>` element. We are defining the value then re-defining the value when it is changed.
 ```
