@@ -35,7 +35,7 @@ Here's the first two that ship with the editor:
 
 Let's see how to add a new style — slightly-rounded!
 
-## Add a new Style
+## Add a New Style
 Adding a new Style is pretty simple.
 
 1. Create an `image.js` file in `/includes/block-styles/`. Here's the [completed example](https://gitlab.10up.com/exercises/gutenberg-lessons/-/blob/trunk/themes/10up-theme/includes/block-styles/image.js).
@@ -47,7 +47,7 @@ When we've done that, we can now use our new style and see it outputting as the 
 ![alt text](images/core-image-slightly-rounded.png "Slightly Rounded Image block style")
 
 
-## Adding Styles to custom blocks
+## Adding Styles to Custom Blocks
 You can also add Styles to custom blocks that you create. Let's add a new style to the CTA block that we built in the previous lesson. Let's say we want to have the option of making the border super thick on our CTA block. Something like this:
 
 ![alt text](images/cta-block-style.png "Slightly Rounded Image block style")
@@ -82,10 +82,10 @@ And voila! We've added a new style for our custom block!
 
 **Note**: For training purposes, this replicates the custom styles already in place for the `cta-complete` block. This type of replication we would typically not do in a real world environment.
 
-![alt text](images/cta-block-thick-border.png "Slightly Rounded Image block style")
+![alt text](images/cta-block-thick-border.png "Thick border CTA style")
 
 
-## Remove an unwanted Style
+## Remove an Unwanted Style
 Lots of core blocks come with styles. Depending on the client, the design, or the use case, you might want to remove any unnecessary styles. Let's use the core Pullquote block as an example — it comes with a "Solid color" Style, which we don't need.
 
 ![alt text](images/pullquote-core-block-style.png "Slightly Rounded Image block style")
