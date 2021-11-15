@@ -2,8 +2,8 @@ import { registerBlockVariation } from '@wordpress/blocks';
 
 // Adds Call To Action Row variation on Group block
 registerBlockVariation('core/group', {
-	name: 'application-ctas',
-	title: 'Application CTAs',
+	name: 'application-ctas-example',
+	title: 'Application CTAs Example',
 	icon: 'block-default',
 	scope: ['inserter'],
 	attributes: {

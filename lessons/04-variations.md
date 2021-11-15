@@ -19,7 +19,7 @@ In the last lesson, we learned how to add styles to blocks. In this lesson, we'r
 
 We need a way to "package up" all those elements so editors can easily insert it whenever they want. Thankfully we can, with block variations!
 
-## Breaking it down
+## Breaking it Down
 For our example, we need to combine these four blocks for easy use in the editor. Let's break down what we're looking at here into actual blocks:
 
 ![alt text](images/variations-block-cta-2.png "Block Variation breakdown")
@@ -32,8 +32,12 @@ On first glance, it looked like we just needed 4 blocks. But we actually need a 
 5. Our two CTA blocks
 
 ## Using Variations
-Alright — let's build this thing! The completed example is in [application-ctas.js](../themes/10up-theme/includes/block-variations/application-ctas.js)
-1. First, we need to register a new variation of the Group block:
+Alright — let's build this thing!
+
+**HINT**: You can find a completed example in [application-ctas-example.js](../themes/10up-theme/includes/block-variations/application-ctas-example.js). You can also find this example using the block editor by looking in the blocks inserter under `DESIGN` as `Application CTAs Example` (or by typing `/Application CTAs Example`).
+
+1. First, we need to create our varitations file. In the directory [block-variations](../themes/10up-theme/includes/block-variations) add a new file `application-ctas.js`.
+2. Next, in this new file, we need to register a new variation of the group block. We first need to import the `registerBlockVariation` function (`import { registerBlockVariation } from '@wordpress/blocks';`), then call the function and register our group block variation:
 ```
 registerBlockVariation('core/group', {
 	name: 'application-ctas',
@@ -43,8 +47,10 @@ registerBlockVariation('core/group', {
 	attributes: {
 		className: 'is-style-application-ctas',
 	},
+});
 ```
-2. Next, we need to define some structure for our variation via `innerBlocks`. This is where the real magic happens:
+3. We now need to make sure this variation is being imported correctly and verify it displays in the admin. Open the [index.js](../themes/10up-theme/includes/block-variations/index.js) file inside `block-variations`. Here, you will see the import for `./application-ctas-example`. We want to replicate that import for our new file as `import './application-ctas';`. Once this is added (be sure you are running `npm run watch` in the theme to ensure your code updates), you should now find your variation in listed in the editor in the block inserter as `Application CTAs`. If you select it, it currently only outputs a core block. .
+4. We need to define some structure for our variation via `innerBlocks`. We add this declaration after `attributes: {},` in our `application-ctas.js` file. This is where the real magic happens:
 ```
 innerBlocks: [
 		[
@@ -72,12 +78,12 @@ innerBlocks: [
 	],
 ```
 
-3. You can see that we added a custom className on the description paragraph. You could do the same for any of the attributes that a block supports. [BlockBook](https://youknowriad.github.io/blockbook/block/) is an excellent resource for seeing what attributes are available on each block to use
+5. You can see that we added a custom className on the description paragraph. You could do the same for any of the attributes that a block supports. [BlockBook](https://youknowriad.github.io/blockbook/block/) is an excellent resource for seeing what attributes are available on each block to use
 
-4. Once we've registered the block, we can now see it in the inserter:
+6. Once we've registered the block, we can now see it in the inserter:
 ![alt text](images/applications-cta-inserter.png "CTA block inserter")
 
-5. And here's our finished product:
+7. And here's our finished product:
 ![alt text](images/applications-cta-blank.png "CTA block inserter")
 
 
@@ -90,7 +96,7 @@ That's a quick look of block variations. Let's quickly summarize the most import
 3. You can change the attributes of any blocks you use — adding classes, changing placeholder text, etc
 
 
-## Next steps
+## Next Steps
 1. Try to create a different layout. Perhaps a variation that places a CTA next to an image:
 ![alt text](images/variations-block-next-steps-1.png "CTA + image")
 
@@ -98,7 +104,7 @@ That's a quick look of block variations. Let's quickly summarize the most import
 ![alt text](images/variations-block-next-steps-2.png "CTA + image rounded")
 
 
-## Further reading
+## Further Reading
 * [Block Variations Handbook](https://developer.wordpress.org/block-editor/reference-guides/block-api/block-variations/)
 * [Block Variations](https://css-tricks.com/how-to-use-block-variations-in-wordpress/)
 * [BlockBook](https://youknowriad.github.io/blockbook/block/)
