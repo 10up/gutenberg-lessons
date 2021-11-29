@@ -65,7 +65,7 @@ To do this, we need to manage three new pieces of data:
 3. The button link.
 
 Add three more attributes to the `cta-starter/block.json` file for each of the new pieces of data with a `default` value and the appropriate `type` as needed. ( Refer to `cta-complete/block,json` if you get stuck )
-**Note: On of them is NOT of the the type `string`**
+**Note: One of them is NOT of the the type `string`**
 
 **HINT**: Attributes we are adding:
 * `showCTALink`

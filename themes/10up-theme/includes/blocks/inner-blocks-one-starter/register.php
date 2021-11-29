@@ -2,10 +2,10 @@
 /**
  * Gutenberg Blocks setup
  *
- * @package GutenbergLessons\Blocks\InnerBlocksOneComplete
+ * @package GutenbergLessons\Blocks\InnerBlocksOneStarter
  */
 
-namespace GutenbergLessons\Blocks\InnerBlocksOneComplete;
+namespace GutenbergLessons\Blocks\InnerBlocksOneStarter;
 
 /**
  * Register the block
@@ -17,7 +17,7 @@ function register() {
 
 	// Register the block.
 	register_block_type_from_metadata(
-		TENUP_THEME_BLOCK_DIR . '/inner-blocks-one-complete', // this is the directory where the block.json is found.
+		TENUP_THEME_BLOCK_DIR . '/inner-blocks-one-starter', // this is the directory where the block.json is found.
 		[
 			'render_callback' => $n( 'render_block_callback' ),
 		]
@@ -36,10 +36,10 @@ function register() {
 function render_block_callback( $attributes, $content, $block ) {
 	ob_start();
 	get_template_part(
-		'includes/blocks/inner-blocks-one-complete/markup',
+		'includes/blocks/inner-blocks-one-starter/markup',
 		null,
 		[
-			'class_name' => 'wp-block-gutenberg-lessons-inner-blocks-one-complete',
+			'class_name' => 'wp-block-gutenberg-lessons-inner-blocks-one-starter',
 			'attributes' => $attributes,
 			'content'    => $content,
 			'block'      => $block,

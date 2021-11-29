@@ -10,7 +10,7 @@ In many of our projects at 10up, we need to change the style of some of the core
 
 
 ## What are "block styles"?
-You might have noticed that some blocks have a Styles panel in their Inspector. The core Image block, for example, comes with these two styles: `default` and `rounded`.
+You might have noticed that some blocks have a Styles Panel in their Inspector. The core Image block, for example, comes with these two styles: `default` and `rounded`.
 
 ![alt text](images/core-image-styles.png "Core Image block styles")
 
@@ -76,7 +76,7 @@ wp.domReady(() => {
 });
 ```
 6. Next, we need to be sure this custom style registration is imported. See the [index.js](https://gitlab.10up.com/exercises/gutenberg-lessons/-/blob/trunk/themes/10up-theme/includes/block-styles/index.js) file found in `block-styles` and add the above file name as an import (`import './cta-starter';`);
-7. Add a style using the new `is-style-thick-border` classname. This has already been done for you in the [`call-to-actoin.css`](https://gitlab.10up.com/exercises/gutenberg-lessons/-/blob/trunk/themes/10up-theme/assets/css/frontend/components/blocks/call-to-action.css) file.
+7. Add a style using the new `is-style-thick-border` classname. This has already been done for you in the [`call-to-action.css`](https://gitlab.10up.com/exercises/gutenberg-lessons/-/blob/trunk/themes/10up-theme/assets/css/frontend/components/blocks/call-to-action.css) file.
 
 And voila! We've added a new style for our custom block!
 
