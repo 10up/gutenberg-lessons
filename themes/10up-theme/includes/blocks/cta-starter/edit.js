@@ -23,7 +23,7 @@ const ExampleBockEdit = ({ attributes: { title }, setAttributes }) => {
 		<Fragment>
 			<div {...blockProps}>
 				<RichText
-					className="wp-block-cta-complete-__title"
+					className="call-to-action-block__title"
 					tagName="h2"
 					placeholder={__('Title here …', 'gutenberg-lessons')}
 					keepPlaceholderOnFocus="true"
