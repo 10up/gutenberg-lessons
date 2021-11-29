@@ -76,6 +76,31 @@ As we can see, the starter files are in place for [`inner-blocks-one-starter`](/
 
 2. Register the block in [`blocks.php`](/themes/10up-theme/includes/blocks.php). Find the section in the file that begins with the comment `// Call block register functions for each block.` Here, we want to replicate the call `InnerBlocksOneComplete\register();` to reference our starter block as `InnerBlocksOneStarter\register();`.
 
+3. Run `npm run build` on the theme, use the block selector, and search `inner...` and you will now see "Inner Blocks One - Starter."
+
+#### Wire Up the Inner Block Area in the Editor and the Front End
+If we select the `"inner Blocks One - Starter" as mentioned previously, we can see that we cannot add any blocks or content at this time. To set this up, we need the following steps:
+
+1. Notice we have imported `InnerBlocks` in our [`index.js`](/themes/10up-theme/includes/blocks/inner-blocks-one-starter/index.js) file.
+2. Make sure we are importing `InnerBlocks` in our block [`edit.js`](/themes/10up-theme/includes/blocks/inner-blocks-one-starter/edit.js) file. See the `import` line at the top that reads `import { useBlockProps } from '@wordpress/block-editor';`, add `InnerBlocks` as such: `import { useBlockProps, InnerBlocks } from '@wordpress/block-editor';`.
+3. Ensure the `InnerBlocks` component is set to save and update by changing `save: () => null,` in the `registerBlockType` call to `save: () => <InnerBlocks.Content />`.
+4. Find the content block where we currently have the comment `/* The InnerBlocks should get inserted here */`. Here, we want to add our `<InnerBlocks>` component. To do so, for starters, simply add `<InnerBlocks>`.
+5. Run `npm run build` on the theme, use the block selector, and search `inner...` and select "Inner Blocks One - Starter." You can now add blocks to the inner content area.
+6. Let's setup a [template](https://developer.wordpress.org/block-editor/how-to-guides/block-tutorial/nested-blocks-inner-blocks/#template) of inner blocks by updating our `<InnerBlocks>` component in [`edit.js`](/themes/10up-theme/includes/blocks/inner-blocks-one-starter/edit.js) to the following:
+
+```
+<InnerBlocks
+	template={[
+		['core/heading', { level: 2, placeholder: 'Insert your heading here...' }],
+		['core/paragraph', { placeholder: 'Write some description text here...' }],
+		['core/buttons', {}, [['core/button']]],
+	]}
+/>
+```
+
+7. Run `npm run build` on the theme, use the block selector, and select "Inner Blocks One - Starter." In the blocks content area, you can now see a predefined group of blocks you can edit. Added content to your inner blocks, and save the post.
+
+8. If we look at the front end, we will see these changese we have made do not yet appear. To show this markup, let's go to our [`markup.php`](/themes/10up-theme/includes/blocks/inner-blocks-one-starter/markup.php) page. If we look down at the content container, we will see the comment `// The inner blocks content should get rendered here.` What we need here is the `$args['content']`, which is the html generated from `InnerBlocks` that is being created from the save method in JS or the `render_callback` in php and is sanitized. Therefore, by simply replacing this comment with `echo $args['content']; // phpcs:disable`, we should now see our content on the front end (`// phpcs: disable` is added because we are intentionally overriding the need to sanitize this output and want to disable any phpcs warnings or errors because of this).
 
 ### 2. "Card Grid" Block
 The second block we will be building is a "Card Grid" component. This Card grid should allow editors to place as many card components into a grid that automatically reflows based on the screen size of the device they are using.
