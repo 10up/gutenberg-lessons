@@ -23,7 +23,7 @@ registerFormatType(FORMAT_NAME, {
 		return (
 			<RichTextToolbarButton
 				icon={GradientIcon}
-				title={__('Gradient')}
+				title={__('Gradient Complete')}
 				onClick={onToggle}
 				isActive={isActive}
 			/>
