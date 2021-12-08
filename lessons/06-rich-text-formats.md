@@ -45,6 +45,7 @@ What is included in our pre-setup:
 - [`gradient-starter.js`](/themes/10up-theme/includes/text-formats/gradient-starter.js) contains all the imports that we need.
 - The `Gradient Complete` and `Gradient Starter` files have both already been included in the [`text-formats/index.js`](/themes/10up-theme/includes/text-formats/index.js) file which is included in our `entry` block in the project [`package.json`](/themes/10up-theme/package.json) file.
 - This file, when compiled into the project `/dist` directory, is enqueued in the [`core.php`](/themes/10up-theme/includes/core.php) file `text_formats()` function.
+- Styles for the gradient effect have already been added in the [`has-text-gradient.css`](/themes/10up-theme/assets/css/frontent/components/has-text-gradient.css) file.
 
 Next, in [`gradient-starter.js`](/themes/10up-theme/includes/text-formats/gradient-starter.js), we need to call the `registerFormatType` function with the correct information to register our format (we go through these steps below).
 
