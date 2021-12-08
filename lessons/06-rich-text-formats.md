@@ -63,6 +63,7 @@ So, to get this working, we want to do do the following in [`gradient-starter.js
 
 **NOTE**: if you get stuck, please compare with [`gradient-complete.js`](/themes/10up-theme/includes/text-formats/gradient-complete.js)
 
+1. Because we are adding the same classnames in both the `Starter` and `Complete` component and will create issues for us, let's remove (or comment out) the line `import './gradient-complete';` referencing the `Complete` component in the [`text-formats/index.js`](/themes/10up-theme/includes/text-formats/index.js).
 1. Add the `registerFormatType()` function below where we set the `const FORMAT_NAME` as so:
 
 ```js
