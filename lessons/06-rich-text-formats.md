@@ -99,7 +99,7 @@ registerFormatType(FORMAT_NAME, {
 
 ```
 
-Per the above, we next want to add our `return` to include the `RichTextToolbarButton` component. Here, `onClick`prop. We will rig the `onClick` to a function `onToggle()` in the next step below:
+Per the above, we next want to add our `return` to include the `RichTextToolbarButton` component. Here, we also add an `onClick` prop. We will rig the `onClick` to a function `onToggle()` in the next step below:
 
 ```js
 edit({ isActive, value, onChange }) {
