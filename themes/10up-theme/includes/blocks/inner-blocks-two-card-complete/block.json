@@ -8,7 +8,7 @@
 	"category": "gutenberg-lessons",
 	"attributes":{
 	},
-  "parent": [ "gutenberg-lessons/inner-blocks-two-card-grid" ],
+	"parent": [ "gutenberg-lessons/inner-blocks-two-card-grid-complete" ],
 	"example": {},
 	"editorScript": "file:../../../dist/blocks/inner-blocks-two-card-complete-block/editor.js"
 }

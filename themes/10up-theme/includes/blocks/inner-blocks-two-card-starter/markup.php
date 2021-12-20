@@ -2,7 +2,7 @@
 /**
  * Example block markup
  *
- * @package GutenbergLessons\Blocks\InnerBlocksTwoCardGridComplete
+ * @package GutenbergLessons\Blocks\InnerBlocksTwoCardGridStarter
  *
  * @var array $args {
  *     $args is provided by get_template_call.

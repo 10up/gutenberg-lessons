@@ -1,13 +1,14 @@
 {
-	"title": "Inner Blocks Two Card - Complete",
-	"description": "Complete version of the Inner Blocks block",
+	"title": "Inner Blocks Two Card - Starter",
+	"description": "Starter version of the Inner Blocks block",
 	"text-domain": "gutenberg-lessons",
-	"name": "gutenberg-lessons/inner-blocks-two-card-complete",
+	"name": "gutenberg-lessons/inner-blocks-two-card-starter",
 	"icon": "format-aside",
 	"apiVersion": 2,
 	"category": "gutenberg-lessons",
 	"attributes":{
 	},
 	"example": {},
-	"editorScript": "file:../../../dist/blocks/inner-blocks-two-card-complete-block/editor.js"
+  "parent": [ "gutenberg-lessons/inner-blocks-two-card-grid-starter" ],
+	"editorScript": "file:../../../dist/blocks/inner-blocks-two-card-starter-block/editor.js"
 }

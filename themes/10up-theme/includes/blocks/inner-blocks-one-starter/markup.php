@@ -2,7 +2,7 @@
 /**
  * Example block markup
  *
- * @package GutenbergLessons\Blocks\InnerBlocksOneComplete
+ * @package GutenbergLessons\Blocks\InnerBlocksOneStarter
  *
  * @var array $args {
  *     $args is provided by get_template_call.

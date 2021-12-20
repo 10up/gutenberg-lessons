@@ -2,10 +2,10 @@
 /**
  * Gutenberg Blocks setup
  *
- * @package GutenbergLessons\Blocks\InnerBlocksTwoCardComplete
+ * @package GutenbergLessons\Blocks\InnerBlocksTwoCardStarter
  */
 
-namespace GutenbergLessons\Blocks\InnerBlocksTwoCardComplete;
+namespace GutenbergLessons\Blocks\InnerBlocksTwoCardStarter;
 
 /**
  * Register the block
@@ -17,7 +17,7 @@ function register() {
 
 	// Register the block.
 	register_block_type_from_metadata(
-		TENUP_THEME_BLOCK_DIR . '/inner-blocks-two-card-complete', // this is the directory where the block.json is found.
+		TENUP_THEME_BLOCK_DIR . '/inner-blocks-two-card-starter', // this is the directory where the block.json is found.
 		[
 			'render_callback' => $n( 'render_block_callback' ),
 		]
@@ -36,10 +36,10 @@ function register() {
 function render_block_callback( $attributes, $content, $block ) {
 	ob_start();
 	get_template_part(
-		'includes/blocks/inner-blocks-two-card-complete/markup',
+		'includes/blocks/inner-blocks-two-card-starter/markup',
 		null,
 		[
-			'class_name' => 'wp-block-gutenberg-lessons-inner-blocks-two-card-complete',
+			'class_name' => 'wp-block-gutenberg-lessons-inner-blocks-two-card-starter',
 			'attributes' => $attributes,
 			'content'    => $content,
 			'block'      => $block,
