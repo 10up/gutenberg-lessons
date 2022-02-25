@@ -16,7 +16,9 @@ import { PanelBody, ToggleControl } from '@wordpress/components';
  *
  * @return {*} React Element
  */
-const ExampleBockEdit = ({ attributes: { title }, setAttributes }) => {
+const ExampleBockEdit = (props) => {
+	const { attributes, setAttributes } = props;
+	const { title } = attributes;
 	const blockProps = useBlockProps({ className: 'call-to-action-block' });
 
 	return (
