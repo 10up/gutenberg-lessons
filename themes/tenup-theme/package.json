@@ -1,0 +1,42 @@
+{
+  "name": "tenup-theme",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "npm run watch",
+    "watch": "10up-toolkit watch --port=5000 --hot",
+    "build": "10up-toolkit build",
+    "format-js": "10up-toolkit format-js",
+    "lint-js": "10up-toolkit lint-js",
+    "lint-style": "10up-toolkit lint-style",
+    "test": "10up-toolkit test-unit-jest",
+    "clean-dist": "rm -rf ./dist"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "10up-toolkit": "^3.0.0"
+  },
+  "dependencies": {
+    "@10up/component-navigation": "^2.1.0",
+    "normalize.css": "^8.0.1"
+  },
+  "10up-toolkit": {
+    "devURL": "https://gutenberg-training.test",
+    "entry": {
+      "admin": "./assets/js/admin/admin.js",
+      "editor-style-overrides": "./assets/js/admin/editor-style-overrides.js",
+      "blocks": "./includes/blocks/blocks.js",
+      "frontend": "./assets/js/frontend/frontend.js",
+      "shared": "./assets/js/shared/shared.js",
+      "styleguide": "./assets/js/styleguide/styleguide.js",
+      "core-block-overrides": "./includes/core-block-overrides.js",
+      "rich-text-formats": "./includes/text-formats/index.js",
+      "cta-complete-block": "./includes/blocks/cta-complete/index.js",
+      "inner-blocks-one-complete-block": "./includes/blocks/inner-blocks-one-complete/index.js",
+      "inner-blocks-two-card-grid-complete-block": "./includes/blocks/inner-blocks-two-card-grid-complete/index.js",
+      "inner-blocks-two-card-complete-block": "./includes/blocks/inner-blocks-two-card-complete/index.js",
+      "cta-starter-block": "./includes/blocks/cta-starter/index.js"
+    }
+  }
+}
