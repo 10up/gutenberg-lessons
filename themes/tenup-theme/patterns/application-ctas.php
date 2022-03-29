@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Application CTAs
- * Slug: tenup-theme/application-ctas
- * Category: text
+ * Title: Application CTAs - Completed
+ * Slug: tenup-theme/application-ctas-completed
+ * Categories: text
  *
  * @package GutenbergLessons
  */

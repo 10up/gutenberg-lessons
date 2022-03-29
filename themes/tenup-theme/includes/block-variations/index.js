@@ -3,4 +3,4 @@
  */
 
 // Each block that needs variations should have it's own file.
-import './application-ctas-example';
+import './four-columns-variation-completed';
