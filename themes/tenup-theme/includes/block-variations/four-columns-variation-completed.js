@@ -7,7 +7,6 @@ registerBlockVariation('core/columns', {
 	name: 'four-columns-equal',
 	title: __('25/25/25/25'),
 	description: __('Four columns; equal split'),
-	isDefault: true,
 	icon: (
 		<SVG width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
 			<Path
