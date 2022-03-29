@@ -1,7 +1,7 @@
 {
 	"title": "Inner Blocks Two Card - Complete",
 	"description": "Complete version of the Inner Blocks block",
-	"text-domain": "gutenberg-lessons",
+	"textdomain": "gutenberg-lessons",
 	"name": "gutenberg-lessons/inner-blocks-two-card-complete",
 	"icon": "format-aside",
 	"apiVersion": 2,

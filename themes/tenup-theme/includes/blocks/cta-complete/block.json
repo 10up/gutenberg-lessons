@@ -2,7 +2,7 @@
 	"title": "CTA - Complete",
 	"apiVersion": 2,
 	"description": "Complete version of the CTA block",
-	"text-domain": "gutenberg-lessons",
+	"textdomain": "gutenberg-lessons",
 	"name": "gutenberg-lessons/cta-complete",
 	"icon": "feedback",
 	"category": "gutenberg-lessons",

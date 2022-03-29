@@ -2,7 +2,7 @@
 	"title": "CTA - Starter",
 	"apiVersion": 2,
 	"description": "Starter version of the CTA block.",
-	"text-domain": "gutenberg-lessons",
+	"textdomain": "gutenberg-lessons",
 	"name": "gutenberg-lessons/cta-starter",
 	"icon": "feedback",
 	"category": "gutenberg-lessons",

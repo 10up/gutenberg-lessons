@@ -1,7 +1,7 @@
 {
 	"title": "Inner Blocks Two Card - Starter",
 	"description": "Starter version of the Inner Blocks block",
-	"text-domain": "gutenberg-lessons",
+	"textdomain": "gutenberg-lessons",
 	"name": "gutenberg-lessons/inner-blocks-two-card-starter",
 	"icon": "format-aside",
 	"apiVersion": 2,
@@ -9,6 +9,5 @@
 	"attributes":{
 	},
 	"example": {},
-  "parent": [ "gutenberg-lessons/inner-blocks-two-card-grid-starter" ],
-	"editorScript": "file:../../../dist/blocks/inner-blocks-two-card-starter-block/editor.js"
+  "parent": [ "gutenberg-lessons/inner-blocks-two-card-grid-starter" ]
 }

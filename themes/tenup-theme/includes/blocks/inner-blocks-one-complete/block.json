@@ -1,7 +1,7 @@
 {
 	"title": "Inner Blocks One - Complete",
 	"description": "Complete version of the Inner Blocks block",
-	"text-domain": "gutenberg-lessons",
+	"textdomain": "gutenberg-lessons",
 	"name": "gutenberg-lessons/inner-blocks-one-complete",
 	"icon": "align-full-width",
 	"apiVersion": 2,
