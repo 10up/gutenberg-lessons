@@ -20,11 +20,9 @@ function setup() {
 	};
 
 	add_action( 'enqueue_block_editor_assets', $n( 'blocks_editor_styles' ) );
-
 	add_filter( 'block_categories_all', $n( 'blocks_categories' ), 10, 2 );
-
 	add_action( 'init', $n( 'register_theme_blocks' ) );
-
+	add_action( 'init', $n( 'register_theme_block_patterns' ) );
 	add_action( 'init', $n( 'block_patterns_and_categories' ) );
 
 	/*
@@ -178,3 +176,141 @@ function block_patterns_and_categories() {
 
 	*/
 }
+
+
+/**
+ * This function will likely ship with WordPress 6.0 at which point we can remove it from the theme
+ */
+if ( ! function_exists( 'register_theme_block_patterns' ) ) :
+
+	/**
+	 * Register any patterns that the active theme may provide under its
+	 * `./patterns/` directory. Each pattern is defined as a PHP file and defines
+	 * its metadata using plugin-style headers. The minimum required definition is:
+	 *
+	 *     /**
+	 *      * Title: My Pattern
+	 *      * Slug: my-theme/my-pattern
+	 *      *
+	 *
+	 * The output of the PHP source corresponds to the content of the pattern, e.g.:
+	 *
+	 *     <main><p><?php echo "Hello"; ?></p></main>
+	 *
+	 * Other settable fields include:
+	 *
+	 *   - Description
+	 *   - Viewport Width
+	 *   - Categories       (comma-separated values)
+	 *   - Keywords         (comma-separated values)
+	 *   - Block Types      (comma-separated values)
+	 *   - Inserter         (yes/no)
+	 */
+	function register_theme_block_patterns() {
+		$default_headers = array(
+			'title'         => 'Title',
+			'slug'          => 'Slug',
+			'description'   => 'Description',
+			'viewportWidth' => 'Viewport Width',
+			'categories'    => 'Categories',
+			'keywords'      => 'Keywords',
+			'blockTypes'    => 'Block Types',
+			'inserter'      => 'Inserter',
+		);
+
+		$dirpath = TENUP_THEME_PATH . '/patterns/';
+		if ( file_exists( $dirpath ) ) {
+			$files = glob( $dirpath . '*.php' );
+			if ( $files ) {
+				foreach ( $files as $file ) {
+					$pattern_data = get_file_data( $file, $default_headers );
+
+					if ( empty( $pattern_data['slug'] ) ) {
+						trigger_error(
+							sprintf(
+								/* translators: %s: file name. */
+								esc_html__( 'Could not register file "%s" as a block pattern ("Slug" field missing)', 'tenup-theme' ),
+								esc_attr( $file )
+							)
+						);
+						continue;
+					}
+
+					if ( ! preg_match( '/^[A-z0-9\/_-]+$/', $pattern_data['slug'] ) ) {
+						trigger_error(
+							sprintf(
+								/* translators: %1s: file name; %2s: slug value found. */
+								esc_html__( 'Could not register file "%1$s" as a block pattern (invalid slug "%2$s")', 'tenup-theme' ),
+								esc_attr( $file ),
+								esc_attr( $pattern_data['slug'] )
+							)
+						);
+					}
+
+					if ( \WP_Block_Patterns_Registry::get_instance()->is_registered( $pattern_data['slug'] ) ) {
+						continue;
+					}
+
+					// Title is a required property.
+					if ( ! $pattern_data['title'] ) {
+						trigger_error(
+							sprintf(
+								/* translators: %1s: file name; %2s: slug value found. */
+								esc_html__( 'Could not register file "%s" as a block pattern ("Title" field missing)', 'tenup-theme' ),
+								esc_attr( $file )
+							)
+						);
+						continue;
+					}
+
+					// For properties of type array, parse data as comma-separated.
+					foreach ( array( 'categories', 'keywords', 'blockTypes' ) as $property ) {
+						if ( ! empty( $pattern_data[ $property ] ) ) {
+							$pattern_data[ $property ] = array_filter(
+								preg_split(
+									'/[\s,]+/',
+									(string) $pattern_data[ $property ]
+								)
+							);
+						} else {
+							unset( $pattern_data[ $property ] );
+						}
+					}
+
+					// Parse properties of type int.
+					foreach ( array( 'viewportWidth' ) as $property ) {
+						if ( ! empty( $pattern_data[ $property ] ) ) {
+							$pattern_data[ $property ] = (int) $pattern_data[ $property ];
+						} else {
+							unset( $pattern_data[ $property ] );
+						}
+					}
+
+					// Parse properties of type bool.
+					foreach ( array( 'inserter' ) as $property ) {
+						if ( ! empty( $pattern_data[ $property ] ) ) {
+							$pattern_data[ $property ] = in_array(
+								strtolower( $pattern_data[ $property ] ),
+								array( 'yes', 'true' ),
+								true
+							);
+						} else {
+							unset( $pattern_data[ $property ] );
+						}
+					}
+
+					// The actual pattern content is the output of the file.
+					ob_start();
+					include $file;
+					$pattern_data['content'] = ob_get_clean();
+					if ( ! $pattern_data['content'] ) {
+						continue;
+					}
+
+					register_block_pattern( $pattern_data['slug'], $pattern_data );
+				}
+			}
+		}
+	}
+
+endif;
