@@ -1,0 +1,12 @@
+{
+	"title": "Inner Blocks One - Starter",
+	"description": "Starter version of the Inner Blocks block",
+	"textdomain": "gutenberg-lessons",
+	"name": "gutenberg-lessons/inner-blocks-one-starter",
+	"icon": "align-full-width",
+	"apiVersion": 2,
+	"category": "gutenberg-lessons",
+	"attributes":{
+	},
+	"example": {}
+}

@@ -1,0 +1,13 @@
+{
+	"title": "Inner Blocks Two Card - Starter",
+	"description": "Starter version of the Inner Blocks block",
+	"textdomain": "gutenberg-lessons",
+	"name": "gutenberg-lessons/inner-blocks-two-card-starter",
+	"icon": "format-aside",
+	"apiVersion": 2,
+	"category": "gutenberg-lessons",
+	"attributes":{
+	},
+	"example": {},
+  "parent": [ "gutenberg-lessons/inner-blocks-two-card-grid-starter" ]
+}

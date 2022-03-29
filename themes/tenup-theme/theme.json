@@ -1,0 +1,74 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultPalette": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "duotone": [],
+      "gradients": [],
+      "link": false,
+      "palette": [
+          {
+            "name": "White",
+            "slug": "white",
+            "color": "#ffffff"
+          },
+          {
+            "name": "Black",
+            "slug": "black",
+            "color": "#000000"
+          },
+          {
+            "name": "Grey",
+            "slug": "grey",
+            "color": "#656565"
+          },
+          {
+            "name": "Red",
+            "slug": "red",
+            "color": "df2b26"
+          }
+      ]
+    },
+    "custom": {},
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1000px"
+    },
+    "spacing": {
+      "margin": false,
+      "padding": false,
+      "units": []
+    },
+    "typography": {
+      "customFontSize": false,
+      "lineHeight": false,
+      "dropCap": false,
+      "fontSizes": []
+    },
+    "blocks": {
+      "core/button": {
+        "color": {
+          "palette": []
+        }
+      }
+    }
+  },
+  "styles": {
+    "color": {},
+    "elements": {
+      "h1": {},
+      "h2": {},
+      "h3": {},
+      "h4": {},
+      "h5": {},
+      "h6": {},
+      "link": {}
+    },
+    "typography": {}
+  }
+}
