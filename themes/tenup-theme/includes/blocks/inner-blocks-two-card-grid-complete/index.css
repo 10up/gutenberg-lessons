@@ -1,9 +1,0 @@
-.wp-block-gutenberg-lessons-inner-blocks-two-card-grid-complete {
-	display: block !important;
-}
-
-.wp-block-gutenberg-lessons-inner-blocks-two-card-grid-complete .block-editor-block-list__layout {
-	display: grid;
-	grid-gap: 2rem;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 2fr));
-}

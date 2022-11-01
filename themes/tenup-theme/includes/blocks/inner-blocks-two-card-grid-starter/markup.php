@@ -4,16 +4,15 @@
  *
  * @package GutenbergLessons\Blocks\InnerBlocksTwoCardGridComplete
  *
- * @var array    $attributes         Block attributes.
- * @var string   $content            Block content.
- * @var WP_Block $block              Block instance.
- * @var array    $context            BLock context.
- * @var string   $wrapper_attributes Block Wrapper Attributes. To be applied to the outermost element.
+ * @var array    $attributes Block attributes.
+ * @var string   $content    Block content.
+ * @var WP_Block $block      Block instance.
+ * @var array    $context    BLock context.
  */
 
 ?>
 
-<section <?php echo wp_kses_post( $wrapper_attributes ); ?>>
+<section <?php echo get_block_wrapper_attributes(); // phpcs:ignore ?>>
 	<?php
 	// The InnerBlocks should get rendered here
 	?>

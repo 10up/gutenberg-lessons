@@ -34,3 +34,5 @@ Session.vim
 Thumbs.db
 Desktop.ini
 debug.log
+/db.php
+/plugins
