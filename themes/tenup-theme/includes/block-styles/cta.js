@@ -1,4 +1,5 @@
 import { registerBlockStyle } from '@wordpress/blocks';
+import domReady from '@wordpress/dom-ready';
 
 function registerCTAStyles() {
 	registerBlockStyle('gutenberg-lessons/cta-complete', {
@@ -7,6 +8,4 @@ function registerCTAStyles() {
 	});
 }
 
-wp.domReady(() => {
-	registerCTAStyles();
-});
+domReady( registerCTAStyles );

@@ -1,12 +1,9 @@
-/**
- * WordPress dependencies
- */
 import { useBlockProps } from '@wordpress/block-editor';
 
 /**
  * Block Edit Component
  *
- * @return {JSX.Element} React Element
+ * @returns {JSX.Element} React Element
  */
 const BockEdit = () => {
 	const blockProps = useBlockProps();

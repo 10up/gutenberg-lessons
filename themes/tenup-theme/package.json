@@ -15,7 +15,7 @@
     "node": ">=12.0.0"
   },
   "devDependencies": {
-    "10up-toolkit": "^3.0.0"
+    "10up-toolkit": "^4.3.0"
   },
   "dependencies": {
     "@10up/component-navigation": "^2.1.0",
@@ -23,6 +23,7 @@
   },
   "10up-toolkit": {
     "devURL": "https://gutenberg-training.test",
+    "useBlockAssets": true,
     "entry": {
       "admin": "./assets/js/admin/admin.js",
       "editor-style-overrides": "./assets/js/admin/editor-style-overrides.js",
@@ -30,13 +31,7 @@
       "frontend": "./assets/js/frontend/frontend.js",
       "shared": "./assets/js/shared/shared.js",
       "styleguide": "./assets/js/styleguide/styleguide.js",
-      "core-block-overrides": "./includes/core-block-overrides.js",
-      "rich-text-formats": "./includes/text-formats/index.js",
-      "cta-complete-block": "./includes/blocks/cta-complete/index.js",
-      "inner-blocks-one-complete-block": "./includes/blocks/inner-blocks-one-complete/index.js",
-      "inner-blocks-two-card-grid-complete-block": "./includes/blocks/inner-blocks-two-card-grid-complete/index.js",
-      "inner-blocks-two-card-complete-block": "./includes/blocks/inner-blocks-two-card-complete/index.js",
-      "cta-starter-block": "./includes/blocks/cta-starter/index.js"
+      "core-block-overrides": "./includes/core-block-overrides.js"
     }
   }
 }

@@ -1,11 +1,7 @@
-/* eslint-disable no-unused-vars */
-/**
- * WordPress dependencies
- */
 import { __ } from '@wordpress/i18n';
-import { Fragment } from '@wordpress/element';
 import { RichText, InspectorControls, URLInput, useBlockProps } from '@wordpress/block-editor';
 import { PanelBody, ToggleControl } from '@wordpress/components';
+
 /**
  * Block Edit Component
  *
@@ -22,7 +18,7 @@ const ExampleBockEdit = (props) => {
 	const blockProps = useBlockProps({ className: 'call-to-action-block' });
 
 	return (
-		<Fragment>
+		<>
 			<div {...blockProps}>
 				<RichText
 					className="call-to-action-block__title"
@@ -33,9 +29,9 @@ const ExampleBockEdit = (props) => {
 				/>
 			</div>
 			<InspectorControls>
-				<PanelBody>Toggle control</PanelBody>
+				<PanelBody>{/* { Insert the toggle control here } */}</PanelBody>
 			</InspectorControls>
-		</Fragment>
+		</>
 	);
 };
 

@@ -1,4 +1,5 @@
 import { registerBlockStyle } from '@wordpress/blocks';
+import domReady from '@wordpress/dom-ready';
 
 function registerImageStyles() {
 	registerBlockStyle('core/image', {
@@ -7,6 +8,4 @@ function registerImageStyles() {
 	});
 }
 
-wp.domReady(() => {
-	registerImageStyles();
-});
+domReady(registerImageStyles);

@@ -1,38 +1,40 @@
 {
-	"title": "CTA - Complete",
-	"apiVersion": 2,
-	"description": "Complete version of the CTA block",
-	"textdomain": "gutenberg-lessons",
-	"name": "gutenberg-lessons/cta-complete",
-	"icon": "feedback",
-	"category": "gutenberg-lessons",
-	"attributes": {
-		"title": {
-			"type": "string"
-		},
-		"description": {
-			"type": "string"
-		},
-		"showCTALink": {
-			"type": "boolean"
-		},
-		"ctaLink": {
-			"type": "string",
-			"default": "https://10up.com"
-		},
-		"ctaText": {
-			"type": "string",
-			"default": "Learn more →"
-		}
-	},
-	"example": {
-		"attributes": {
-			"title": "CTA Block",
-			"description": "Venenatis saepe perspiciatis illum qui voluptatum sagittis nihil litora ipsum sequi, eiusmod tellus soluta, pulvinar! Nemo exercitationem hic risus fugit! Omnis, proident tempora perspiciatis nulla.",
-			"showCTALink": true,
-			"ctaLink": "https://10up.com",
-			"ctaText": "Cta Text"
-		}
-	},
-	"editorScript": "file:../../../dist/blocks/cta-complete-block/editor.js"
+  "title": "CTA - Complete",
+  "apiVersion": 2,
+  "description": "Complete version of the CTA block",
+  "textdomain": "gutenberg-lessons",
+  "name": "gutenberg-lessons/cta-complete",
+  "icon": "feedback",
+  "category": "gutenberg-lessons",
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "description": {
+      "type": "string",
+      "default": ""
+    },
+    "showCTALink": {
+      "type": "boolean"
+    },
+    "ctaLink": {
+      "type": "string",
+      "default": "https://10up.com"
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Learn more →"
+    }
+  },
+  "example": {
+    "attributes": {
+      "title": "CTA Block",
+      "description": "Venenatis saepe perspiciatis illum qui voluptatum sagittis nihil litora ipsum sequi, eiusmod tellus soluta, pulvinar! Nemo exercitationem hic risus fugit! Omnis, proident tempora perspiciatis nulla.",
+      "showCTALink": true,
+      "ctaLink": "https://10up.com",
+      "ctaText": "Cta Text"
+    }
+  },
+  "editorScript": "file:./index.js"
 }
