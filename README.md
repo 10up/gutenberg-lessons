@@ -20,10 +20,10 @@ You can find the training itself at [gutenberg.10up.com/training](https://gutenb
 cd gutenberg-training-test/wordpress && rm -rf wp-content && git clone git@gitlab.10up.com:exercises/gutenberg-lessons.git wp-content
 ```
 
-3. Navigate to the theme directory and install dependencies
+3. Navigate to the wp-content directory and install dependencies
 
 ```bash
-cd wp-content/themes/tenup-theme && npm install && npm run start
+cd wp-content && npm install && npm run start
 ```
 
 4. Activate the tenup-theme in WordPress
